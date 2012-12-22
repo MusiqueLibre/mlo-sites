@@ -1,0 +1,95 @@
+@font-face{
+  font-family:"over";
+  src: url("Overhaul.otf");
+}
+*{
+  -moz-transition:all 0.2s ease;
+}
+body{
+  margin:0;
+  font-family:over;
+  background:#f5f2ed url("bg.png") no-repeat;
+}
+/*MENU*/
+#menu{
+  position:fixed;
+  z-index:100;
+  width:100%;
+}
+#main_menu{
+  top:0;
+  left:0;
+  margin:0;
+  text-align:center;
+  border-bottom:#434343 solid 6px;
+  background:#F5F2ED url('texture.png');
+  padding:0;
+}
+#main_menu li{
+  list-style-type: none;
+  display:inline-block;
+  padding:0 35px;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:1.3em;
+  -moz-transform: skew(-20deg);
+}
+#main_menu li:nth-child(even){
+  -moz-transform: skew(-20deg);
+   background:#d8d6d2;
+}
+#main_menu li:nth-child(odd){
+  -moz-transform: skew(20deg);
+}
+#main_menu a{
+  text-decoration:none;
+  color:#434343;
+}
+/*LOGO*/
+#welcome{
+  text-align:center;
+  position:fixed;
+  width:100%;
+  top:150px;
+}
+#logo{
+  max-width:100%;
+  min-width:100px;
+}
+
+/*CORPS*/
+#main{
+  position:relative;
+  z-index:10;
+  top:800px;
+}
+#main > div{
+  position:relative;
+}
+#intro{
+  background:#5E8A8E;
+  padding:50px 0 50px 13%;
+  -moz-transform:skew(0,-2deg);
+}
+#intro > *{
+  -moz-transform:skew(0,2deg);
+}
+#video_pres{
+  width:87%
+}
+.title{
+  position:absolute;
+  font-size:600%;
+  top:-55px;
+  left:2%;
+  color:#F5F2ED;
+  margin:0;
+  /*specific*/
+  text-shadow: -3px -3px 0 #5E8A8E;
+}
+@media only screen and (max-width: 600px) {
+  .title{
+    font-size:2.2em;
+    top:-20px;
+  }
+}
