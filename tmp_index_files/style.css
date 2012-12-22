@@ -1,0 +1,177 @@
+body{
+  background:url("connect.png");
+  margin:0;
+  padding:0;
+  font-family:liberation, trebuchet;
+}
+h2, h3{
+  font-weight:normal;
+}
+h3{
+  color:#552200;
+  margin-top:0;
+}
+a,a:visited{
+  color:#333;
+}
+/*Police*/
+@font-face{
+  font-family: "foglihten";
+  src: url('FoglihtenFr02.otf')
+}
+@font-face{
+  font-family: "pulsar";
+  src: url('pulsarjs.ttf')
+}
+.label, #values_date,h2,h3{
+  font-family: foglihten;
+}
+.label:before,h2:before,h3:before{
+  content:'F';
+}
+.label:after,h2:after,h3:after{
+  content:'E';
+}
+/*Header*/
+header{
+  overflow:hidden;
+  margin-bottom:20px;
+}
+/*Main*/
+#title{
+  display:none;
+}
+#banner{
+  width: 49%;
+  margin:10px 0 0 1%;
+}
+#values{
+  color: #333;
+  float:right;
+  font-size:1.5em;
+  padding:0 3%;
+  width: 44%;
+}
+#values_date{
+  color:#552200;
+}
+#values_date:after{
+  content:'V';
+}
+#values_date:before{
+  content:'U';
+}
+#content-main-title{
+  color: #ff7f2a;
+  text-shadow:2px 2px 0px rgba(85, 34, 0, 0.19);
+  -moz-text-shadow:2px 2px 0px rgba(85, 34, 0, 0.19);
+  -webkit-text-shadow:2px 2px 0px rgba(85, 34, 0, 0.19);
+  font-size:3.5em;
+  margin:0;
+  padding:0 10px;
+}
+#content-main-title:before{
+  content:'F';
+}
+#content-main-title:after{
+  content:'E';
+}
+/*identica*/
+#flash h3{
+  margin:20px 0 0 0;
+  display:inline;
+  color:#333;
+}
+#more_identica{
+  color:#333;
+}
+#flash{
+  padding:5px 10px 0 5px;
+  border-top: 2px dashed #FF7F2A;
+  border-bottom: 2px dashed #FF7F2A;
+  background:url('nasty_fabric.png');
+}
+#flash ul{
+  color:#333;
+  padding:0 10px;
+  height:1.2em;
+  z-index:1000;
+  margin-top:5px;
+}
+#flash ul a{
+  color:#000;
+  z-index:10000;
+}
+.rssdesc{
+  padding-left:5px;
+}
+.rssdate{
+  font-size:0.8em;
+}
+#flash li{
+   list-style:none;
+}
+/*BLOCKS*/
+.block{
+  min-width:273px;
+  max-width:395px;
+  margin:0 10px;
+  float:left;
+  min-height:350px;
+}
+.block_content{
+  padding:5px 10px;
+  border: 1px dashed #552200;
+  border-top: 2px solid #552200;
+  box-shadow:4px 4px 5px rgba(85, 34, 0, 0.19);
+  -moz-box-shadow:4px 4px 5px rgba(85, 34, 0, 0.19);
+  -webkit-box-shadow:4px 4px 5px rgba(85, 34, 0, 0.19);
+}
+.block h3{
+  font-size:1.75em;
+  margin:0;
+}
+.icon{
+  font-family:pulsarjs;
+  color:green;
+}
+.icon.nok{
+  color:red;
+}
+/*RESPONSIVE*/
+@media screen and (min-width:1100px){
+  #values{
+    font-size:2em;
+  }
+  #content-main-title{
+    font-size:3em;
+  }
+}
+@media screen and (min-width:1620px){
+  #values{
+    font-size:2.5em;
+  }
+  #content-main-title{
+    font-size:4.5em;
+  }
+}
+/*Portable*/
+@media screen and (max-width:500px){
+ #title{
+   display:block;
+   color:#FF7F2A
+ }
+ #banner{
+    display:none;
+ }
+  #values{
+    font-size:2em;
+    float:none;
+  }
+  #flash ul{
+    height:65px;
+  }
+  #content-main-title{
+    font-size:2.5em;
+  }
+}

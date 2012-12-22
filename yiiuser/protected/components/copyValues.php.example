@@ -1,0 +1,44 @@
+<?php
+class copyValues extends CApplicationComponent{
+    public function database(){
+      return  Yii::app()->dbforum;
+    }
+
+
+    public function copy($username,$password,$email,$salt){
+      //Insert user data in the forum. I use 'Deleted' because of the activation
+      $connection= $this->database();
+      $sql="INSERT INTO GDN_User (Name, Password, HashMethod,  Email,PasswordSalt,Deleted) 
+            VALUES ('$username','$password', 'dogma','$email','$salt','1');";
+      $command=$connection->createCommand($sql);
+      $command->execute();
+      //Get the ID of the newly created user
+      $getIDSql = "SELECT UserID FROM GDN_User WHERE Name = '$username'";
+      $commandID=$connection->createCommand($getIDSql);
+      $IDQuery = $commandID->query();
+      $IDQuery = $IDQuery->readAll();
+      $ID = $IDQuery[0]['UserID'];
+
+      //add user ID and role in the table
+      $sqlRole="INSERT INTO GDN_UserRole (UserID, RoleID) 
+                VALUES ('$ID', '4434');";
+      $commandRole=$connection->createCommand($sqlRole);
+      $commandRole->execute();
+
+
+    }
+    public function updatePassword($username,$password,$salt){
+      $connection= $this->database();
+      $sql="UPDATE GDN_User SET Password = '$password', PasswordSalt = '$salt' WHERE Name = '$username'";
+      $command=$connection->createCommand($sql);
+      $command->execute();
+    }
+    public function activateAccount($username){
+      $connection=Yii::app()->dbforum;
+      $sql="UPDATE GDN_User SET Deleted = '0' WHERE Name = '$username'";
+      $command=$connection->createCommand($sql);
+      $command->execute();
+
+    }
+}
+?>

@@ -1,0 +1,4 @@
+Ajouter PasswordSalt dans la table vanilla
+Ajouter PasswordChar et rendre "NULL" password
+Demander pourquoi je sui obligé de faire ça ^
+grep -r FACTODO . : factoriser les trucs mis en dur
