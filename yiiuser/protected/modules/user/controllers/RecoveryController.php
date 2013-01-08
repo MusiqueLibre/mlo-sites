@@ -15,14 +15,14 @@ class RecoveryController extends Controller
 				$email = ((isset($_GET['email']))?$_GET['email']:'');
 				$activkey = ((isset($_GET['activkey']))?$_GET['activkey']:'');
 				if ($email&&$activkey) {
-					$form2 = new UserChangePassword;
+					  $form2 = new UserChangePassword;
 		    		$find = User::model()->notsafe()->findByAttributes(array('email'=>$email));
 		    		if(isset($find)&&$find->activkey==$activkey) {
 			    		if(isset($_POST['UserChangePassword'])) {
 							$form2->attributes=$_POST['UserChangePassword'];
 							if($form2->validate()) {
 								$find->password = Yii::app()->controller->module->encrypting($form2->password);
-								$find->activkey=Yii::app()->controller->module->encrypting(microtime().$form2->password);
+								$find->activkey=Yii::app()->controller->module->encrypting(microtime());
 								if ($find->status==0) {
 									$find->status = 1;
 								}
@@ -41,13 +41,18 @@ class RecoveryController extends Controller
 			    		$form->attributes=$_POST['UserRecoveryForm'];
 			    		if($form->validate()) {
 			    			$user = User::model()->notsafe()->findbyPk($form->user_id);
+                //Check if the activation key is empty for imported users
+                if($activkey==''){
+                  $user->activkey=Yii::app()->controller->module->encrypting(microtime());
+                  $user->save();
+                }
 							$activation_url = 'http://' . $_SERVER['HTTP_HOST'].$this->createUrl(implode(Yii::app()->controller->module->recoveryUrl),array("activkey" => $user->activkey, "email" => $user->email));
 							
 							$subject = UserModule::t("You have requested the password recovery site {site_name}",
 			    					array(
 			    						'{site_name}'=>Yii::app()->name,
 			    					));
-			    			$message = UserModule::t("You have requested the password recovery site {site_name}. To receive a new password, go to {activation_url}.",
+			    			$message = UserModule::t("You have requested the password recovery site {site_name}. To receive a new password, go to {activation_url} .",
 			    					array(
 			    						'{site_name}'=>Yii::app()->name,
 			    						'{activation_url}'=>$activation_url,
