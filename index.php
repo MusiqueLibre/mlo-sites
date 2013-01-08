@@ -6,9 +6,19 @@
     <LINK rel="stylesheet" type="text/css" href="tmp_index_files/style.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="tmp_index_files/jquerycyclelite.js"></script>
+    <script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */</script>
   </head>
   <body>
-    <?php include('inc/header.php'); ?>
+    <?php include 'inc/header.php'; ?>
     <div id="main">
       <div id="flash">
         <h3>news flash</h3> <a id="more_identica" href="http://identi.ca/dogmazic">(identi.ca)</a>
@@ -19,7 +29,7 @@
       </div>
       <h2 id="content-main-title">dogma reste ouvert pendant les travaux !!</h2>
       <div class="block">
-        <h3>wtf ?</h3>
+        <h3>dogmazic v3 ?</h3>
         <div class="block_content">
           <p>Au cas où vous auriez loupé un épisode, le site dogmazic (<a href="http://blog.dogmazic.net">en savoir plus sur l'asso et le projet</a>) amorce actuellement la deuxième refonte majeure de son histoire.</p>
           <p>Bienvenue, donc, sur la page temporaire qui nous servira à communiquer pendant toute la durée des travaux.</p>
@@ -28,12 +38,15 @@
         </div>
       </div>
       <div class="block">
-        <h3>là où ça cause</h3>
+        <h3>participer</h3>
         <div class="block_content">
           <p>Pour suivre la vie de l'asso :</p>
           <a href="http://blog.dogmazic.net"><img src="tmp_index_files/blog_logo.png" alt="logo blog"/></a>
           <p>Pour discuter de l'asso, du site et du libre en général :</p>
           <a href="http://forum.dogmazic.net"><img src="tmp_index_files/forum_logo.png" alt="logo forum"/></a>
+          <p>Nouveau ? Par ici les <a href="http://user.dogmazic.net">inscriptions</a></p>
+          <p>Vous pouvez également venir nous causer en direct sur irc sur <b>irc.freenode.net</b>, salon <b>#dogmazic</b></p>
+          <p>Pour vous connecter il vous faut un client IRC (irssi, xchat, smuxi...), il existe également des solutions en ligne comme  <a href="http://en.irc2go.com/webchat/?net=freenode&room=dogmazic">ici !</a></p>
         </div>
       </div>
       <div class="block">
@@ -64,6 +77,9 @@
           <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
           <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
           <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+          <a class="FlattrButton" style="display:none;" href="http://dogmazic.net/"></a>
+          <noscript><a href="http://flattr.com/thing/150302/Help-us-free-the-music" target="_blank">
+          <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript> 
           </form>
         </div>
       </div>
@@ -72,10 +88,10 @@
         <div class="block_content">
           <p><span class="icon">Q </span>Installer un nouveau forum </p>
           <p><span class="icon">Q </span>Installer un nouveau blog </p>
-          <p><span class="icon nok">S </span>Réouvrir les inscriptions</p>
+          <p><span class="icon">Q </span>Réouvrir les inscriptions</p>
           <p><span class="icon nok">S </span>Traduire les infos</p>
           <p><span class="icon nok">S </span>Donner accès aux morceaux</p>
-          <p><span class="icon nok">S </span>Mettre en place un Git des devs actuels</p>
+          <p><span class="icon">Q </span>Mettre en place un Git des devs actuels</p>
           <p><span class="icon nok">S </span>Installer <a href="http://www.loomio.org/">loomio</a></p>
           <p><span class="icon nok">S </span>Remonter les derniers messages du forum ici</p>
           <p><span class="icon nok">S </span>Remonter les derniers posts du blog ici</p>
