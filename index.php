@@ -8,7 +8,7 @@
     <script type="text/javascript" src="tmp_index_files/jquerycyclelite.js"></script>
   </head>
   <body>
-    <header><h1 id="title">DOGMAZIC</h1><img src="tmp_index_files/banniere_main.png" alt="head_banner" id="banner"/><div id="values"><span class="label">libre</span>  <span class="label">militante</span>  <span class="label">associative</span>  <span class="label">écléctique</span>  <span class="label">sans-pub</span> <span id="values_date">since_2004</span> </div></header>
+    <?php include('inc/header.php'); ?>
     <div id="main">
       <div id="flash">
         <h3>news flash</h3> <a id="more_identica" href="http://identi.ca/dogmazic">(identi.ca)</a>
@@ -42,6 +42,29 @@
           <p>Dogmazic est avant tout une archive avec plus de 50 000 morceaux.</p>
           <p>Pour le moment, ils ne sont pas accessible, mais on va bricoler un petit truc en attendant que la v3 soit prête !</p>
           <p>Un peu de patience, et désolé de vous priver de votre dose de musique libre ;-)</p>
+        </div>
+      </div>
+      <div class="block">
+        <h3>soutenir l'asso</h3>
+        <div class="block_content">
+          <p> Quelques pistes :</p>
+          <h4>Etre présent</h4>
+          <p>Il y a bien des façons de soutenir l'association, à commencer par participer aux <a href="http://forum.dogmazic.net"> forums</a>
+          <h4> Donner un coup de main</h4>
+          <p>On commence a avoir des outils pour travailler ensemble (comme notre repos <a href="https://github.com/MusiqueLibre/Dogmazic">git</a>), si vous êtes grapistes, programmeur, ou que vous souhaitez simplement aider, faites le nous savoir en nous <a href="http://blog.dogmazic.net/?page_id=285">contactant</a></p>
+          <h4>Faire un don</h4>
+          <p>L'association a environ 3000 euros  de frais fixes par an ! Et il ne s'agit là que des serveurs et de quelques dépenses de bases (assurance, banque...) ! Votre soutient est vraiment crucial !</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="cmd" value="_donations">
+          <input type="hidden" name="business" value="support@dogmazic.net">
+          <input type="hidden" name="lc" value="FR">
+          <input type="hidden" name="item_name" value="Association Musique Libre">
+          <input type="hidden" name="no_note" value="0">
+          <input type="hidden" name="currency_code" value="EUR">
+          <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+          <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+          <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+          </form>
         </div>
       </div>
       <div class="block">

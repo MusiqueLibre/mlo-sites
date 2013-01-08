@@ -2,7 +2,7 @@
 <HTML>
   <HEAD>
     <TITLE>Dogmazic v3</TITLE>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="tmp_index_files/presentation/style.css" />
     <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
   </HEAD>
   <BODY>
@@ -17,12 +17,12 @@
       </ul>
     </div>
     <div id="welcome">
-      <img alt='logov3' src="v3large.png" id="logo"/>
+      <img alt='logov3' src="tmp_index_files/presentation/v3large.png" id="logo"/>
     </div>
     <div id="main">
       <div id="intro">
         <h2 class="title">Présentation</h2>
-       <video src="renderlogo.ogg" id="video_pres" controls ></video>
+        
       </div>
       <div id="site">
 

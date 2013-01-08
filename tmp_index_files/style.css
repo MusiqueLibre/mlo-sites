@@ -115,9 +115,8 @@ header{
 .block{
   min-width:273px;
   max-width:395px;
-  margin:0 10px;
+  margin:20px 10px;
   float:left;
-  min-height:350px;
 }
 .block_content{
   padding:5px 10px;

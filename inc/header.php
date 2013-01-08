@@ -1,0 +1,1 @@
+<header><h1 id="title">DOGMAZIC</h1><img src="tmp_index_files/banniere_main.png" alt="head_banner" id="banner"/><div id="values"><span class="label">libre</span>  <span class="label">militante</span>  <span class="label">associative</span>  <span class="label">écléctique</span>  <span class="label">sans-pub</span> <span id="values_date">since_2004</span> </div></header>
