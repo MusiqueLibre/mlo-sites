@@ -1,0 +1,38 @@
+#  Generated or modified by Produhost (c)DRI 2005 at 2012 Dec 20 at 14:36:37 Pid=[26068]
+# AuthUserFile "/home/vnatrc/www/boutiquelibre/.htpaccess"
+# AuthGroupFile /dev/null
+# AuthName "Acces Restreint : identifiez-vous S.V.P."
+# AuthType Basic
+
+# <limit GET POST>
+# order deny,allow
+# deny from all
+# allow from 127.0.0.1
+# require user dev
+# satisfy any
+# </Limit>
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	RewriteCond %{SERVER_NAME} dogmazic\.net$ [NC]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/erreur404\.html
+	RewriteRule . /index.php [L]
+</IfModule>
+
+# BEGIN WordPress
+# <IfModule mod_rewrite.c>
+#	RewriteEngine On
+#	RewriteBase /
+#	RewriteCond %{REQUEST_FILENAME} !-f
+#	RewriteCond %{REQUEST_FILENAME} !-d
+#	RewriteRule . /index.php [L]
+#</IfModule>
+
+# END WordPress
+
+
+#  Generated or modified by Produhost (c)DRI 2005 at 2012 Dec 20 at 14:36:37 Pid=[26068]
