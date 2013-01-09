@@ -36,10 +36,10 @@ class UserIdentity extends CUserIdentity
 				$this->errorCode=self::ERROR_USERNAME_INVALID;
 			}
     }
-		else if($hashed_password !== $user->password && $hashed_password !== crypt($user->password, $hashed_password))
+		else if($hashed_password !== $user->password && $hashed_password !== crypt($this->password, $hashed_password))
     {
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-      }
+    }
 		else if($user->status==0&&Yii::app()->getModule('user')->loginNotActiv==false)
 			$this->errorCode=self::ERROR_STATUS_NOTACTIV;
 		else if($user->status==-1)

@@ -21,7 +21,13 @@ class RecoveryController extends Controller
 			    		if(isset($_POST['UserChangePassword'])) {
 							$form2->attributes=$_POST['UserChangePassword'];
 							if($form2->validate()) {
-								$find->password = Yii::app()->controller->module->encrypting($form2->password);
+                //adding crypt support
+                if(Yii::app()->getModule('user')->hash=='crypt')
+                  $salt = Randomness::blowfishSalt();
+                else
+                $salt="";
+								$find->password = Yii::app()->controller->module->encrypting($form2->password, $salt);
+								$find->salt = $salt;
 								$find->activkey=Yii::app()->controller->module->encrypting(microtime());
 								if ($find->status==0) {
 									$find->status = 1;
@@ -52,7 +58,7 @@ class RecoveryController extends Controller
 			    					array(
 			    						'{site_name}'=>Yii::app()->name,
 			    					));
-			    			$message = UserModule::t("You have requested the password recovery site {site_name}. To receive a new password, go to {activation_url} .",
+			    			$message = UserModule::t("You have requested the password recovery site {site_name}. To receive a new password, go to {activation_url} ",
 			    					array(
 			    						'{site_name}'=>Yii::app()->name,
 			    						'{activation_url}'=>$activation_url,
