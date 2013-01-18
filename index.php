@@ -6,28 +6,33 @@
     <LINK rel="stylesheet" type="text/css" href="tmp_index_files/style.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="tmp_index_files/jquerycyclelite.js"></script>
+    <script src="tmp_index_files/jquery.masonry.min.js"></script>
+<!-- Flattr API-->
     <script type="text/javascript">
 /* <![CDATA[ */
     (function() {
+
         var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
         s.type = 'text/javascript';
         s.async = true;
         s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
         t.parentNode.insertBefore(s, t);
+
     })();
 /* ]]> */</script>
   </head>
   <body>
+    <?php include 'inc/generalmenu.php'; ?>
     <?php include 'inc/header.php'; ?>
-    <div id="main">
       <div id="flash">
         <h3>news flash</h3> <a id="more_identica" href="http://identi.ca/dogmazic">(identi.ca)</a>
         <?php
-           include('tmp_index_files/rssreader/lib/rsslib.php');
-           echo  RSS_Display('http://identi.ca/api/statuses/user_timeline/247889.rss', 5, false, true);
+           require_once('inc/rsslib.php');
+           echo  rss_reader('http://identi.ca/api/statuses/user_timeline/247889.rss', 5, false, false );
         ?>
       </div>
       <h2 id="content-main-title">dogma reste ouvert pendant les travaux !!</h2>
+    <div id="main">
       <div class="block">
         <h3>dogmazic v3 ?</h3>
         <div class="block_content">
@@ -92,14 +97,20 @@
           <p><span class="icon nok">S </span>Traduire les infos</p>
           <p><span class="icon nok">S </span>Donner accès aux morceaux</p>
           <p><span class="icon">Q </span>Mettre en place un Git des devs actuels</p>
-          <p><span class="icon nok">S </span>Installer <a href="http://www.loomio.org/">loomio</a></p>
           <p><span class="icon nok">S </span>Remonter les derniers messages du forum ici</p>
           <p><span class="icon nok">S </span>Remonter les derniers posts du blog ici</p>
         </div>
       </div>
     </div>
     <script type="text/javascript">
-      $('#flash ul').cycle()
+      $(function(){  
+         $('#main').masonry({
+            itemSelector : '.block',
+            columnWidth : 20
+         });
+        //masonery
+        $('#flash ul').cycle();
+      });
     </script>
   </body>
 </html>
