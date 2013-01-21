@@ -1,0 +1,81 @@
+/*global*/
+/* Menu */
+#oe_wrapper li{
+  list-style: none;
+}
+  
+.oe_menu{
+  position:relative;
+  margin:0;
+  background:#333;
+}
+
+.oe_menu_list{
+  padding-top:2px;
+  position:relative;
+  display:inline-block;
+}
+.oe_menu_link,.oe_menu_link:visited{
+  background-color:#000;
+  color:#aaa;
+  text-decoration:none;
+  width:90px;
+  padding:0 10px;
+  margin:1px;
+}
+.oe_menu_list.selected{
+  background:#FF7F2A;
+  color:#fff;
+}
+.oe_sub_menu{
+  margin-right:10px;
+  color:#000;
+}
+#oe_menu .menu_more{
+  background:#555;
+}
+.oe_drop{
+  position:absolute;
+  top:-999px;
+  left:1px;
+  background:url('tmp_index_files/connect.png');
+  padding:10px 40px 10px 10px;
+  border-bottom: 5px solid #333333;
+  border-top: 2px solid #FF7F2A;
+}
+.oe_drop a{
+  text-decoration:none;
+  color:#222;
+  padding:2px 2px 2px 4px;
+  margin:2px;
+  font-size:12px;
+  display:block;
+}
+.oe_drop .oe_full{
+  width:100%;
+}
+.oe_drop a:hover{
+  background:#FF7F2A;
+  color:#fff;
+}
+.oe_heading{
+  color:#aaa;
+  font-size:16px;
+  margin-bottom:10px;
+  padding-bottom:6px;
+  border-bottom:1px solid #ddd;
+}
+#oe_menu .rsstitle{
+  font-size:1.1em;
+  border-bottom: 1px solid #f1c9af;
+  margin:0 0 10px 0;
+}
+#oe_menu .rsslist{
+  margin:0 0 15px 0;
+}
+#oe_menu .rssdate{
+  color:#555;
+}
+#oe_menu .rssdesc{
+  display:none;
+}

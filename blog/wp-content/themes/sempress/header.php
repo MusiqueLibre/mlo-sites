@@ -44,6 +44,8 @@
     echo ' | ' . sprintf( __( 'Page %s', 'sempress' ), max( $paged, $page ) );
 
   ?></title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://dogmazic.net/style_global.css">
 <link rel="profile" href="http://microformats.org/profile/specs" />
 <link rel="profile" href="http://microformats.org/profile/hatom" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -54,6 +56,7 @@
 </head>
 
 <body <?php body_class(); ?><?php sempress_blog_itemscope(); ?>>
+<?php include '../inc/generalmenu.php'; ?>
 <div id="page" class="hfeed h-feed">
 <?php do_action( 'before' ); ?>
   <header id="branding" role="banner">

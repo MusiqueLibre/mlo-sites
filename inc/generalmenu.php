@@ -1,171 +1,48 @@
+<?php header('Content-type: text/html; charset=utf-8'); ?>
 
-<style type="text/css">
-  /* Menu */
-  .oe_overlay{
-
-    background:#000;
-    opacity:0;
-    position:fixed;
-    top:0px;
-    left:0px;
-    width:100%;
-    height:100%;
-  }
-
-  .oe_menu{
-    list-style:none;
-    position:relative;
-    margin:0;
-    background:#333;
-  }
-
-  .oe_menu > li{
-    width:112px;
-    padding-bottom:2px;
-    position:relative;
-    display:inline-block;
-  }
-  .oe_menu > li > a{
-    display:block;
-    background-color:#000;
-    color:#aaa;
-    text-decoration:none;
-    font-weight:bold;
-    width:90px;
-    padding:0 10px;
-    margin:1px;
-  }
-  .oe_menu > li > a:hover,
-  .oe_menu > li.selected > a{
-    background:#fff;
-    color:#101010;
-    opacity:1.0;
-  }
-  .oe_wrapper .hovered > li > a{
-    background:#fff;
-    text-shadow:0px 0px 1px #FFF;
-  }
-  .oe_menu div{
-    position:absolute;
-    top:-999px;
-    left:1px;
-    background:#fff;
-    padding:10px 40px 10px 10px;
-    border-bottom: 5px solid #333333;
-  }
-  .oe_menu div ul li a{
-    text-decoration:none;
-    color:#222;
-    padding:2px 2px 2px 4px;
-    margin:2px;
-    font-size:12px;
-    display:block;
-  }
-  .oe_menu div .oe_full{
-    width:100%;
-  }
-  .oe_menu div ul li a:hover{
-    background:#FF7F2A;
-    color:#fff;
-  }
-  .oe_menu li ul{
-    list-style:none;
-    float:left;
-    margin-right:10px;
-  }
-  .oe_heading{
-    color:#aaa;
-    font-size:16px;
-    margin-bottom:10px;
-    padding-bottom:6px;
-    border-bottom:1px solid #ddd;
-  }
-  #oe_menu .rsstitle{
-    font-size:1.1em;
-    border-bottom: 1px solid #FF7F2A;
-  }
-  #oe_menu .rsslist{
-    margin:0 0 20px 0;
-  }
-  #oe_menu .rssdate{
-    display:none;
-  }
-  #menu_forum .rssdesc{
-    display:none;
-  }
-  #menu_forum .rssdate{
-    display:block;
-  }
-</style>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<!-- Flattr API-->
-    <script type="text/javascript">
-/* <![CDATA[ */
-    (function() {
-
-        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-        s.type = 'text/javascript';
-        s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-        t.parentNode.insertBefore(s, t);
-
-    })();
-/* ]]> */</script>
 <script type="text/javascript">
   $(function(){
     var $oe_menu        = $('#oe_menu ');
     var $oe_menu_items  = $oe_menu.children('li');
-    var $oe_overlay     = $('#oe_overlay');
     
+    //displaying drop down menu properly 
     $oe_menu_items.children('.oe_drop').each(function(){
       parentheight = $(this).parent().outerHeight();
       offset = $(this).offset();
-      $(this).css({'left' : -offset.left , 'top' : parentheight , 'display' : 'none' , 'width' : $(window).width() });
+      //get the window width and remoxe block's padding to have the proper size
+      window_width = $(window).width() - parseInt($(".oe_drop").css("padding-left").replace(/[^-\d\.]/g, '')) - parseInt($(".oe_drop").css("padding-right").replace(/[^-\d\.]/g, ''));
+      $(this).css({'left' : -offset.left , 'top' : parentheight , 'display' : 'none' , 'width' : window_width });
     });
 
-    $oe_menu_items.bind('mouseenter',function(){
+    $oe_menu_items.hover(function(){
         $(this).addClass('slided selected');
         $(this).parent().find('.oe_drop').slideUp(200);
         $(this).children('.oe_drop').css('z-index','9999').stop(true,true).slideDown(200,function(){
             $oe_menu_items.not('.slided').children('.oe_drop').hide();
             $(this).removeClass('slided');
-        });
-    }).bind('mouseleave',function(){
+        })
+    },function(){
         $(this).removeClass('selected').children('.oe_drop').css('z-index','1');
     });
 
-    $oe_menu.bind('mouseenter',function(){
+    $oe_menu.hover(function(){
         $(this).addClass('hovered');
-    }).bind('mouseleave',function(){
+    },function(){
         $(this).removeClass('hovered');
-        $oe_menu_items.children('.oe_drop').hide();
+        $oe_menu_items.children('.oe_drop').slideUp(200);
     })
   });
 </script>
-<div class="oe_wrapper">
-    <div id="oe_overlay" class="oe_overlay"></div>
+
+<div id="oe_wrapper">
     <ul id="oe_menu" class="oe_menu">
-        <li>
-            <a href="http://dogmazic.net">dogmazic.net</a>
+        <li class="oe_menu_list">
+            <a href="http://dogmazic.net" class="oe_menu_link">dogmazic.net</a>
         </li>
-        <li>
-            <a href="http://forum.dogmazic.net">Forum</a>
-            <div class="oe_drop" id="menu_forum">
-                <ul>
-                    <li class="oe_heading">
-                        Derniers messages :
-                    </li>
-                </ul>
-                <?php
-                  require_once('rsslib.php');
-                  echo  rss_reader('http://forum.dogmazic.net/index.php?p=/discussions/feed.rss', 6);
-                 ?>
-            </div>
-        </li>
-        <li>
-            <a href="http://blog.dogmazic.net">Blog</a>
+        <li class="oe_menu_list">
+            <a href="http://blog.dogmazic.net" class="menu_more oe_menu_link">Blog</a>
             <div class="oe_drop">
-                <ul>
+                <ul class="oe_sub_menu">
                     <li class="oe_heading">
                         Derniers articles :
                     </li>
@@ -176,19 +53,48 @@
                  ?>
             </div>
         </li>
-        <li>
-            <a href="https://github.com/MusiqueLibre/Dogmazic">Github</a>
+        <li class="oe_menu_list">
+            <a href="http://forum.dogmazic.net" class="oe_menu_link menu_more">Forum</a>
+            <div class="oe_drop" id="menu_forum">
+                <ul class="oe_sub_menu">
+                    <li class="oe_heading">
+                        Derniers messages :
+                    </li>
+                </ul>
+                <?php
+                  require_once('rsslib.php');
+                  echo  rss_reader('http://forum.dogmazic.net/index.php?p=/discussions/feed.rss', 5);
+                 ?>
+            </div>
         </li>
-        <li>
-            <a href="http://blog.dogmazic.net">Soutenir</a>
+        <li class="oe_menu_list">
+            <a href="http://en.irc2go.com/webchat/?net=freenode&room=dogmazic" target="_blank" class="oe_menu_link menu_more">#IRC <img alt="external link" src="http://www.dogmazic.net/tmp_index_files/ex_link.png" /></a>
+            <div class="oe_drop" id="menu_forum">
+                <ul class="oe_sub_menu">
+                    <li class="oe_heading">
+                        Discuter en direct :
+                    </li>
+                  <li>
+                      IRC, ou Instant Relay Chat, est un outil largement utilisé par la communauté libre. Pour vous iy connecter il vous faut un client IRC (irssi, xchat, smuxi...). Le lien du menu vous permet d'accéder à un client en ligne.
+                      <br/><br/>
+                      L'équipe, les membres, et les curieux de l'assos "Musique Libre !" sont présent sur <b>irc.freenode.net</b>, salon <b>#dogmazic</b>
+                  </li>
+                </ul>
+            </div>
+        </li>
+        <li class="oe_menu_list">
+              <a href="https://github.com/MusiqueLibre/Dogmazic" target="_blank" class="oe_menu_link">Github <img alt="external link" src="http://dogmazic.net/tmp_index_files/ex_link.png" /></a>
+        </li>
+        <li class="oe_menu_list">
+            <a href="http://blog.dogmazic.net" class="menu_more oe_menu_link">Soutenir</a>
             <div class="oe_drop">
-                <ul>
+                <ul class="oe_sub_menu">
                     <li class="oe_heading">
                       Faire un don
                     </li>
                 </ul>
-                <ul>
-                 <li>
+                <ul class="oe_sub_menu">
+                 <li class="oe_menu_list">
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
                     <input type="hidden" name="cmd" value="_donations">
                     <input type="hidden" name="business" value="support@dogmazic.net">
@@ -206,12 +112,12 @@
                 </ul>
             </div>
         </li>
-        <li>
-            <a href="http://user.dogmazic.net">Inscription</a>
+        <li class="oe_menu_list">
+            <a href="http://user.dogmazic.net" class="oe_menu_link">Inscription</a>
         </li>
     
-        <li>
-            <a href="http://blog.dogmazic.net/?page_id=285">Contact</a>
+        <li class="oe_menu_list">
+            <a href="http://blog.dogmazic.net/?page_id=285" class="oe_menu_link">Contact</a>
         </li>
     </ul>
 </div>

@@ -1,4 +1,5 @@
 <?php
+
 function rss_reader($feed_url,$limit=5,$want_title=true,$want_link=true){
   setlocale (LC_TIME, 'fr_FR.utf8','fra');
   $rss = new DOMDocument();
@@ -22,7 +23,7 @@ function rss_reader($feed_url,$limit=5,$want_title=true,$want_link=true){
     //
     //optionnal title
     if($want_title){
-      $title = utf8_decode($feed[$x]['title']);
+      $title = $feed[$x]['title'];
       if($want_link){
         $title = '<a href="'.$link.'" title="'.$title.'" class="rsstitle">'.$title.'</a>';
       }
@@ -32,8 +33,8 @@ function rss_reader($feed_url,$limit=5,$want_title=true,$want_link=true){
       $rss_result .= $title;
     }
 
-    $description = utf8_decode($feed[$x]['desc']);
-    $date = utf8_decode(strftime("%a %d %B %G, %k:%M", strtotime($feed[$x]['date'])));
+    $description = $feed[$x]['desc'];
+    $date = strftime("%a %d %B %G, %k:%M", strtotime($feed[$x]['date']));
     //adding the item
     $rss_result .= '<span class="rssdate">'.$date.'</span><span class="rssdesc">'.$description.'</span>';
 
