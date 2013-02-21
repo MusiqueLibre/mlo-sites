@@ -56,6 +56,30 @@ you're not familiar with yii.
 WARNING : You obviously need a proper vanilla installation since yiiuser
 wants to copy values into its database !
 
+PHING SYNC AND DEPLOY
+=====================
+
+Dogma is deployed in several environements (local/dev server/prod
+servers/github) and we want all of them to be in sync with their
+respective credentials. That's what "build.xlm" is made for. You need to
+install phing in order to use it
+(http://www.phing.info/trac/wiki/Users/Installation)
+
+You have to create a build.*your env*.properties (e.g. :
+build.local.properties) then launch the script with "phing -Denv=*your
+env*" (e.g. : phing -Denv=local). There's an example with the settings
+you need to fill in this folder.
+
+The proper line to upgrade the site is this one : 
+phing -Denv=prod && git push origin master && git ftp push && phing
+-Denv=local
+(I strongly suggest you to create an alias in .bashrc).
+The command above :
+1) switches the files to prod credentials
+2) pushes to github
+3) sync the website with ftp
+4) Goes back to local credential
+
 Use the work for your website
 =============================
 
