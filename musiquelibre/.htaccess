@@ -1,4 +1,0 @@
-AuthUserFile /var/www/html/virtualdomains/14846/musique-libre.org/archive/.htpasswd
-AuthName "Work in progress on the archive"
-AuthType Basic
-require valid-user
