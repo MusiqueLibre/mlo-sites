@@ -2,5 +2,5 @@ yiiuser/protected/config/*
 yiiuser/protected/runtime/*
 build.prod.properties
 build.local.properties
-./musiquelibre/*
+musiquelibre/*
 
