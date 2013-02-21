@@ -1,5 +1,5 @@
-user\.dogmazic\.net/protected/config/*
-user\.dogmazic\.net/protected/runtime/*
+user.dogmazic.net/protected/config/*
+user.dogmazic.net/protected/runtime/*
 build.prod.properties
 build.local.properties
 musiquelibre/*
