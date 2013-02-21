@@ -3,3 +3,4 @@ user.dogmazic.net/protected/runtime/*
 build.prod.properties
 build.local.properties
 musiquelibre/*
+user.dogmazic.net/index.php
