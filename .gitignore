@@ -1,3 +1,4 @@
 yiiuser/protected/config/*
 yiiuser/protected/runtime/*
-yiiuser/protected/components/copyValues.php
+build.prod.properties
+build.local.properties
