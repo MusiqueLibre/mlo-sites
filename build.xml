@@ -45,6 +45,7 @@
             <filterchain>
                 <replaceregexp>
                   <regexp pattern="defined" replace="//defined"/>
+                  <regexp pattern="////" replace="//"/>
                 </replaceregexp>
             </filterchain>
         </reflexive>
