@@ -16,7 +16,7 @@
   display:inline-block;
 }
 .oe_menu_link,.oe_menu_link:visited{
-  background-color:#000;
+  background:#555;
   color:#aaa;
   text-decoration:none;
   width:90px;
@@ -31,8 +31,14 @@
   margin-right:10px;
   color:#000;
 }
-#oe_menu .menu_more{
-  background:#555;
+.menu_more_button{
+  background:#7D4E2F;
+  border:0;
+  padding:0;
+  line-height:1em;
+  margin 0 8px 0 0;
+  width:20px;
+  color:#fff;
 }
 .oe_drop{
   position:absolute;
@@ -42,6 +48,7 @@
   padding:10px 40px 10px 10px;
   border-bottom: 5px solid #333333;
   border-top: 2px solid #FF7F2A;
+  z-index:9999;
 }
 .oe_drop a{
   text-decoration:none;

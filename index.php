@@ -41,7 +41,7 @@
         <div class="block_content">
           <p>Au cas où vous auriez loupé un épisode, le site dogmazic (<a href="http://blog.dogmazic.net">en savoir plus sur l'asso et le projet</a>) amorce actuellement la deuxième refonte majeure de son histoire.</p>
           <p>Bienvenue, donc, sur la page temporaire qui nous servira à communiquer pendant toute la durée des travaux.</p>
-          <p>D'ici très peu de temps dogmazic sera à même d'offrir une plateforme digne de ce nom pour tout les musiciens publiant sous licence libre.</p>
+          <p>D'ici très peu de temps dogmazic sera à même d'offrir une plateforme digne de ce nom pour tous les musiciens publiant sous licence libre.</p>
           <p> Restez connectés, de nouvelles infos seront publiées quotidiennement sur ce site !</p>
         </div>
       </div>
@@ -61,7 +61,7 @@
         <h3>musique</h3>
         <div class="block_content">
           <p>Dogmazic est avant tout une archive avec plus de 50 000 morceaux.</p>
-          <p>Pour le moment, ils ne sont pas accessible, mais on va bricoler un petit truc en attendant que la v3 soit prête !</p>
+          <p>Pour le moment, ils ne sont pas accessibles, mais on va bricoler un petit truc en attendant que la v3 soit prête !</p>
           <p>Un peu de patience, et désolé de vous priver de votre dose de musique libre ;-)</p>
         </div>
       </div>
@@ -72,9 +72,9 @@
           <h4>Etre présent</h4>
           <p>Il y a bien des façons de soutenir l'association, à commencer par participer aux <a href="http://forum.dogmazic.net"> forums</a>
           <h4> Donner un coup de main</h4>
-          <p>On commence a avoir des outils pour travailler ensemble (comme notre repos <a href="https://github.com/MusiqueLibre/Dogmazic">git</a>), si vous êtes grapistes, programmeur, ou que vous souhaitez simplement aider, faites le nous savoir en nous <a href="http://blog.dogmazic.net/?page_id=285">contactant</a></p>
+          <p>On commence à avoir des outils pour travailler ensemble (comme notre repos <a href="https://github.com/MusiqueLibre/Dogmazic">git</a>), si vous êtes graphiste, programmeur, ou que vous souhaitez simplement aider, faites le nous savoir en nous <a href="http://blog.dogmazic.net/?page_id=285">contactant</a></p>
           <h4>Faire un don</h4>
-          <p>L'association a environ 3000 euros  de frais fixes par an ! Et il ne s'agit là que des serveurs et de quelques dépenses de bases (assurance, banque...) ! Votre soutient est vraiment crucial !</p>
+          <p>L'association a environ 3000 euros  de frais fixes par an ! Et il ne s'agit là que des serveurs et de quelques dépenses de bases (assurance, banque...) ! Votre soutien est vraiment crucial !</p>
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
           <input type="hidden" name="cmd" value="_donations">
           <input type="hidden" name="business" value="support@dogmazic.net">

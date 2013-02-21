@@ -34,6 +34,8 @@ function rss_reader($feed_url,$limit=5,$want_title=true,$want_link=true){
     }
 
     $description = $feed[$x]['desc'];
+
+    date_default_timezone_set('Europe/Paris');
     $date = strftime("%a %d %B %G, %k:%M", strtotime($feed[$x]['date']));
     //adding the item
     $rss_result .= '<span class="rssdate">'.$date.'</span><span class="rssdesc">'.$description.'</span>';
