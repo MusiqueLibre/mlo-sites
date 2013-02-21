@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<project name="deployDogma" basedir="." default="main">
+  <target name="main">
+  <!--Get the proper config file for the building env with -Denv=local/prod-->
+  <property file="build.${env}.properties" />
+  <!-- Copy files and replace tokens with the proper value  -->
+    <copy todir="./user.dogmazic.net/protected/config/" overwrite="true">
+      <fileset dir="./user.dogmazic.net/protected/config_example">
+        <include name="*.php" />
+      </fileset>
+      <filterchain>
+        <replacetokens begintoken="@@" endtoken="@@">
+          <token key="yiiDBName" value="${yii_db}" />
+          <token key="yiiDBUser" value="${yii_db_user}" />
+          <token key="yiiDBPass" value="${yii_db_pass}" />
+          <token key="forumDBName" value="${forum_db}" />
+          <token key="forumDBUser" value="${forum_db_user}" />
+          <token key="forumDBPass" value="${forum_db_pass}" />
+          <token key="blogDBName" value="${blog_db}" />
+          <token key="blogDBUser" value="${blog_db_user}" />
+          <token key="blogDBPass" value="${blog_db_pass}" />
+        </replacetokens>
+      </filterchain>
+    </copy>
+    <!--Remove Debug mode for prod-->
+      <if>
+        <equals arg1="${env}" arg2="local" />
+      <then>
+        <reflexive>
+            <fileset dir="./user.dogmazic.net">
+                <include name="index.php" />
+            </fileset>
+            <filterchain>
+                <replaceregexp>
+                    <regexp pattern="//" replace=""/>
+                </replaceregexp>
+            </filterchain>
+        </reflexive>
+      </then>
+      <else>
+        <reflexive>
+            <fileset dir="./user.dogmazic.net">
+                <include name="index.php" />
+            </fileset>
+            <filterchain>
+                <replaceregexp>
+                  <regexp pattern="defined" replace="//defined"/>
+                </replaceregexp>
+            </filterchain>
+        </reflexive>
+      </else>
+      </if>   
+  </target>
+
+</project>
