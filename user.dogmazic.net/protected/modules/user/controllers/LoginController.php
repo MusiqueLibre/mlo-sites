@@ -13,11 +13,11 @@ class LoginController extends Controller
 			$model=new UserLogin;
 			// collect user input data
 			if(isset($_POST['UserLogin']))
-			{
+		 {
 				$model->attributes=$_POST['UserLogin'];
 				// validate user input and redirect to previous page if valid
 				if($model->validate()) {
-					$this->lastViset();
+					$this->createSession();
 					if (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
 						$this->redirect(Yii::app()->controller->module->returnUrl);
 					else
@@ -30,10 +30,17 @@ class LoginController extends Controller
 			$this->redirect(Yii::app()->controller->module->returnUrl);
 	}
 	
-	private function lastViset() {
-		$lastVisit = User::model()->notsafe()->findByPk(Yii::app()->user->id);
-    $lastVisit->lastvisit = time();
-    $lastVisit->save();
+	private function createSession() {
+		$user = User::model()->notsafe()->findByPk(Yii::app()->user->id);
+    //create the session token
+    $user->session = uniqid(crypt(rand()).'_', 'true');
+
+    //create the cookie with the user ID and the token
+    setcookie("sso_authent_mlo[id]", $user->id, time()+3600,"/", 'mlo.loc');
+    setcookie("sso_authent_mlo[token]", $user->session, time()+3600,"/", 'mlo.loc');
+    //strore the time of last visit
+    $user->lastvisit = time();
+    $user->save();
 	}
 
 }
