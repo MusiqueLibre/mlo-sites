@@ -87,3 +87,41 @@ It's released under GNU GPL v3 Licence, feel free to use any feature
 we've build for your own website. It's not properly pluginified yet, ask
 if you don't know where's what you looking for.
 
+This project is based on :
+==========================
+
+Thanks a lot to those people to make those wonderfull tools free and open-source
+and GPL or GPL-compatible. Without this, we can't do 1/1000th of what we
+do. Thank you for sharing. Big up to the tems and contributors of those
+projects :
+
+Every blogs and such are based on :
+http://wordpress.org
+
+The theme is a modification of the great : 
+http://wordpress.org/themes/sempress 
+
+The forum is based on the community version of :
+http://vanillaforums.org/
+
+The "decision" plugin is loosely based on
+http://vanillaforums.org/get/voting-plugin-1.1.1b
+
+The authentication and user portal (and few extra stuffs) is made with :
+http://www.yiiframework.com
+
+Dogmazic v3 is nothing but a big plugin of http://mediagoblin.org/
+This project super rocks, and makes a wonderfull framework to build
+multimedia stufs ! Special thanks to Joar, Elrond and Paroneayea for
+their patience and help. Thanks a lot to all contributors who helped
+
+The css is preprocessed with :
+http://lesscss.org/
+
+The deployement is made thanks to :
+http://www.phing.info
+
+We're using icons by Aleksandra Wolska http://handdrawing.olawolska.com/
+under CC-BY-SA 3.0
+
+Also we're using some pattern from subtlepatterns.com

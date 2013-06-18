@@ -18,6 +18,11 @@ class LoginController extends Controller
 				// validate user input and redirect to previous page if valid
 				if($model->validate()) {
 					$this->createSession();
+      //redirect to the remote page
+          if (isset($_GET['url'])){
+            header( 'Location:'.$_GET['url']);
+            die;
+          }
 					if (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
 						$this->redirect(Yii::app()->controller->module->returnUrl);
 					else
@@ -25,8 +30,13 @@ class LoginController extends Controller
 				}
 			}
 			// display the login form
-			$this->render('/user/login',array('model'=>$model));
+        $this->render('/user/login',array('model'=>$model));
 		} else
+      //redirect to the remote page
+      if (isset($_GET['url'])){
+            header( 'Location:'.$_GET['url']);
+            die;
+      }
 			$this->redirect(Yii::app()->controller->module->returnUrl);
 	}
 	
@@ -42,5 +52,10 @@ class LoginController extends Controller
     $user->lastvisit = time();
     $user->save();
 	}
+
+  public function actionRemoteLogin(){
+		$model=new UserLogin;
+    $this->renderPartial('/user/loginminimal',array('model'=>$model, 'url'=>$_GET['url']));
+  }
 
 }

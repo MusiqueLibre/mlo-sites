@@ -2655,3 +2655,960 @@ Stack trace:
 REQUEST_URI=/yiiuser/index.php/user/registration
 HTTP_REFERER=http://dogma.loc/yiiuser/index.php/user/registration
 ---
+2013/06/03 17:46:00 [error] [php] include(../inc/generalmenu.php): failed to open stream: No such file or directory (/var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/main.php:24)
+Stack trace:
+#0 /var/www/mlo/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/mlo/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/mlo/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/mlo/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/mlo/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/mlo/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/mlo/framework/web/CBaseController.php(126): require()
+#8 /var/www/mlo/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/mlo/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /var/www/mlo/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/mlo/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/mlo/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/mlo/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/main.php (24)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/main.php (24)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/column1.php (6)
+2013/06/03 18:01:51 [error] [php] Undefined index: sso_authent_mlo (/var/www/mlo/inc/general_menu.php:89)
+Stack trace:
+#0 /var/www/mlo/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/mlo/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/mlo/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/mlo/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/mlo/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/mlo/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/mlo/framework/web/CBaseController.php(126): require()
+#8 /var/www/mlo/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/mlo/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /var/www/mlo/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/mlo/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/mlo/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/mlo/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/
+in /var/www/mlo/inc/general_menu.php (89)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/main.php (21)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/column1.php (6)
+2013/06/03 18:05:25 [error] [php] Undefined index: sso_authent_mlo (/var/www/mlo/inc/general_menu.php:89)
+Stack trace:
+#0 /var/www/mlo/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/mlo/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/mlo/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/mlo/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/mlo/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/mlo/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/mlo/framework/web/CBaseController.php(126): require()
+#8 /var/www/mlo/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/mlo/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /var/www/mlo/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/mlo/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/mlo/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/mlo/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/
+in /var/www/mlo/inc/general_menu.php (89)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/main.php (21)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/column1.php (6)
+2013/06/03 18:06:45 [error] [php] Undefined index: sso_authent_mlo (/var/www/mlo/inc/general_menu.php:90)
+Stack trace:
+#0 /var/www/mlo/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/mlo/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/mlo/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/mlo/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/mlo/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/mlo/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/mlo/framework/web/CBaseController.php(126): require()
+#8 /var/www/mlo/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/mlo/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/controllers/SiteController.php(32): SiteController->render()
+#11 /var/www/mlo/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#12 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/mlo/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/mlo/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/mlo/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/
+in /var/www/mlo/inc/general_menu.php (90)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/main.php (21)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/column1.php (6)
+2013/06/03 18:09:24 [error] [php] array_key_exists() expects parameter 2 to be array, string given (/var/www/mlo/inc/general_menu.php:90)
+Stack trace:
+#0 /var/www/mlo/framework/web/CBaseController.php(126): require()
+#1 /var/www/mlo/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#2 /var/www/mlo/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#3 /var/www/mlo/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#4 /var/www/mlo/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 /var/www/mlo/framework/web/CBaseController.php(206): CContentDecorator->run()
+#6 /var/www/mlo/framework/web/CBaseController.php(300): SiteController->endWidget()
+#7 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/column1.php(6): SiteController->endContent()
+#8 /var/www/mlo/framework/web/CBaseController.php(126): require()
+#9 /var/www/mlo/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#10 /var/www/mlo/framework/web/CController.php(784): SiteController->renderFile()
+#11 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/controllers/SiteController.php(32): SiteController->render()
+#12 /var/www/mlo/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#13 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /var/www/mlo/framework/web/CController.php(286): SiteController->runAction()
+#15 /var/www/mlo/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#16 /var/www/mlo/framework/web/CWebApplication.php(282): SiteController->run()
+#17 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/
+in /var/www/mlo/inc/general_menu.php (90)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/main.php (21)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/views/layouts/column1.php (6)
+2013/06/03 18:11:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/jquery-2.0.1.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/jquery-2.0.1.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:11:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/normalize.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/normalize.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:11:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/normalize.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/normalize.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:11:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/less-1.3.3.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/less-1.3.3.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:11:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/style_global.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/style_global.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:11:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/less-1.3.3.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/less-1.3.3.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+---
+2013/06/03 18:11:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/global.less".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/global.less
+---
+2013/06/03 18:11:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:12:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/jquery-2.0.1.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/jquery-2.0.1.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:12:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/less-1.3.3.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/less-1.3.3.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:12:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/normalize.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/normalize.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:12:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/style_global.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/style_global.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:12:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/less-1.3.3.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/less-1.3.3.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:12:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+---
+2013/06/03 18:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/global.less".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/global.less
+---
+2013/06/03 18:12:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/less-1.3.3.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/less-1.3.3.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:12:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/style_global.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/style_global.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:12:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/normalize.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/normalize.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:12:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/jquery-2.0.1.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/jquery-2.0.1.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/normalize.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/normalize.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/style_global.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/style_global.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:13:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/less-1.3.3.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/less-1.3.3.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:13:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:13:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/global.less".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/global.less
+---
+2013/06/03 18:13:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+---
+2013/06/03 18:13:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/profile
+---
+2013/06/03 18:14:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/jquery-2.0.1.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/jquery-2.0.1.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:14:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/style_global.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/style_global.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:14:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/normalize.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/normalize.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:14:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/less-1.3.3.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/less-1.3.3.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:14:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/03 18:14:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/global.less".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/global.less
+---
+2013/06/03 18:14:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+---
+2013/06/05 17:00:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/less-1.3.3.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/less-1.3.3.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/05 17:00:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/jquery-2.0.1.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/jquery-2.0.1.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/05 17:00:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/normalize.css".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/normalize.css
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/05 17:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/05 17:00:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/js/less-1.3.3.min.js".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/js/less-1.3.3.min.js
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/05 17:00:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/05 17:00:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+---
+2013/06/05 17:00:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/css/global.less".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/css/global.less
+---
+2013/06/05 17:00:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/ex_link.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php/global_statics/images/ex_link.png
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php/user/login
+---
+2013/06/05 17:37:32 [error] [exception.CException] exception 'CException' with message 'Property "UserModule.loginRemoteUrl" is not defined.' in /var/www/mlo/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/mlo/framework/base/CModule.php(513): CComponent->__set('loginRemoteUrl', Array)
+#1 /var/www/mlo/framework/base/CModule.php(86): CModule->configure(Array)
+#2 /var/www/mlo/framework/YiiBase.php(206): CModule->__construct('user', NULL, Array)
+#3 /var/www/mlo/framework/base/CModule.php(282): YiiBase::createComponent('user.UserModule', 'user', NULL, Array)
+#4 /var/www/mlo/framework/web/CWebApplication.php(337): CModule->getModule('user')
+#5 /var/www/mlo/framework/web/CWebApplication.php(276): CWebApplication->createController('user/loginRemot...')
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/loginRemot...')
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#9 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/loginRemote
+---
+2013/06/05 17:38:20 [error] [exception.CException] exception 'CException' with message 'Property "UserModule.loginRemoteUrl" is not defined.' in /var/www/mlo/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/mlo/framework/base/CModule.php(513): CComponent->__set('loginRemoteUrl', Array)
+#1 /var/www/mlo/framework/base/CModule.php(86): CModule->configure(Array)
+#2 /var/www/mlo/framework/YiiBase.php(206): CModule->__construct('user', NULL, Array)
+#3 /var/www/mlo/framework/base/CModule.php(282): YiiBase::createComponent('user.UserModule', 'user', NULL, Array)
+#4 /var/www/mlo/framework/web/CWebApplication.php(337): CModule->getModule('user')
+#5 /var/www/mlo/framework/web/CWebApplication.php(276): CWebApplication->createController('user/remote/log...')
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/remote/log...')
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#9 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/remote/login
+---
+2013/06/05 17:39:29 [error] [exception.CException] exception 'CException' with message 'Property "UserModule.loginRemoteUrl" is not defined.' in /var/www/mlo/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/mlo/framework/base/CModule.php(513): CComponent->__set('loginRemoteUrl', Array)
+#1 /var/www/mlo/framework/base/CModule.php(86): CModule->configure(Array)
+#2 /var/www/mlo/framework/YiiBase.php(206): CModule->__construct('user', NULL, Array)
+#3 /var/www/mlo/framework/base/CModule.php(282): YiiBase::createComponent('user.UserModule', 'user', NULL, Array)
+#4 /var/www/mlo/framework/web/CWebApplication.php(337): CModule->getModule('user')
+#5 /var/www/mlo/framework/web/CWebApplication.php(276): CWebApplication->createController('user/remotelogi...')
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/remotelogi...')
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#9 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/remotelogin
+---
+2013/06/05 17:39:35 [error] [exception.CException] exception 'CException' with message 'Property "UserModule.loginRemoteUrl" is not defined.' in /var/www/mlo/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/mlo/framework/base/CModule.php(513): CComponent->__set('loginRemoteUrl', Array)
+#1 /var/www/mlo/framework/base/CModule.php(86): CModule->configure(Array)
+#2 /var/www/mlo/framework/YiiBase.php(206): CModule->__construct('user', NULL, Array)
+#3 /var/www/mlo/framework/base/CModule.php(282): YiiBase::createComponent('user.UserModule', 'user', NULL, Array)
+#4 /var/www/mlo/framework/web/CWebApplication.php(337): CModule->getModule('user')
+#5 /var/www/mlo/framework/web/CWebApplication.php(276): CWebApplication->createController('user/remotelogi...')
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/remotelogi...')
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#9 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/remotelogin
+---
+2013/06/05 17:40:12 [error] [exception.CException] exception 'CException' with message 'Property "UserModule.loginRemoteUrl" is not defined.' in /var/www/mlo/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/mlo/framework/base/CModule.php(513): CComponent->__set('loginRemoteUrl', Array)
+#1 /var/www/mlo/framework/base/CModule.php(86): CModule->configure(Array)
+#2 /var/www/mlo/framework/YiiBase.php(206): CModule->__construct('user', NULL, Array)
+#3 /var/www/mlo/framework/base/CModule.php(282): YiiBase::createComponent('user.UserModule', 'user', NULL, Array)
+#4 /var/www/mlo/framework/web/CWebApplication.php(337): CModule->getModule('user')
+#5 /var/www/mlo/framework/web/CWebApplication.php(276): CWebApplication->createController('user/remotelogi...')
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/remotelogi...')
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#9 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/remotelogin
+---
+2013/06/05 17:40:18 [error] [exception.CException] exception 'CException' with message 'Property "UserModule.loginRemoteUrl" is not defined.' in /var/www/mlo/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/mlo/framework/base/CModule.php(513): CComponent->__set('loginRemoteUrl', Array)
+#1 /var/www/mlo/framework/base/CModule.php(86): CModule->configure(Array)
+#2 /var/www/mlo/framework/YiiBase.php(206): CModule->__construct('user', NULL, Array)
+#3 /var/www/mlo/framework/base/CModule.php(282): YiiBase::createComponent('user.UserModule', 'user', NULL, Array)
+#4 /var/www/mlo/framework/web/CWebApplication.php(337): CModule->getModule('user')
+#5 /var/www/mlo/framework/web/CWebApplication.php(276): CWebApplication->createController('user/remotelogi...')
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/remotelogi...')
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#9 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/remotelogin
+---
+2013/06/05 17:42:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/remotelogin".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/remotelogi...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/remotelogin
+---
+2013/06/05 17:42:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/loginremote".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/loginremot...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/loginremote
+---
+2013/06/05 17:42:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/loginremote".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/loginremot...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/loginremote
+---
+2013/06/05 17:43:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/loginremote".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/loginremot...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/loginremote
+---
+2013/06/05 17:43:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/loginremote".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/loginremot...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/loginremote
+---
+2013/06/05 17:46:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/loginremote".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/loginremot...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/loginremote
+---
+2013/06/05 18:02:02 [error] [php] Undefined variable: model (/var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/views/user/loginminimal.php:10)
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(869): LoginController->renderFile()
+#1 /var/www/mlo/framework/web/CController.php(782): LoginController->renderPartial()
+#2 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(47): LoginController->render()
+#3 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionRemoteLogin()
+#4 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#6 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#7 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#8 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login/remotelogin
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/views/user/loginminimal.php (10)
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (47)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/05 18:10:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/user/login')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/user/login
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php?r=user/login/remotelogin
+---
+2013/06/06 10:50:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/loginremote".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/loginremot...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/loginremote
+---
+2013/06/06 10:50:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "remote".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('remote')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('remote')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login/remo...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login/remote
+---
+2013/06/06 10:52:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "type".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('type')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('type')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login/type...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login/type/minimal
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php?r=user/login/remotelogin
+---
+2013/06/06 10:58:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "type".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('type')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('type')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login/type...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login/type/minimal
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php?r=user/login/remotelogin
+---
+2013/06/06 10:58:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login?type=minimal".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('login?type=mini...')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('login?type=mini...')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login/logi...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login/login?type=minimal
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php?r=user/login/remotelogin
+---
+2013/06/06 10:59:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login?type=minimal".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('login?type=mini...')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('login?type=mini...')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login/logi...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login/login?type=minimal
+HTTP_REFERER=http://mlo.loc/user.dogmazic.net/index.php?r=user/login/remotelogin
+---
+2013/06/06 10:59:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "remote".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('remote')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('remote')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login/remo...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login/remote
+---
+2013/06/06 11:02:12 [error] [php] Undefined index: type (/var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php:31)
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (31)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 11:02:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/login:".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login:')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/user.dogmazic.net/index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login:
+---
+2013/06/06 11:02:43 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(34): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (34)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 11:03:06 [error] [php] Undefined index: type (/var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php:31)
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (31)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 11:11:18 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(34): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (34)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 11:15:03 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(34): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (34)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 11:16:13 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(34): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (34)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 11:27:40 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(34): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (34)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 11:29:43 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(38): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (38)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 11:58:15 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(38): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (38)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 12:00:30 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(38): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (38)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 12:02:24 [error] [php] Undefined variable: url (/var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php:56)
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login/remotelogin&url=http://mlo.loc/wordpress/
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (56)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 12:06:08 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(38): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (38)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 12:06:25 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(38): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (38)
+in /var/www/mlo/user.dogmazic.net/index.php (9)
+2013/06/06 13:57:13 [error] [php] Cannot modify header information - headers already sent by (output started at /var/www/mlo/framework/web/CController.php:793) (/var/www/mlo/framework/web/CHttpRequest.php:789)
+Stack trace:
+#0 /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php(40): LoginController->redirect()
+#1 /var/www/mlo/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#2 /var/www/mlo/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/mlo/framework/web/CController.php(286): LoginController->runAction()
+#4 /var/www/mlo/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#5 /var/www/mlo/framework/web/CWebApplication.php(282): LoginController->run()
+#6 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/mlo/user.dogmazic.net/index.php(9): CWebApplication->run()
+REQUEST_URI=/user.dogmazic.net/index.php?r=user/login&url=http://mlo.loc/wordpress
+in /var/www/mlo/Dogmazic-SRC/user.dogmazic.net/protected/modules/user/controllers/LoginController.php (40)
+in /var/www/mlo/user.dogmazic.net/index.php (9)

@@ -1,0 +1,99 @@
+/* glue: 0.3 hash: 9549f9dc79 */
+.sprite-icons-wifi-on,
+.sprite-icons-wifi-off,
+.sprite-icons-users,
+.sprite-icons-user-woman,
+.sprite-icons-user-man,
+.sprite-icons-user-boss,
+.sprite-icons-user-admin,
+.sprite-icons-timer,
+.sprite-icons-tick,
+.sprite-icons-tag,
+.sprite-icons-statistic,
+.sprite-icons-star,
+.sprite-icons-search,
+.sprite-icons-rss,
+.sprite-icons-right,
+.sprite-icons-remove,
+.sprite-icons-refresh,
+.sprite-icons-picture,
+.sprite-icons-photo-camera,
+.sprite-icons-notepad,
+.sprite-icons-movie,
+.sprite-icons-mail,
+.sprite-icons-locked,
+.sprite-icons-left,
+.sprite-icons-info,
+.sprite-icons-home,
+.sprite-icons-hint,
+.sprite-icons-help,
+.sprite-icons-graffikaorg,
+.sprite-icons-file,
+.sprite-icons-favourites,
+.sprite-icons-error,
+.sprite-icons-earth,
+.sprite-icons-download,
+.sprite-icons-disc-floopy,
+.sprite-icons-disc-cd,
+.sprite-icons-datebase,
+.sprite-icons-configuration,
+.sprite-icons-computer,
+.sprite-icons-comment,
+.sprite-icons-clock,
+.sprite-icons-clasp,
+.sprite-icons-calendar,
+.sprite-icons-bin-full,
+.sprite-icons-bin-empty,
+.sprite-icons-basket-full,
+.sprite-icons-basket-empty,
+.sprite-icons-alert,
+.sprite-icons-add{background-image:url('icons.png');background-repeat:no-repeat}
+.sprite-icons-wifi-on{background-position:0px 0px;width:24px;height:24px;}
+.sprite-icons-wifi-off{background-position:-24px 0px;width:24px;height:24px;}
+.sprite-icons-users{background-position:0px -24px;width:24px;height:24px;}
+.sprite-icons-user-woman{background-position:-24px -24px;width:24px;height:24px;}
+.sprite-icons-user-man{background-position:-48px 0px;width:24px;height:24px;}
+.sprite-icons-user-boss{background-position:-48px -24px;width:24px;height:24px;}
+.sprite-icons-user-admin{background-position:0px -48px;width:24px;height:24px;}
+.sprite-icons-timer{background-position:-24px -48px;width:24px;height:24px;}
+.sprite-icons-tick{background-position:-48px -48px;width:24px;height:24px;}
+.sprite-icons-tag{background-position:-72px 0px;width:24px;height:24px;}
+.sprite-icons-statistic{background-position:-72px -24px;width:24px;height:24px;}
+.sprite-icons-star{background-position:-72px -48px;width:24px;height:24px;}
+.sprite-icons-search{background-position:0px -72px;width:24px;height:24px;}
+.sprite-icons-rss{background-position:-24px -72px;width:24px;height:24px;}
+.sprite-icons-right{background-position:-48px -72px;width:24px;height:24px;}
+.sprite-icons-remove{background-position:-72px -72px;width:24px;height:24px;}
+.sprite-icons-refresh{background-position:-96px 0px;width:24px;height:24px;}
+.sprite-icons-picture{background-position:-96px -24px;width:24px;height:24px;}
+.sprite-icons-photo-camera{background-position:-96px -48px;width:24px;height:24px;}
+.sprite-icons-notepad{background-position:-96px -72px;width:24px;height:24px;}
+.sprite-icons-movie{background-position:0px -96px;width:24px;height:24px;}
+.sprite-icons-mail{background-position:-24px -96px;width:24px;height:24px;}
+.sprite-icons-locked{background-position:-48px -96px;width:24px;height:24px;}
+.sprite-icons-left{background-position:-72px -96px;width:24px;height:24px;}
+.sprite-icons-info{background-position:-96px -96px;width:24px;height:24px;}
+.sprite-icons-home{background-position:-120px 0px;width:24px;height:24px;}
+.sprite-icons-hint{background-position:-120px -24px;width:24px;height:24px;}
+.sprite-icons-help{background-position:-120px -48px;width:24px;height:24px;}
+.sprite-icons-graffikaorg{background-position:-120px -72px;width:24px;height:24px;}
+.sprite-icons-file{background-position:-120px -96px;width:24px;height:24px;}
+.sprite-icons-favourites{background-position:0px -120px;width:24px;height:24px;}
+.sprite-icons-error{background-position:-24px -120px;width:24px;height:24px;}
+.sprite-icons-earth{background-position:-48px -120px;width:24px;height:24px;}
+.sprite-icons-download{background-position:-72px -120px;width:24px;height:24px;}
+.sprite-icons-disc-floopy{background-position:-96px -120px;width:24px;height:24px;}
+.sprite-icons-disc-cd{background-position:-120px -120px;width:24px;height:24px;}
+.sprite-icons-datebase{background-position:-144px 0px;width:24px;height:24px;}
+.sprite-icons-configuration{background-position:-144px -24px;width:24px;height:24px;}
+.sprite-icons-computer{background-position:-144px -48px;width:24px;height:24px;}
+.sprite-icons-comment{background-position:-144px -72px;width:24px;height:24px;}
+.sprite-icons-clock{background-position:-144px -96px;width:24px;height:24px;}
+.sprite-icons-clasp{background-position:-144px -120px;width:24px;height:24px;}
+.sprite-icons-calendar{background-position:0px -144px;width:24px;height:24px;}
+.sprite-icons-bin-full{background-position:-24px -144px;width:24px;height:24px;}
+.sprite-icons-bin-empty{background-position:-48px -144px;width:24px;height:24px;}
+.sprite-icons-basket-full{background-position:-72px -144px;width:24px;height:24px;}
+.sprite-icons-basket-empty{background-position:-96px -144px;width:24px;height:24px;}
+.sprite-icons-alert{background-position:-120px -144px;width:24px;height:24px;}
+.sprite-icons-add{background-position:-144px -144px;width:24px;height:24px;}
