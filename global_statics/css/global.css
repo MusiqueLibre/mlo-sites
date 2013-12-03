@@ -33,7 +33,7 @@ h1,
 a,
 a:visited {
   text-decoration: none;
-  color: #9c4409;
+  color: #c5580f;
 }
 a:hover {
   text-decoration: underline;
@@ -68,7 +68,7 @@ h6 {
 }
 h1,
 h2 {
-  color: #cc590c;
+  color: #848484;
 }
 li {
   list-style: none;
@@ -76,7 +76,7 @@ li {
 }
 li:before {
   content: "\25B9\00A0";
-  color: #b15e27;
+  color: #cf7438;
   margin-left: -14px;
 }
 nav {
@@ -132,7 +132,7 @@ blockquote small:before {
   content: '\2014 \00A0';
 }
 summary {
-  color: #9c4409;
+  color: #c5580f;
   cursor: pointer;
 }
 summary:before {
@@ -148,7 +148,7 @@ summary:before {
   position: relative;
 }
 .tooltip:hover:after {
-  background: #eabea0;
+  background: #f2d9c8;
   border-radius: 5px;
   bottom: 26px;
   color: #fff;
@@ -161,7 +161,7 @@ summary:before {
 }
 .tooltip:hover:before {
   border: solid;
-  border-color: #eabea0 transparent;
+  border-color: #f2d9c8 transparent;
   border-width: 6px 6px 0 6px;
   bottom: 20px;
   content: "";
@@ -177,22 +177,22 @@ summary:before {
 }
 .titlization,
 .entry-title {
-  text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #cc590c;
-  -moz-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #cc590c;
-  -o-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #cc590c;
-  -m-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #cc590c;
-  -webkit-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #cc590c;
+  text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #848484;
+  -moz-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #848484;
+  -o-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #848484;
+  -m-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #848484;
+  -webkit-text-shadow: 2px 2px 0 #ffffff, 2px 3px 3px #848484;
   margin: 15px 0 5px 0;
 }
 .slight_highlight,
 dt {
   text-decoration: none;
-  color: #b15e27;
-  -webkit-text-shadow: 0 0 2px #cc590c;
-  -moz-text-shadow: 0 0 2px #cc590c;
-  -o-text-shadow: 0 0 2px #cc590c;
-  -ms-text-shadow: 0 0 2px #cc590c;
-  text-shadow: 0 0 2px #cc590c;
+  color: #cf7438;
+  -webkit-text-shadow: 0 0 2px #ee6e19;
+  -moz-text-shadow: 0 0 2px #ee6e19;
+  -o-text-shadow: 0 0 2px #ee6e19;
+  -ms-text-shadow: 0 0 2px #ee6e19;
+  text-shadow: 0 0 2px #ee6e19;
   font-size: 1em;
   /* usefull if applied to headers*/
 
@@ -218,15 +218,15 @@ dt {
   top: 10px;
 }
 .menu_more_button.lower_button {
-  border: 1px solid #b15e27;
+  border: 1px solid #cf7438;
 }
 .highlight,
 .Active,
 Highlight {
   /*Vanilla classes are camel case which sucks*/
 
-  border-bottom: 2px solid #cc590c;
-  border-right: 2px solid #cc590c;
+  border-bottom: 2px solid #848484;
+  border-right: 2px solid #848484;
 }
 .visual_block,
 .form_box,
@@ -239,7 +239,7 @@ article.attachment {
   -ms-box-shadow: 5px 5px 5px #999999;
   box-shadow: 5px 5px 5px #999999;
   background-color: #fff;
-  border: 1px solid #eabea0;
+  border: 1px solid #f2d9c8;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -268,27 +268,27 @@ input[type="button"] {
   border: none;
   /*.shadowyBox(@main_color_dark);*/
 
-  color: #cc590c;
+  color: #848484;
   margin: 0 4px;
   height: 33px;
   background-color: #fff;
-  border: 1px solid #eabea0;
+  border: 1px solid #f2d9c8;
 }
 .main_menu_more {
-  -webkit-box-shadow: 0 0 2px #9c4409;
-  -moz-box-shadow: 0 0 2px #9c4409;
-  -o-box-shadow: 0 0 2px #9c4409;
-  -ms-box-shadow: 0 0 2px #9c4409;
-  box-shadow: 0 0 2px #9c4409;
+  -webkit-box-shadow: 0 0 2px #c5580f;
+  -moz-box-shadow: 0 0 2px #c5580f;
+  -o-box-shadow: 0 0 2px #c5580f;
+  -ms-box-shadow: 0 0 2px #c5580f;
+  box-shadow: 0 0 2px #c5580f;
   border: none;
   font-size: 1em;
 }
 .button_thick {
-  -webkit-text-shadow: 1px 1px 1px #9c4409;
-  -moz-text-shadow: 1px 1px 1px #9c4409;
-  -o-text-shadow: 1px 1px 1px #9c4409;
-  -ms-text-shadow: 1px 1px 1px #9c4409;
-  text-shadow: 1px 1px 1px #9c4409;
+  -webkit-text-shadow: 1px 1px 1px #c5580f;
+  -moz-text-shadow: 1px 1px 1px #c5580f;
+  -o-text-shadow: 1px 1px 1px #c5580f;
+  -ms-text-shadow: 1px 1px 1px #c5580f;
+  text-shadow: 1px 1px 1px #c5580f;
   color: #fff;
 }
 .buttonified {
@@ -299,7 +299,7 @@ input[type="button"] {
   padding: 0 1px 0 6px;
 }
 .menu_container .enlighted {
-  border-bottom: 2px solid #cc590c;
+  border-bottom: 2px solid #848484;
 }
 button:hover,
 .buttonified:hover,
@@ -308,12 +308,12 @@ input[type="button"]:hover,
 input[type="submit"]:hover,
 .lower_button,
 .selected_button {
-  color: #cc590c;
-  -webkit-box-shadow: 4px 4px 4px #cc590c;
-  -moz-box-shadow: 4px 4px 4px #cc590c;
-  -o-box-shadow: 4px 4px 4px #cc590c;
-  -ms-box-shadow: 4px 4px 4px #cc590c;
-  box-shadow: 4px 4px 4px #cc590c;
+  color: #848484;
+  -webkit-box-shadow: 4px 4px 4px #ee6e19;
+  -moz-box-shadow: 4px 4px 4px #ee6e19;
+  -o-box-shadow: 4px 4px 4px #ee6e19;
+  -ms-box-shadow: 4px 4px 4px #ee6e19;
+  box-shadow: 4px 4px 4px #ee6e19;
   text-decoration: none;
 }
 #connection_button.lower_button {
@@ -322,55 +322,55 @@ input[type="submit"]:hover,
 #connection_button,
 .darker_button,
 .darker_button:visited {
-  background: #cc0c1f;
+  background: #ee192f;
   color: #fff;
   font-weight: 500;
 }
 #connection_button:hover,
 .darker_button:hover {
   color: #fff;
-  background: #cc590c;
-  -webkit-text-shadow: 2px 2px 2px #facaaa;
-  -moz-text-shadow: 2px 2px 2px #facaaa;
-  -o-text-shadow: 2px 2px 2px #facaaa;
-  -ms-text-shadow: 2px 2px 2px #facaaa;
-  text-shadow: 2px 2px 2px #facaaa;
-  -webkit-box-shadow: 0 0 5px #cc590c;
-  -moz-box-shadow: 0 0 5px #cc590c;
-  -o-box-shadow: 0 0 5px #cc590c;
-  -ms-box-shadow: 0 0 5px #cc590c;
-  box-shadow: 0 0 5px #cc590c;
+  background: #848484;
+  -webkit-text-shadow: 2px 2px 2px #fce6d7;
+  -moz-text-shadow: 2px 2px 2px #fce6d7;
+  -o-text-shadow: 2px 2px 2px #fce6d7;
+  -ms-text-shadow: 2px 2px 2px #fce6d7;
+  text-shadow: 2px 2px 2px #fce6d7;
+  -webkit-box-shadow: 0 0 5px #ee6e19;
+  -moz-box-shadow: 0 0 5px #ee6e19;
+  -o-box-shadow: 0 0 5px #ee6e19;
+  -ms-box-shadow: 0 0 5px #ee6e19;
+  box-shadow: 0 0 5px #ee6e19;
 }
 .hollow_button {
   border: none;
-  -webkit-box-shadow: 0 0 2px #9c4409;
-  -moz-box-shadow: 0 0 2px #9c4409;
-  -o-box-shadow: 0 0 2px #9c4409;
-  -ms-box-shadow: 0 0 2px #9c4409;
-  box-shadow: 0 0 2px #9c4409;
+  -webkit-box-shadow: 0 0 2px #c5580f;
+  -moz-box-shadow: 0 0 2px #c5580f;
+  -o-box-shadow: 0 0 2px #c5580f;
+  -ms-box-shadow: 0 0 2px #c5580f;
+  box-shadow: 0 0 2px #c5580f;
   font-size: 1em;
 }
 /*###2 : LOGO*/
 #main_header {
   background: #fff;
   margin-bottom: 40px;
-  -webkit-box-shadow: 4px 4px 4px #f37c2d;
-  -moz-box-shadow: 4px 4px 4px #f37c2d;
-  -o-box-shadow: 4px 4px 4px #f37c2d;
-  -ms-box-shadow: 4px 4px 4px #f37c2d;
-  box-shadow: 4px 4px 4px #f37c2d;
+  -webkit-box-shadow: 4px 4px 4px #f3985b;
+  -moz-box-shadow: 4px 4px 4px #f3985b;
+  -o-box-shadow: 4px 4px 4px #f3985b;
+  -ms-box-shadow: 4px 4px 4px #f3985b;
+  box-shadow: 4px 4px 4px #f3985b;
 }
 #logo_box {
   text-align: center;
   font-size: 1em;
-  color: #cc590c;
+  color: #848484;
   display: inline-block;
   width: 150px;
   vertical-align: middle;
 }
 .logo_box_img,
 .site_logo {
-  background: #f37c2d;
+  background: #f3985b;
 }
 #site-title {
   font-size: 120px;
@@ -378,12 +378,12 @@ input[type="submit"]:hover,
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
-  color: #f37c2d;
-  -webkit-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #f37c2d;
-  -moz-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #f37c2d;
-  -o-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #f37c2d;
-  -ms-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #f37c2d;
-  text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #f37c2d;
+  color: #f3985b;
+  -webkit-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #f3985b;
+  -moz-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #f3985b;
+  -o-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #f3985b;
+  -ms-text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #f3985b;
+  text-shadow: 3px 3px 0 #ffffff, 6px 6px 0 #f3985b;
   display: inline-block;
   -webkit-transform: skew(-20deg, 0deg);
   -moz-transform: skew(-20deg, 0deg);
@@ -392,15 +392,15 @@ input[type="submit"]:hover,
   transform: skew(-20deg, 0deg);
   margin: 0 20px;
   vertical-align: text-bottom;
-  border-left: 1px solid #eabea0;
-  border-right: 1px solid #eabea0;
+  border-left: 1px solid #f2d9c8;
+  border-right: 1px solid #f2d9c8;
   padding: 0 30px;
   vertical-align: middle;
 }
 #home_link {
   /*color given to the link inside the site title*/
 
-  color: #f37c2d;
+  color: #f3985b;
 }
 #home_link:hover {
   text-decoration: none;
@@ -564,21 +564,21 @@ textarea {
   top: -999px;
   background: url("../images/subtle_dots.png");
   padding: 0 40px 10px 10px;
-  border-left: 5px solid #cc590c;
-  -webkit-box-shadow: 2px 2px 2px #723d19;
-  -moz-box-shadow: 2px 2px 2px #723d19;
-  -o-box-shadow: 2px 2px 2px #723d19;
-  -ms-box-shadow: 2px 2px 2px #723d19;
-  box-shadow: 2px 2px 2px #723d19;
+  border-left: 5px solid #848484;
+  -webkit-box-shadow: 2px 2px 2px #965224;
+  -moz-box-shadow: 2px 2px 2px #965224;
+  -o-box-shadow: 2px 2px 2px #965224;
+  -ms-box-shadow: 2px 2px 2px #965224;
+  box-shadow: 2px 2px 2px #965224;
   z-index: 9000;
 }
 /*###3 : GLOBAL MENU*/
 #global_menu_container {
-  border-bottom: 5px solid #f37c2d;
+  border-bottom: 5px solid #f3985b;
   background: url("../images/subtle_dots.png");
 }
 .global_menu_list.selected {
-  background: #cc590c;
+  background: #848484;
   color: #fff;
 }
 .global_sub_menu_container a {
@@ -590,7 +590,7 @@ textarea {
   display: block;
 }
 .global_sub_menu_container a:hover {
-  background: #cc590c;
+  background: #848484;
   color: #fff;
 }
 .global_menu_title {
@@ -602,7 +602,7 @@ textarea {
 }
 #global_menu .rsstitle {
   font-size: 1.1em;
-  border-bottom: 1px solid #facaaa;
+  border-bottom: 1px solid #fce6d7;
   margin: 0 0 10px 0;
 }
 #global_menu .rsstitle:before {
@@ -629,15 +629,16 @@ textarea {
   margin: 0 8px;
 }
 .global_menu_list h1 {
+  color: #848484;
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
-  color: #cc590c;
-  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
-  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
-  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
-  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cc590c;
+  color: #ee6e19;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ee6e19;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ee6e19;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ee6e19;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ee6e19;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ee6e19;
 }
 .global_menu_link,
 .global_menu_link:visited {
@@ -646,20 +647,20 @@ textarea {
   text-decoration: none;
   padding: 2px 8px;
   margin: 0 5px 0 10px;
-  -webkit-box-shadow: 4px 4px 4px #cc590c;
-  -moz-box-shadow: 4px 4px 4px #cc590c;
-  -o-box-shadow: 4px 4px 4px #cc590c;
-  -ms-box-shadow: 4px 4px 4px #cc590c;
-  box-shadow: 4px 4px 4px #cc590c;
+  -webkit-box-shadow: 4px 4px 4px #ee6e19;
+  -moz-box-shadow: 4px 4px 4px #ee6e19;
+  -o-box-shadow: 4px 4px 4px #ee6e19;
+  -ms-box-shadow: 4px 4px 4px #ee6e19;
+  box-shadow: 4px 4px 4px #ee6e19;
   position: relative;
   top: 0;
 }
 .global_menu_link:hover {
-  -webkit-box-shadow: 5px 5px 5px #facaaa;
-  -moz-box-shadow: 5px 5px 5px #facaaa;
-  -o-box-shadow: 5px 5px 5px #facaaa;
-  -ms-box-shadow: 5px 5px 5px #facaaa;
-  box-shadow: 5px 5px 5px #facaaa;
+  -webkit-box-shadow: 5px 5px 5px #fce6d7;
+  -moz-box-shadow: 5px 5px 5px #fce6d7;
+  -o-box-shadow: 5px 5px 5px #fce6d7;
+  -ms-box-shadow: 5px 5px 5px #fce6d7;
+  box-shadow: 5px 5px 5px #fce6d7;
 }
 #global_menu_contact:before {
   content: '';
@@ -697,7 +698,7 @@ textarea {
 }
 #main_nav,
 .sub_nav {
-  border-top: 1px solid #eabea0;
+  border-top: 1px solid #f2d9c8;
   z-index: 3;
   position: relative;
   width: 100%;
@@ -711,7 +712,7 @@ textarea {
 #main_nav .menu-item {
   display: inline-block;
   padding: 0 10px;
-  border-right: 1px solid #eabea0;
+  border-right: 1px solid #f2d9c8;
   margin: 0 8px;
   vertical-align: middle;
 }
@@ -720,7 +721,7 @@ textarea {
   top: -9999px;
 }
 #main_nav .sub_menu_container {
-  border-top: 1px solid #6c6c6c;
+  border-top: 1px solid #848484;
 }
 .sub_menu_container .main_nav_link {
   margin: 15px 0;
@@ -744,14 +745,14 @@ textarea {
   border-bottom-width: 0;
 }
 .has_sub_li:hover .has_sub_link {
-  border-left: 4px solid #cc590c;
+  border-left: 4px solid #848484;
 }
 .bellow_sub_menu {
   position: absolute;
   left: 9999px;
-  border-top: 2px solid #eabea0;
+  border-top: 2px solid #f2d9c8;
   width: 300px;
-  border-left: 5px solid #cc590c;
+  border-left: 5px solid #848484;
   background: #fff;
 }
 .bellow_sub_menu .menu_item {
@@ -771,7 +772,7 @@ textarea {
 #sidebar {
   float: right;
   width: 24%;
-  border: 1px solid #6c6c6c;
+  border: 1px solid #848484;
   background: url("../images/subtle_dots.png");
   padding: 10px;
   -webkit-box-sizing: border-box;
@@ -779,12 +780,12 @@ textarea {
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-box-shadow: 4px 4px 4px #6c6c6c;
-  -moz-box-shadow: 4px 4px 4px #6c6c6c;
-  -o-box-shadow: 4px 4px 4px #6c6c6c;
-  -ms-box-shadow: 4px 4px 4px #6c6c6c;
-  box-shadow: 4px 4px 4px #6c6c6c;
-  border: 1px solid #eabea0;
+  -webkit-box-shadow: 4px 4px 4px #848484;
+  -moz-box-shadow: 4px 4px 4px #848484;
+  -o-box-shadow: 4px 4px 4px #848484;
+  -ms-box-shadow: 4px 4px 4px #848484;
+  box-shadow: 4px 4px 4px #848484;
+  border: 1px solid #f2d9c8;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -798,15 +799,15 @@ textarea {
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
-  color: #b15e27;
-  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #b15e27;
-  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #b15e27;
-  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #b15e27;
-  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #b15e27;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #b15e27;
+  color: #cf7438;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cf7438;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cf7438;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cf7438;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cf7438;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #cf7438;
 }
 .sidebar_title a {
-  color: #b15e27;
+  color: #cf7438;
 }
 #sidebar input {
   width: auto;

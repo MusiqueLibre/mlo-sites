@@ -80,7 +80,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   text-align: center;
 }
 footer.entry-meta {
-  border-top: 1px solid #9c4409;
+  border-top: 1px solid #c5580f;
   background: url("../images/subtle_dots.png");
   padding: 10px 34px;
   color: #555555;
@@ -91,7 +91,7 @@ footer.entry-meta {
   border-radius: 5px;
 }
 .entry-title a {
-  color: #cc590c;
+  color: #ee6e19;
 }
 .entry-meta {
   clear: both;

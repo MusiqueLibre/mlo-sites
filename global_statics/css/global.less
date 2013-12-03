@@ -59,7 +59,7 @@ h1,h2,h3,h4,h5,h6{
   color:@text_color_light;
 }
 h1, h2{
-  color:@main_color;
+  color:@main_gray;
 }
 li{
   list-style: none;
@@ -170,11 +170,11 @@ summary:before{
 
 .titlization,/*TODO : utiliser cette classe plutôt que dupliquer le style un peu partout*/
 .entry-title{
-  text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
-  -moz-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
-  -o-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
-  -m-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
-  -webkit-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_color;
+  text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_gray;
+  -moz-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_gray;
+  -o-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_gray;
+  -m-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_gray;
+  -webkit-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_gray;
   margin: 15px 0 5px 0;
 }
 .slight_highlight, dt{
@@ -203,8 +203,8 @@ summary:before{
   border:1px solid @main_color_desat;
 }
 .highlight, .Active, Highlight{ /*Vanilla classes are camel case which sucks*/
-  border-bottom: 2px solid @main_color;
-  border-right: 2px solid @main_color;
+  border-bottom: 2px solid @main_gray;
+  border-right: 2px solid @main_gray;
 }
 .visual_block, /* Standard class to apply this style for blocs to visually pop out*/
 .form_box,/* Mg specific (to avoid overriding all templates)*/
@@ -229,7 +229,7 @@ button, .buttonified, .BigButton, input[type="submit"], input[type="button"],{/*
   vertical-align: middle;
   border: none;
   /*.shadowyBox(@main_color_dark);*/
-  color: @main_color;
+  color: @main_gray;
   margin:0 4px;
   height:33px;
   background-color: #fff;
@@ -253,10 +253,10 @@ button, .buttonified, .BigButton, input[type="submit"], input[type="button"],{/*
   padding: 0 1px 0 6px;
 }
 .menu_container .enlighted{
-  border-bottom: 2px solid @main_color;
+  border-bottom: 2px solid @main_gray;
 }
 button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover,input[type="submit"]:hover, .lower_button, .selected_button{
-  color:@main_color;
+  color:@main_gray;
   .shadowyBox(@main_color);
   text-decoration: none;
 }
@@ -271,7 +271,7 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover,i
 }
 #connection_button:hover, .darker_button:hover{
   color:#fff;
-  background:@main_color;
+  background:@main_gray;
   .shadowyText(@main_color_light, 2px, 2px);
   .shadowyBox(@main_color, 0, 5px);
 }
@@ -289,7 +289,7 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover,i
 #logo_box{
   text-align:center;
   font-size: 1em;
-  color:@main_color;
+  color:@main_gray;
   display: inline-block;
   width: 150px;
   vertical-align: middle;
@@ -477,7 +477,7 @@ textarea {
   top:-999px;
   background:@pattern_menus;
   padding: 0 40px 10px 10px;
-  border-left: 5px solid @main_color;
+  border-left: 5px solid @main_gray;
   .shadowyBox(@main_color_desat_dark, 2px, 2px); 
   z-index:9000;
 }
@@ -487,7 +487,7 @@ textarea {
   background: @pattern_menus;
 }
 .global_menu_list.selected{
-  background:@main_color;
+  background:@main_gray;
   color:#fff;
 }
 .global_sub_menu_container a{
@@ -499,7 +499,7 @@ textarea {
   display:block;
 }
 .global_sub_menu_container a:hover{
-  background:@main_color;
+  background:@main_gray;
   color:#fff;
 }
 .global_menu_title{
@@ -540,7 +540,7 @@ textarea {
   margin: 0 8px;
 }
 .global_menu_list h1{
-  color: @main_color;
+  color: @main_gray;
   .titlization(1px, @main_color);
 }
 .global_menu_link,.global_menu_link:visited{
@@ -625,14 +625,14 @@ textarea {
   border-bottom-width: 0;
 }
 .has_sub_li:hover .has_sub_link{
-  border-left: 4px solid @main_color;
+  border-left: 4px solid @main_gray;
 }
 .bellow_sub_menu{
   position: absolute;
   left:9999px;
   border-top: 2px solid @main_color_desat_light;
   width: 300px;
-  border-left: 5px solid @main_color;
+  border-left: 5px solid @main_gray;
   background: #fff;
 }
 .bellow_sub_menu .menu_item{
