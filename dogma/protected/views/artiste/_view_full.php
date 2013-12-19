@@ -7,7 +7,7 @@
 
 
 <div class="content">
-  <?php echo CHtml::image($data->logo, "image du grouep", "image du grouep", array("class"=>"artiste_image")); ?>
+  <?php echo CHtml::image($data->logo, "image du groupe", array("class"=>"artiste_image")); ?>
   <dl>
 	<dt><?php echo CHtml::encode($data->getAttributeLabel('date_insc')); ?>:</dt>
 	<dd><?php echo CHtml::encode(date("d/m/Y",$data->date_insc)); ?></dd>
