@@ -98,7 +98,6 @@
             <filterchain>
                 <replaceregexp>
                   <regexp pattern='\.css"' replace='.less"'/>
-                  <regexp pattern='"stylesheet"' replace='"stylesheet/less"'/>
                 </replaceregexp>
             </filterchain>
         </reflexive>
@@ -149,7 +148,6 @@
             <filterchain>
                 <replaceregexp>
                   <regexp pattern='\.less"' replace='.css"'/>
-                  <regexp pattern="stylesheet/less" replace="stylesheet"/>
                 </replaceregexp>
             </filterchain>
         </reflexive>
