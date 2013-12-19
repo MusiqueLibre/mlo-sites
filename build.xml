@@ -22,6 +22,18 @@
         </replacetokens>
       </filterchain>
   </copy>
+  <copy todir="${old_dogma_folder}/protected/config/" overwrite="true">
+    <fileset dir="${old_dogma_folder}/protected/config_example">
+        <include name="*.php" />
+      </fileset>
+      <filterchain>
+        <replacetokens begintoken="@@" endtoken="@@">
+          <token key="oldogmaDBName" value="${old_dogma_db}" />
+          <token key="oldogmaDBUser" value="${old_dogma_db_user}" />
+          <token key="olddogmaDBPass" value="${old_dogma_db_pass}" />
+        </replacetokens>
+      </filterchain>
+  </copy>
   <copy tofile="./wp-content/plugins/mlo_sso_authent/mlo_sso_config.php" file="./wp-content/plugins/mlo_sso_authent/mlo_sso_config-example.php"  overwrite="true">
       <filterchain>
         <replacetokens begintoken="@@" endtoken="@@">
@@ -122,6 +134,8 @@
         <exec command="lessc global.less global.css" dir="./global_statics/css" />
         <exec command="lessc global_wp.less global_wp.css" dir="./global_statics/css" />
         <exec command="lessc global_vanilla.less global_vanilla.css" dir="./global_statics/css" />
+        <exec command="lessc global_yii.less global_yii.css" dir="./global_statics/css" />
+        <exec command="lessc old_dogma.less old_dogma.css" dir="./global_statics/css" />
         <exec command="lessc normalize.less normalize.css" dir="./global_statics/css" />
         <echo message="Commiting changes made by phing before pushing" />
         <exec command="git add -A" dir="." passthru="true"/>

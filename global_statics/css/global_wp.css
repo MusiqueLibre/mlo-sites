@@ -16,21 +16,29 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 /*#1 : LESS GLOBAL VARIABLES*/
 /*a very subtle blue*/
+/* SUB-SITES COLORS */
+/*Services*/
 /*BG*/
 /*Text colors*/
 /*#1 : LESS MIXINS*/
-/* =Header
--------------------------------------------------------------- */
-#author-info {
-  margin-bottom: 30px;
+/* Color override */
+#wordpress_site #site_title {
+  color: #217844;
 }
-.page-header h1,
-#author-description h2 {
-  margin-top: 0;
-  padding-top: 0;
+#wordpress_site #main_content_title {
+  background-color: #185832;
 }
-#logo_box {
-  margin-bottom: 20px;
+#sidebar_header {
+  background: #217844;
+}
+.side_filter_title {
+  background: #217844;
+}
+.side_filter:nth-child(3) .side_filter_title {
+  background: #041009;
+}
+.side_filter:nth-child(2) .side_filter_title {
+  background: #185832;
 }
 /* =Structure
 -------------------------------------------------------------- */
@@ -76,56 +84,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 /* =Content
 -------------------------------------------------------------- */
-.post_thumbnail {
-  text-align: center;
-}
-footer.entry-meta {
-  border-top: 1px solid #c5580f;
-  background: url("../images/subtle_dots.png");
-  padding: 10px 34px;
-  color: #555555;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-}
-.entry-title a {
-  color: #ee6e19;
-}
-.entry-meta {
-  clear: both;
-  display: block;
+.index_list_columns a {
+  font-size: 1em;
+  /*prevents this em to be added to h1 em*/
+
 }
 .entry-header {
   margin-bottom: 10px;
-}
-#content nav .nav-previous {
-  float: left;
-  width: 50%;
-}
-#content nav .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-#nav-above:after {
-  clear: both;
-}
-#nav-below,
-#nav-above {
-  clear: both;
-  padding: 20px;
-  background: none;
-}
-#nav-above {
-  padding-top: 0;
-}
-.nav-previous,
-.nav-next,
-.previous-image,
-.next-image {
-  font-size: 12px;
 }
 .page-link {
   clear: both;
@@ -134,16 +99,6 @@ footer.entry-meta {
 .page .edit-link {
   clear: both;
   display: block;
-}
-/*TODO : Replace by Salvattore*/
-.home article {
-  float: left;
-  max-width: 48%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .entry-meta,
 .tag-archive-meta,
@@ -160,6 +115,14 @@ footer.entry-meta {
 .format-audio .entry-title a,
 .format-image .entry-title a {
   font-size: 25px;
+}
+.wp-post-image {
+  float: left;
+  margin: 0 20px 20px 0;
+  max-width: 33%;
+}
+#article_header_meta {
+  float: right;
 }
 /* 404 page */
 .error404 .widget {
@@ -181,14 +144,6 @@ footer.entry-meta {
   background: #eee;
   display: block;
   padding: 1em;
-}
-/* Image Attachments */
-.image-attachment div.entry-meta {
-  float: left;
-}
-.image-attachment nav {
-  float: right;
-  margin: 0 0 1em 0;
 }
 .image-attachment .entry-content {
   clear: both;
@@ -266,11 +221,6 @@ footer.entry-meta {
 }
 .format-quote:before {
   content: "\f036";
-}
-.infinite-scroll #nav-below,
-.infinite-scroll #nav-above,
-.infinite-scroll #colophon {
-  display: none;
 }
 /* =Images
 -------------------------------------------------------------- */

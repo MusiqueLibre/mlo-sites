@@ -1,0 +1,78 @@
+/*#1 : LESS GLOBAL VARIABLES*/
+/*a very subtle blue*/
+/* SUB-SITES COLORS */
+/*Services*/
+/*BG*/
+/*Text colors*/
+/*#1 : LESS MIXINS*/
+.pager .hidden {
+  display: none;
+}
+.pager ul,
+.sorter ul {
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  border-bottom: 9px solid #e0e0e0;
+}
+.pager li,
+.sorter li {
+  margin: 0;
+  padding: 0;
+}
+.pager li,
+.sorter li {
+  display: inline-block;
+  padding: 2px 3px;
+}
+.pager li:before,
+.sorter li:before {
+  margin: 0;
+  content: "";
+}
+.pager .page.selected a {
+  cursor: default;
+  color: #6a6a6a;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.pager,
+.sorter {
+  width: 50%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.items + .pager {
+  float: none;
+  /*unfloat the footer pager which is alone*/
+
+  clear: both;
+  text-align: right;
+  width: 100%;
+}
+.sorter a:after {
+  content: " \25B3";
+  display: inline-block;
+  width: 15px;
+  margin-left: 10px;
+  line-height: 1em;
+}
+.sorter a:hover:after {
+  content: " \25B2";
+}
+.sorter .asc:after {
+  content: " \25B2";
+}
+.sorter .asc:hover:after {
+  content: " \25BD";
+}
+.sorter .desc:after {
+  content: " \25BC";
+}
+.sorter .desc:hover:after {
+  content: " \25B3";
+}
