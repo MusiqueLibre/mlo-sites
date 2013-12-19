@@ -126,20 +126,20 @@
                 <a href="http://musique-libre.org" id="menu_blog" class="menu_more global_menu_link">Blog</a>
             </li>
             <li class="global_menu_list">
-                <a href="http://musique-libre.org/forum" id="menu_doc" class="global_menu_link menu_more">Documentation</a>
+                <a href="http://musique-libre.org/doc" id="menu_doc" class="global_menu_link menu_more">Documentation</a>
             </li>
             <li class="global_menu_list">
                 <a href="http://musique-libre.org/forum" id="menu_forum" class="global_menu_link menu_more">Forum</a>
             </li>
             <li class="global_menu_list">
-                <a href="http://musique-libre.org/forum" id="menu_dev" class="global_menu_link menu_more">Blog des developpeurs</a>
+                <a href="http://musique-libre.org/dev" id="menu_dev" class="global_menu_link menu_more">Blog des developpeurs</a>
             </li>
             <li class="global_menu_list non_site">
                 <a href="http://musique-libre.org/?page_id=285" class="global_menu_contact" id="global_menu_contact">Contact</a>
             </li>
-            <li class="global_menu_list non_site" id="menu_contact">
+            <!--li class="global_menu_list non_site" id="menu_contact">
                 <a  style="width:auto" type="button">Soutenir/Adhérer</a>
-            </li>
+            </li-->
         </ul>
     </nav>
   </section>
