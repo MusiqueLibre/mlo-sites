@@ -58,7 +58,7 @@
               <p class="service_menu_description">
                 Musique déposées sur les versions 1 et 2 de dogmazic entre 2004 et 2012
               </p>
-              <a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Archives Dogmazic 2004/2012</a>
+              <a class="service_menu_lien" href="http://www.musique-libre.org/dogma">Archives Dogmazic 2004/2012</a>
 
             </li>
             <li class="service_menu_item bullet_less">
