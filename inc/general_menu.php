@@ -33,7 +33,7 @@
         </section>
       </div>
       <div id="secondary_logo_box">
-        <div id="secondary_logo_box_title">Archive Dogmazic <br/>2004-2012</div>
+        <div id="secondary_logo_box_title"><img title="Services" src="/global_statics/images/logos/logos_services.jpg"></div>
         <button type="button" class="header_button menu_more_button">les services publics <span class="pretty_font">ml&nbsp;!&nbsp;</span></button>
         <div class="header_sub_button">...</div>
         <section class="sub_menu_container">

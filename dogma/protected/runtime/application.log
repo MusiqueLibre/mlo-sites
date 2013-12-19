@@ -5004,3 +5004,337 @@ Stack trace:
 REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
 HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
 ---
+2013/12/19 19:36:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/logos/logos_services.jpg".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/global_statics/images/logos/logos_services.jpg
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:36:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:36:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:36:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/logos/logos_services.jpg".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/global_statics/images/logos/logos_services.jpg
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:36:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:36:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/logos/logos_services.jpg".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/global_statics/images/logos/logos_services.jpg
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:37:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/logos/logos_services.jpg".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/global_statics/images/logos/logos_services.jpg
+---
+2013/12/19 19:37:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+---
+2013/12/19 19:37:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/logos/logos_services.jpg".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/global_statics/images/logos/logos_services.jpg
+---
+2013/12/19 19:37:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+---
+2013/12/19 19:37:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "global_statics".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('global_statics')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('global_statics')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('site/global_sta...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dogma/index.php/site/global_statics/images/logos/logos_services.jpg
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:37:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "global_statics".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('global_statics')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('global_statics')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('site/global_sta...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dogma/index.php/site/global_statics/images/logos/logos_services.jpg
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "global_statics".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('global_statics')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('global_statics')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('site/global_sta...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dogma/index.php/site/global_statics/images/logos/logos_services.jpg
+---
+2013/12/19 19:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+---
+2013/12/19 19:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "global_statics".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('global_statics')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('global_statics')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('site/global_sta...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dogma/index.php/site/global_statics/images/logos/logos_services.jpg
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:37:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "global_statics".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('global_statics')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('global_statics')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('site/global_sta...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dogma/index.php/site/global_statics/images/logos/logos_services.jpg
+---
+2013/12/19 19:38:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "global_statics/images/logos/logos_services.jpg".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('global_statics/...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/global_statics/images/logos/logos_services.jpg
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:38:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "global_statics".' in /var/www/mlo/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/mlo/framework/web/CController.php(270): CController->missingAction('global_statics')
+#1 /var/www/mlo/framework/web/CWebApplication.php(282): CController->run('global_statics')
+#2 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('site/global_sta...')
+#3 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/dogma/index.php/site/global_statics/images/logos/logos_services.jpg
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:41:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+---
+2013/12/19 19:41:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:41:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:41:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:41:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+---
+2013/12/19 19:41:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:42:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:42:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:42:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+---
+2013/12/19 19:42:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:43:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:43:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
+2013/12/19 19:43:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+---
+2013/12/19 19:43:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/logos/dogmav3.png".' in /var/www/mlo/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/mlo/framework/web/CWebApplication.php(141): CWebApplication->runController('images/logos/do...')
+#1 /var/www/mlo/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/mlo/dogma/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/dogma/index.php/images/logos/dogmav3.png
+HTTP_REFERER=http://mlo.loc/dogma/index.php/site/login
+---
