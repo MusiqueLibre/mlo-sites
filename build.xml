@@ -92,7 +92,7 @@
             </filterchain>
         </reflexive>
         <reflexive>
-          <fileset dir="${old_dogma_folder}/protected/views/layout/">
+          <fileset dir="${old_dogma_folder}/protected/views/layouts/">
                 <include name="main.php.php" />
             </fileset>
             <filterchain>
@@ -143,7 +143,7 @@
             </filterchain>
         </reflexive>
         <reflexive>
-          <fileset dir="${old_dogma_folder}/protected/views/layout/">
+          <fileset dir="${old_dogma_folder}/protected/views/layouts/">
                 <include name="main.php.php" />
             </fileset>
             <filterchain>
