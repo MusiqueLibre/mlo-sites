@@ -28,8 +28,8 @@
       </fileset>
       <filterchain>
         <replacetokens begintoken="@@" endtoken="@@">
-          <token key="oldogmaDBName" value="${old_dogma_db}" />
-          <token key="oldogmaDBUser" value="${old_dogma_db_user}" />
+          <token key="olddogmaDBName" value="${old_dogma_db}" />
+          <token key="olddogmaDBUser" value="${old_dogma_db_user}" />
           <token key="olddogmaDBPass" value="${old_dogma_db_pass}" />
         </replacetokens>
       </filterchain>

@@ -58,10 +58,10 @@ return array(
 		*/
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=old_dogma',
+			'connectionString' => 'mysql:host=localhost;dbname=@@olddogmaDBName@@',
 			'emulatePrepare' => true,
-			'username' => 'old_dogma',
-			'password' => 'old_dogma',
+			'username' => '@@olddogmaDBUser@@',
+			'password' => '@@olddogmaDBPass@@',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(
