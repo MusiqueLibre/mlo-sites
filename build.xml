@@ -91,6 +91,17 @@
               </replaceregexp>
             </filterchain>
         </reflexive>
+        <reflexive>
+          <fileset dir="${old_dogma_folder}/protected/views/layout/">
+                <include name="main.php.php" />
+            </fileset>
+            <filterchain>
+                <replaceregexp>
+                  <regexp pattern='\.css"' replace='.less"'/>
+                  <regexp pattern='"stylesheet"' replace='"stylesheet/less"'/>
+                </replaceregexp>
+            </filterchain>
+        </reflexive>
       </then>
       <else>
         <reflexive>
@@ -129,6 +140,17 @@
               <replaceregexp>
                 <regexp pattern="${esc_local_url}" replace="${prod_url}"/>
               </replaceregexp>
+            </filterchain>
+        </reflexive>
+        <reflexive>
+          <fileset dir="${old_dogma_folder}/protected/views/layout/">
+                <include name="main.php.php" />
+            </fileset>
+            <filterchain>
+                <replaceregexp>
+                  <regexp pattern='\.less"' replace='.css"'/>
+                  <regexp pattern="stylesheet/less" replace="stylesheet"/>
+                </replaceregexp>
             </filterchain>
         </reflexive>
         <exec command="lessc global.less global.css" dir="./global_statics/css" />
