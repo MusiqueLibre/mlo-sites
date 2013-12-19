@@ -93,7 +93,7 @@
         </reflexive>
         <reflexive>
           <fileset dir="${old_dogma_folder}/protected/views/layouts/">
-                <include name="main.php.php" />
+                <include name="main.php" />
             </fileset>
             <filterchain>
                 <replaceregexp>
@@ -144,7 +144,7 @@
         </reflexive>
         <reflexive>
           <fileset dir="${old_dogma_folder}/protected/views/layouts/">
-                <include name="main.php.php" />
+                <include name="main.php" />
             </fileset>
             <filterchain>
                 <replaceregexp>
