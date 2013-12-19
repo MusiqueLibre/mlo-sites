@@ -321,10 +321,10 @@ function sempress_widgets_init() {
   register_sidebar( array(
     'name' => __( 'Sidebar 1', 'sempress' ),
     'id' => 'sidebar-1',
-    'before_widget' => '<section id="%1$s" class="widget %2$s">',
-    'after_widget' => "</section>",
-    'before_title' => '<h1 class="widget-title">',
-    'after_title' => '</h1>',
+    'before_widget' => '<li id="%1$s" class="bullet_less side_filter %2$s">',
+    'after_widget' => "</div></li>",
+    'before_title' => '<h2 class="side_filter_title"><span class="make_vertical">',
+    'after_title' => '</span></h2><div class="side_filter_content">',
   ) );
 
   register_sidebar( array(
@@ -380,27 +380,27 @@ function sempress_content_nav( $nav_id ) {
   global $wp_query;
 
   ?>
-  <nav id="<?php echo $nav_id; ?>">
+  <div id="<?php echo $nav_id; ?>">
     <h1 class="assistive-text section-heading"><?php _e( 'Post navigation', 'sempress' ); ?></h1>
 
   <?php if ( is_single() ) : // navigation links for single posts ?>
 
-    <?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'sempress' ) . '</span> %title' ); ?>
-    <?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'sempress' ) . '</span>' ); ?>
+    <?php previous_post_link( '<div class="nav_previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'sempress' ) . '</span> %title' ); ?>
+    <?php next_post_link( '<div class="nav_next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'sempress' ) . '</span>' ); ?>
 
   <?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
     <?php if ( get_next_posts_link() ) : ?>
-    <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'sempress' ) ); ?></div>
+    <div class="nav_previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'sempress' ) ); ?></div>
     <?php endif; ?>
 
     <?php if ( get_previous_posts_link() ) : ?>
-    <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'sempress' ) ); ?></div>
+    <div class="nav_next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'sempress' ) ); ?></div>
     <?php endif; ?>
 
   <?php endif; ?>
 
-  </nav><!-- #<?php echo $nav_id; ?> -->
+  </div><!-- #<?php echo $nav_id; ?> -->
   <?php
 }
 endif; // sempress_content_nav

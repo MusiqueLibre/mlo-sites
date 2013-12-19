@@ -2,15 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-ca">
 <head>
    <?php include '../inc/global_statics.php'; ?>
+   <script type="text/javascript">
+     function init(){
+       //dothings
+     }
+   </script>
    <?php include '../inc/vanilla_statics.php'; ?>
    <?php $this->RenderAsset('Head'); ?>
     
 </head>
 <body id="<?php echo $BodyIdentifier; ?>" class="<?php echo $this->CssClass; ?>">
-   <?php include '../inc/general_menu.php'; ?>
-		<header class="Banner" id="main_header">
-      <?php include '../inc/global_logo.php'; ?>
-      <h1 id="site-title"><a id="home_link"  href="<?php echo Url('/'); ?>"><span><?php echo Gdn_Theme::Logo(); ?></span></a></h1>
+		<header id="main_header">
+    <?php
+      $site_title = "Forum";
+      $site_description = "Discussion autour de la musique libre";
+      include '../inc/general_menu.php'; 
+    ?>
      <nav id="main_nav" class="menu_container">
           <?php  $this->RenderAsset('Panel'); ?>
      </nav>	

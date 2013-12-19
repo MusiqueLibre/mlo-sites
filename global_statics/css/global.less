@@ -11,30 +11,39 @@ GENERIC STYLES
   MENUS
     GLOBAL MENU
     MAIN NAV
+  SITE TITLE
   HOME
   COLUMNS
 
 */
 
+@font-face {
+  font-family: "pacifico";
+  src: url("../fonts/Pacifico.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 @import url('less/variables.less');
 
 /*###1 : NAKED TAGS*/
 body{
-  background-image: url("../images/worn_dots.png");
+  /*background-image: url("../images/worn_dots.png");*/
   color: @text_color_main;
   background-color: @main_bg_color;
+  font-family: Liberation Sans,"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 p{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Liberation Sans,"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-h1,a, a:visited{
+a, a:visited{
   text-decoration: none;
-  color: @main_color_dark;
+  color: @complementary;
 }
 a:hover{
   text-decoration: underline;
 }
 h1{
+  color: @main_color_dark;
   font-size: 2.1em;
 }
 h2{
@@ -59,19 +68,23 @@ h1,h2,h3,h4,h5,h6{
   color:@text_color_light;
 }
 h1, h2{
-  color:@main_gray;
+  color:@main_grey;
 }
 li{
   list-style: none;
   margin: 5px 0;
 }
 li:before{
- content: "\25B9\00A0";
+ content: "\25E3\00A0";
  color: @main_color_desat;
  margin-left: -14px;
 }
 nav{ 
-  background: @pattern_menus;
+  background: #666;
+}
+nav a, nav a:visited{ 
+  color: #fff;
+  font-weight: 700;
 }
 /*Reseting the list styles when they are a list of links in a navigation element*/
 nav ul{
@@ -84,15 +97,9 @@ nav li{
 }
 nav li:before{
   content: "";
+  margin: 0;
 }
 
-@font-face {
-  font-family: "FontAwesome";
-  src: url("./font/fontawesome-webfont.eot");
-  src: url("./font/fontawesome-webfont.eot?#iefix") format("eot"), url("./font/fontawesome-webfont.woff") format("woff"), url("./font/fontawesome-webfont.ttf") format("truetype"), url("./font/fontawesome-webfont.svg#FontAwesome") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 
 blockquote {
   font-family: Georgia,"Times New Roman",Times,serif;
@@ -129,14 +136,17 @@ summary{
   cursor: pointer;
 }
 summary:before{
-  content: '\25BF \00A0';
+  content: '\25BC \00A0';
 }
 .open summary:before{
-  content: '\25B5 \00A0';
+  content: '\2A3A \00A0';
 }
 /*dt styling is with generic classes*/
 
 /*###1 GENERIC CLASSES*/
+.pretty_font{
+  font-family: pacifico;
+}
 .tooltip{
     display: inline;
     position: relative;
@@ -168,13 +178,12 @@ summary:before{
   margin-left: 0; 
 }
 
-.titlization,/*TODO : utiliser cette classe plutôt que dupliquer le style un peu partout*/
-.entry-title{
-  text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_gray;
-  -moz-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_gray;
-  -o-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_gray;
-  -m-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_gray;
-  -webkit-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_gray;
+.titlization{
+  text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_grey;
+  -moz-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_grey;
+  -o-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_grey;
+  -m-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_grey;
+  -webkit-text-shadow: 2px 2px 0 #fff, 2px 3px 3px @main_grey;
   margin: 15px 0 5px 0;
 }
 .slight_highlight, dt{
@@ -194,34 +203,25 @@ summary:before{
   position:relative;
   .transition(top, 0.5s, ease);
   top:0px;
-  width:30px;
 }
 .lower_button{
   top:10px;
 }
 .menu_more_button.lower_button{
-  border:1px solid @main_color_desat;
+  .shadowyBox(@subtle_grey, 0, 2px);
 }
 .highlight, .Active, Highlight{ /*Vanilla classes are camel case which sucks*/
-  border-bottom: 2px solid @main_gray;
-  border-right: 2px solid @main_gray;
-}
-.visual_block, /* Standard class to apply this style for blocs to visually pop out*/
-.form_box,/* Mg specific (to avoid overriding all templates)*/
-article.page,/* WP specific (to avoid overriding all templates, but it can be a good idea here)*/
-article.post,
-article.attachment {
-  .shadowyBox(#999, 5px, 5px);
-  background-color: #fff;
-  border: 1px solid @main_color_desat_light;
-  .rounded(5px);
-  margin: 0 1% 2% 1%;
-  padding: 0 20px 20px 20px; 
+  border-bottom: 2px solid @main_grey;
+  border-right: 2px solid @main_grey;
 }
 main img{
   .shadowyBox(#ddd, 3px, 12px);
 }
 
+/*###2 SITES COLORS*/
+.dogma_archive_main_color{
+  color: @main_color;
+}
 /*###1 SPECIFIC STYLING*/
 /*###2 BUTTONS AND VISUAL ELEMENTS*/ 
 button, .buttonified, .BigButton, input[type="submit"], input[type="button"],{/*buttonified exists to make a link looks like a button, when <button> is not semantic*/
@@ -229,21 +229,9 @@ button, .buttonified, .BigButton, input[type="submit"], input[type="button"],{/*
   vertical-align: middle;
   border: none;
   /*.shadowyBox(@main_color_dark);*/
-  color: @main_gray;
+  color: @main_grey;
   margin:0 4px;
-  height:33px;
-  background-color: #fff;
-  border: 1px solid @main_color_desat_light;
-}
-.main_menu_more{
-  .shadowyBox(@main_color_dark, 0, 2px);
-  border:none;
-  font-size:1em;
-
-}
-.button_thick{
-  .shadowyText(@main_color_dark, 1px, 1px);
-  color: #fff;
+  background-color: transparent;
 }
 .buttonified{
   display:inline-block;
@@ -252,64 +240,117 @@ button, .buttonified, .BigButton, input[type="submit"], input[type="button"],{/*
   height:30px;
   padding: 0 1px 0 6px;
 }
-.menu_container .enlighted{
-  border-bottom: 2px solid @main_gray;
+.main_menu_more{
+  border:none;
+  font-size:1em;
+  .shadowyBox(@main_color);
+}
+.button_thick{
+  color: #less_subtle_grey;
+  .shadowyText(@main_grey, 1px, 1px);
+  .shadowyBox(@main_grey, 1px, 1px);
+  padding: 0 15px;
 }
 button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover,input[type="submit"]:hover, .lower_button, .selected_button{
-  color:@main_gray;
-  .shadowyBox(@main_color);
+  color:@main_grey;
   text-decoration: none;
+  background: #fff url("../images/triangles_micro.png") repeat-y;
 }
-#connection_button.lower_button{
-  display: none;
-}
-
-#connection_button, .darker_button, .darker_button:visited{
-  background:@analog1;
-  color: #fff;
-  font-weight: 500;
-}
-#connection_button:hover, .darker_button:hover{
-  color:#fff;
-  background:@main_gray;
-  .shadowyText(@main_color_light, 2px, 2px);
-  .shadowyBox(@main_color, 0, 5px);
+button:active, .buttonified:active, .BigButton:active, input[type="button"]:active,input[type="submit"]:active, .lower_button, .selected_button{
+  .shadowyBox(#333, 0, 2px);
 }
 .hollow_button{
   border: none;
-  .shadowyBox(@main_color_dark, 0, 2px);
-  font-size: 1em;
+  font-size: 1.3em;
+}
+.menu_container .enlighted{
+  border-bottom: 2px solid @main_grey;
 }
 /*###2 : LOGO*/
-#main_header{
-  background: #fff;
-  margin-bottom: 40px;
-  .shadowyBox(@main_color_lighter);
+#main_header_upper{
+  height: 89px;
+  background: url("../images/spect_light.png");
+  .shadowyBox(#DDD);
+  margin-bottom: 20px;
+}
+#main_header_right{
+  background: url("../images/triangles_r.png") top right no-repeat;
+  width: ~"calc(100% - 460px)";
+  border-bottom: 21px solid #e6e6e6;
+  box-shadow: 0 9px 0 #e0e0e0;
+  -moz-box-shadow: 0 9px 0 #e0e0e0;
+  -webkit-box-shadow: 0 9px 0 #e0e0e0;
+  -ms-box-shadow: 0 9px 0 #e0e0e0;
+  -o-box-shadow: 0 9px 0 #e0e0e0;
+}
+#logos, #secondary_logo_box, #main_header_right, #main_player_container,
+#logo_box, #secondary_logo_box, #main_connection{/*make sure the headr elements stay in one line*/
+  float:left;
+  height: @top_menu_height;
+}
+#secondary_logo_box_title, #logo_box_title{
+  height: @top_menu_height;
+  font-family: pacifico;
+  text-align:right;
 }
 #logo_box{
-  text-align:center;
-  font-size: 1em;
-  color:@main_gray;
-  display: inline-block;
-  width: 150px;
-  vertical-align: middle;
+  width: 210px;
+  color: #555;
+  background: url("../images/triangles.png") no-repeat;
 }
+#logo_box_title{
+  font-size: 29px;
+}
+#secondary_logo_box{
+  width: 250px;
+  background-image: url("../images/triangles_logo_alt_l.png"), url("../images/triangles_logo_alt_r_up.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top right;
+}
+#secondary_logo_box_title{
+  padding: 0 10px;
+  font-size: 20px;
+}
+.header_button .pretty_font, .header_sub_button .pretty_font{
+  font-size: 18px;
+}
+.header_button{
+  height: 20px;
+  line-height: 20px;
+  color: #eee;
+  font-size: 13px;
+  background-color: #555;
+  background-image: url("../images/button_triangle_left.png"), 
+                    url("../images/button_triangle_right.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top right;
+  text-align: right;
+  .shadowyText(#eee, 0, 2px);
+  font-family: sans;
+  margin: 0;/*canceling buttons styles*/
+  width: 100%;
+}
+#secondary_logo_box .header_button{
+  background-color: @service_main_color;
+}
+#secondary_logo_box .header_button:hover{
+  background-color: #fff;
+}
+.header_sub_button{
+  height: 9px;
+  text-align:center;
+  background-color: #999;
+  line-height: 0;
+  font-weight: bold;
+}
+/*
 .logo_box_img, .site_logo{
   background: @main_color_lighter;
-}
-
-#site-title{
-  font-size:120px;
-  position:relative;
-  .titlization(3px, @main_color_lighter);
-  display:inline-block;
-  .skew(-20deg);
-  margin: 0 20px;
-  vertical-align: text-bottom;
-  border-left: 1px solid @main_color_desat_light;
-  border-right: 1px solid @main_color_desat_light;
-  padding: 0 30px;
-  vertical-align: middle;
+}*/
+#main_connection{
+  text-align: right;
+  width: ~"calc(100% - 470px)";
+  float: right;
 }
 
 #home_link{/*color given to the link inside the site title*/
@@ -323,6 +364,139 @@ button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover,i
   margin: 0;
   vertical-align: middle;
 }
+/***************************************
+player
+***************************************/
+#main_player_container .header_button{
+  background-color: @main_color;
+}
+#main_player{
+  max-width: 750px;
+  min-width: 450px ;
+  display: inline-block;
+  margin: 0 0 0 20px;
+}
+#main_player_media_html{
+  display: none;
+}
+#page_playlist{
+  display:none;
+}
+#playlist_button{
+  width: auto;
+  height: 50px;
+  font-size: 20px;
+}
+.player_control, .player_track_title, .player_time_control{
+  margin: 4px 0
+}
+.empty + #playlist_button{
+  display: none;
+}
+.player_control{
+  display: inline-block;
+}
+
+.player_control button{
+  padding: 0 5px;
+  cursor: pointer;
+  font-size: 30px;
+  height: auto;
+  color:@main_color_desat;
+  .shadowyText(@main_color_dark, 1px, 0);
+}
+#player_mute_buttons button{
+  font-size: 1em;
+}
+.control_bar, .playhead{
+  margin: 0;
+  padding: 0;
+}
+.player_control .inactive{
+  display: none;
+}
+.player_control.button{
+  padding: 5px;
+  border: 1px solid @main_color_desat;
+}
+.pptitle{
+  border_bottom : 1px solid  @main_color_desat_light;
+  font-family: helvetica;
+  font-size: 0.8em;
+  display: block;
+  background: #eeeeee;
+}
+/* volume slider - right */
+.ppvslider {
+    height: 1em;
+    width: 60px;
+    background: @main_color_desat_light;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ppvmarker {
+    position: relative;
+    right: 0;
+    left: 0;
+    height: 1em;
+    width: 100%;
+    background: @main_color_desat;
+    display: inline-block;
+}
+/* playhead */
+.pptimeleft{
+  font-size: 0.8em;
+  vertical-align: top;
+}
+.ppscrubber{
+  position: relative;
+}
+.ppplayhead, .ppscrubberdrag, .ppscrubber, .pploaded{
+  display: inline-block;
+  height: 1em;
+  width: 320px;
+}
+.ppscrubber{
+  background: @main_color_desat_light;
+}
+
+.ppplayhead{
+  position: relative;
+  background: @main_color_desat;
+  z-index: 10;
+}
+.ppscrubberdrag{
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.ppcontextmenu{
+  display: none;
+}
+.play_track{
+  cursor: pointer;
+}
+.pploaded{
+  background: @main_color_light;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#main_player_container .sub_menu_container{
+  top:100px;
+  background: @pattern_menus;
+  overflow: hidden;
+}
+.playlist_file{
+  float: left;
+  margin: 0 16px;
+}
+
 /* ###1 FORMS */
 form {
   margin: 0 0 18px;
@@ -475,19 +649,20 @@ textarea {
   position:absolute;
   left:0;
   top:-999px;
-  background:@pattern_menus;
+  background: url("../images/triangles_maxi.png") repeat-y #fff 0 -290px;
   padding: 0 40px 10px 10px;
-  border-left: 5px solid @main_gray;
-  .shadowyBox(@main_color_desat_dark, 2px, 2px); 
+  border-left: 5px solid @main_grey;
   z-index:9000;
+  border-right: 9px solid #999;
+  border-bottom: 9px solid #999;
 }
 /*###3 : GLOBAL MENU*/
 #global_menu_container{
-  border-bottom:5px solid @main_color_lighter;
-  background: @pattern_menus;
+  padding-bottom: 8px;
+  background: #e0e0e0;
 }
 .global_menu_list.selected{
-  background:@main_gray;
+  background:@main_grey;
   color:#fff;
 }
 .global_sub_menu_container a{
@@ -499,7 +674,7 @@ textarea {
   display:block;
 }
 .global_sub_menu_container a:hover{
-  background:@main_gray;
+  background:@main_grey;
   color:#fff;
 }
 .global_menu_title{
@@ -531,43 +706,78 @@ textarea {
 #global_menu{
   position:relative;
   margin:0;
-  padding: 5px 5px;
+  padding: 0;
 }
 
 .global_menu_list{
-  padding-top:2px;
+  padding: 0px;
   display:inline-block;
-  margin: 0 8px;
+  margin-left: -4px;
+  background: url("../images/triangles_mini.png") repeat-y;
 }
+.global_menu_list:hover{
+  background-color: #fff;
+  margin-bottom: -9px;
+}
+.global_menu_list.non_site{
+  background: none;
+  padding: 0 15px;
+}
+
 .global_menu_list h1{
-  color: @main_gray;
+  color: @main_grey;
   .titlization(1px, @main_color);
 }
 .global_menu_link,.global_menu_link:visited{
-  z-index: 9900;
-  background: #fff;
+  z-index: 900;
   text-decoration: none;
-  padding: 2px 8px;
-  margin: 0 5px 0 10px;
-  .shadowyBox(@main_color);
+  padding: 0 12px 0 20px;
   position: relative;
-  top: 0;
+  display: inline-block;
+  color: #fff;
 }
 .global_menu_link:hover{
-  .shadowyBox(@main_color_light, 5px, 5px);
+  text-decoration: none;
 }
-#global_menu_contact:before{
-  .sprite(-24px, -96px);
+/*menu site's colors*/
+.global_menu_list:hover #menu_blog{
+  color: @blog_main_color;
+  border-bottom: 9px solid @blog_main_color;
 }
-#global_menu_irc:before{
-  .sprite(-144px, -72px);
+.global_menu_list:hover #menu_doc{
+  color: @doc_main_color;
+  border-bottom: 9px solid @doc_main_color;
 }
-#global_nav{
-  display: inline-block;
+.global_menu_list:hover #menu_forum{
+  color: @forum_main_color;
+  border-bottom: 9px solid @forum_main_color;
 }
+.global_menu_list:hover #menu_dev{
+  color: @dev_main_color;
+  border-bottom: 9px solid @dev_main_color;
+}
+
+.global_menu_link:before{
+  content: "ml ! ";
+  font-family: pacifico;
+  font-weight: normal;
+  font-size: 1em;
+}
+
 #connection_menu{
   margin: 5px 8px;
   float: right;
+}
+#connection_button{
+  position: relative;
+  top: 0;
+}
+#subscribe_link{
+  background-repeat: repeat-y;
+}
+#subscribe_link:hover{
+  background-color: #fff;
+  background-image: url('../images/triangles_micro.png');
 }
 
 /*###3 MAIN NAV*/
@@ -600,7 +810,7 @@ textarea {
   top: -9999px;
 }
 #main_nav .sub_menu_container{
-  border-top: 1px solid @main_color_gray;
+  border-top: 1px solid @main_color_grey;
 }
 
 .sub_menu_container .main_nav_link{
@@ -625,14 +835,14 @@ textarea {
   border-bottom-width: 0;
 }
 .has_sub_li:hover .has_sub_link{
-  border-left: 4px solid @main_gray;
+  border-left: 4px solid @main_grey;
 }
 .bellow_sub_menu{
   position: absolute;
   left:9999px;
   border-top: 2px solid @main_color_desat_light;
   width: 300px;
-  border-left: 5px solid @main_gray;
+  border-left: 5px solid @main_grey;
   background: #fff;
 }
 .bellow_sub_menu .menu_item{
@@ -641,27 +851,41 @@ textarea {
 .bellow_sub_menu .main_nav_link{
   width: 279px;
 }
+/*###1 SITE DESCRIPTION*/
+#site_infos{
+  width: 70%;
+  .boxSizing;
+  padding: 0 20px;
+  background: url('../images/triangles.png') repeat-y;
+}
+#site_title, #site_description{
+  display: inline-block;
+  vertical-align: middle;
+}
+#site_title{
+  width: 30%;
+  font-size: 2.5em;
+  line-height: 1.1em;
+  font-family: pacifico;
+  color: @main_color;
+}
+#site_description{
+  width: 59%;
+  font-size: 1.2em;
+}
+
 /*###2 COLUMNS  */
 
-#primary {
-  float: left;
-  width: 73%;
-}
-#primary.full-width {
-  width: 100%;
-}
 #sidebar {
   float: right;
-  width: 24%;
-  border: 1px solid @main_color_gray;
-  background: @pattern_menus;
-  padding: 10px;
+  width: 27%;
   .boxSizing;
-  .shadowyBox(@main_color_gray);
-  border: 1px solid @main_color_desat_light;
-  .rounded(5px);
-  margin-right: 1%;
+  background: #fff;
 }
+#sidebar .content{
+  padding: 10px;
+}
+
 .sidebar_title {
   margin: 0 0 10px;
   font-size: 2em;
@@ -678,4 +902,170 @@ textarea {
   display:block;
   .border_box;
   text-align: center;
+}
+/*###2 CONTENT*/
+.content{
+  padding: 15px 10px;
+}
+.breadcrumbs{
+  font-size: 0.8em;
+  padding: 0 10px;
+}
+#main_content{
+  position: relative;
+  z-index: 2;/*for the filter animation*/
+  background: url('../images/triangles_maxi.png') top right repeat-y @subtle_grey;
+  float: left;
+  width: 73%;
+}
+#main_content > h1, #main_content_title, #sidebar_title{
+  padding: 5px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #fff;
+  font-family: pacifico;
+  margin: 0;
+}
+#sidebar > h1, #sidebar_header{
+  background: @main_color;
+}
+
+#main_content > h1, #main_content_title{
+  background: @main_color_dark url("../images/spect.png");
+}
+#main_content .content{
+  padding: 20px;
+}
+.index_list_columns{
+  float:left;
+  margin: 0;
+  padding: 10px;
+  .boxSizing;
+}
+.index_list_columns.three_columns{
+  width: 33%;
+}
+.index_list_columns.two_columns{
+  width: 50%;
+}
+.index_list_columns a{
+  font-family: sans;
+  font-size: 1.9em;
+  font-weight: 200;
+}
+.index_list_columns.two_columns:nth-child(6n+1),
+.index_list_columns.two_columns:nth-child(6n+1),
+.index_list_columns.three_columns:nth-child(6n+1),
+.index_list_columns.three_columns:nth-child(6n+2){
+  background: rgba(230,230,230, 0.40);
+}
+/* Sidebar slideshow */
+#sidebar_title.search{
+  display: inline-block;
+}
+#sidebar_header .search_form{
+  float:right;
+  margin: 8px 0
+}
+#sidebar_header .search_submit{
+  position: absolute;
+  left: -9999px;
+}
+#side_nav{
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.side_filter{
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+.side_filter_title{
+
+  background: @main_color;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 500px;
+  white-space: nowrap;
+  padding: 30px 0;
+  margin: 0;
+  z-index: 999;
+  .transition(right, 0.5s, ease);
+  cursor: pointer;
+}
+.side_filter:nth-child(3) .side_filter_title{
+  background: @main_color_darker;
+  right: 60px;
+}
+.side_filter:nth-child(2) .side_filter_title{
+  background: @main_color_dark;
+  right: 30px;
+}
+.make_vertical{
+  .rotate(90deg);
+  display: block;
+  font-size: 0.5em;
+  color: #fff;
+  font-family: sans;
+}
+
+.side_filter_content{
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 203px;
+  min-height: 500px;
+  .transition(left , 0.5s, ease);
+  z-index: 1;
+}
+.side_filter_list{
+  padding: 0;
+}
+.side_filter_item{
+  margin: 0 0 15px 0;
+}
+/*INNER NAV*/
+
+#nav_below .nav_previous, #nav_below .nav_next{
+  z-index: 10000;
+  position: fixed;
+  bottom: 0;
+  height: 2em;
+  max-width: 300px;
+  padding: 3px;
+}
+#nav_below .nav_previous{
+  left: 0;
+  background: #fff url("../images/triangles.png") no-repeat ;
+  opacity: 0.4;
+  .transition(opacity, 0.5s, ease);
+}
+#nav_below .nav_next{
+  right: 0;
+  background: #fff url("../images/triangles_r.png") no-repeat right ;
+  opacity: 0.4;
+  .transition(opacity, 0.5s, ease);
+}
+#nav_below .nav_next:hover{
+  opacity: 1;
+}
+#nav_below .nav_previous:hover{
+  opacity: 1;
+}
+/*FOOTER*/
+#footer{
+  border-top: #e0e0e0 9px solid;
+  padding: 20px;
+  background: @less_subtle_grey;
+  clear: both;
+  font-size: 0.8em;
+  text-align: right;
+}
+#footer_login{
+  font-size: 0.8em;
 }

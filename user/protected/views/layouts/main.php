@@ -10,7 +10,11 @@
 </head>
 
 <body>
-<?php include('../inc/general_menu.php'); ?>
+<?php 
+  $site_title = Yii::app()->name;
+  $site_description= '';
+  include('../inc/general_menu.php');
+?>
 
 <main class="container" id="page" role="main">
 

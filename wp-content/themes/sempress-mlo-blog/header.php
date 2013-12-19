@@ -27,34 +27,19 @@
 <link rel="profile" href="http://microformats.org/profile/specs" />
 <link rel="profile" href="http://microformats.org/profile/hatom" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php include 'inc/wp_statics.php'; ?>
 <?php include 'inc/global_statics.php'; ?>
+<?php include 'inc/wp_statics.php'; ?>
+<?php  wp_enqueue_script('init', get_template_directory_uri() . '/js/init.js', false); ?>
 
-<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?><?php sempress_blog_itemscope(); ?>>
-<?php include 'inc/general_menu.php'; ?>
-<div id="page" class="hfeed h-feed feed">
+<body id="wordpress_site" <?php body_class(); ?><?php sempress_blog_itemscope(); ?>>
+<?php
+  $site_title = get_bloginfo('name');
+  $site_description = get_bloginfo("description");
+  include 'inc/general_menu.php'; 
+?>
+
 <?php do_action( 'before' ); ?>
-  <header id="main_header" role="banner">
-    <section>
-      <?php include 'inc/global_logo.php'; ?>
-      <h1 id="site-title" class="p-name"<?php sempress_blog_itemprop("name"); ?>><a id="home_link" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"<?php sempress_blog_itemprop("url"); ?>><?php bloginfo( 'name' ); ?></a></h1>
-      <h2 id="site-description" class="e-content"<?php sempress_blog_itemprop("description"); ?>><?php bloginfo( 'description' ); ?></h2>
-    </section>
     
-    <?php if (get_header_image()) { ?>
-      <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="header image" id="site-image" />
-    <?php } ?>
-    
-    <nav id="main_nav" class="menu_container" role="navigation">
-      <h1 class="assistive-text section-heading"><a href="#main_nav" title="<?php esc_attr_e( 'Main menu', 'sempress' ); ?>"><?php _e( 'Main menu', 'sempress' ); ?></a></h1>
-      <div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'sempress' ); ?>"><?php _e( 'Skip to content', 'sempress' ); ?></a></div>
 
-      <?php $walker = new improved_main_menu;?>
-      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'walker' => $walker ) ); ?>
-    </nav><!-- #main_nav -->
-  </header><!-- #branding -->
-
-  <main>

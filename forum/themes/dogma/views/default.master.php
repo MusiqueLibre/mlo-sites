@@ -6,7 +6,11 @@
    <?php $this->RenderAsset('Head'); ?>
 </head>
 <body id="<?php echo $BodyIdentifier; ?>" class="<?php echo $this->CssClass; ?>">
-   <?php include '../inc/general_menu.php'; ?>
+    <?php
+      $site_title = "Forum";
+      $site_description = "Discussion autour de la musique libre";
+      include '../inc/general_menu.php'; 
+    ?>
 
    <div id="Frame">
       <div id="Head">

@@ -1,84 +1,156 @@
-<section id="global_menu_container" class="menu_container">
-  <nav id="global_nav">
-      <h1 id="main_title" class="out_of_the_way">Menu general pour les sites de musique libre !</h1>
-      <ul id="global_menu" class="global_menu">
-          <li class="global_menu_list">
-              <a href="http://dogmazic.net" class="global_menu_link">dogmazic.net</a>
-          </li>
-          <li class="global_menu_list">
-              <a href="http://musique-libre.org" class="menu_more global_menu_link">Blog</a><button class="menu_more_button button_thick hollow_button" type="button">+</button>
-              <nav class="sub_menu_container">
-                  <h1>Derniers articles :</h1>
-                  <?php
-                    require_once('rsslib.php');
-                    echo  rss_reader('http://musique-libre.org/?feed=rss2', 4);
-                   ?>
-              </nav>
-          </li>
-          <li class="global_menu_list">
-              <a href="http://musique-libre.org/forum" class="global_menu_link menu_more">Forum</a><!--button class="menu_more_button button_thick hollow_button" type="button">+</button>
-              <nav class="sub_menu_container" id="menu_forum">
-                  <h1>Derniers messages :</h1>
-                  <?php
-                    //require_once('rsslib.php');
-                    //echo  rss_reader('http://musique-libre.org/forum/index.php?p=/discussions/feed.rss', 5);
-                   ?>
-              </nav-->
-          </li>
-          <li class="global_menu_list">
-                <a href="https://github.com/MusiqueLibre/Dogmazic" target="_blank" class="global_menu_link">Github <img alt="lien externe" src="../global_statics/images/ex_link.png" /></a>
-          </li>
-          <li class="global_menu_list">
-            <a href="http://en.irc2go.com/webchat/?net=freenode&room=dogmazic" target="_blank" class="global_menu_link menu_more" id="global_menu_irc">Chat <img alt="lien externe" src="../global_statics/images/ex_link.png" /></a><button class="menu_more_button button_thick hollow_button" type="button">+</button>
-              <section class="sub_menu_container" id="menu_forum">
-                 <h1>Discuter en direct :</h1>
-                 IRC, ou Instant Relay Chat, est un outil largement utilisé par la communauté libre. Pour vous iy connecter il vous faut un client IRC (irssi, xchat, smuxi...). Le lien du menu vous permet d'accéder à un client en ligne.
-                 <br/><br/>
-                 L'équipe, les membres, et les curieux de l'assos "Musique Libre !" sont présent sur <b>irc.freenode.net</b>, salon <b>#dogmazic</b>
-              </section>
-          </li>
-          <li class="global_menu_list">
-              <a href="http://musique-libre.org/?page_id=285" class="global_menu_link" id="global_menu_contact">Contact</a>
-          </li>
-          <li class="global_menu_list">
-              <button class="menu_more_button button_thick hollow_button" style="width:auto" type="button">Soutenir/Adhérer</button>
+<header id="main_header">
+  <div id="main_header_upper" class="menu_container">
+    <section id="logos">
+      <div id="logo_box">
+        <div id="logo_box_title">Musique Libre !</div>
+        <button type="button" class="header_button menu_more_button">l'association <span class="pretty_font">ml &nbsp;!&nbsp;</span></button>
+        <div class="header_sub_button">...</div>
+        <section class="sub_menu_container">
+          <ul id="service_menu">
+            <li class="service_menu_item bullet_less">
+              <h2 class="service_menu_title bullet_less">L'association Musique Libre ! en quelques mots...</h2>
+              <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
+              <p class="service_menu_description">
+                "Musique Libre !" est une association loi 1901 de défense et de promotion des musiques libres. Depuis
+                2004, celle-ci oeuvre pour mettre en avant les artistes qui choisissent de partager leur musique, tout en leur
+                offrant des outils pour qu'ils puissent diffuser leurs musique dans les meilleures conditions. Le tout gratuitement
+                et sans pub depuis toujours !
+              </p>
+              <p class="service_menu_description">
+                Vous trouverez ici des musiques en tout genre qui n'ont que pour seul point commun d'êtres les oeuvres d'artistes
+                qui veulent une culture libre, partageuse, juste et égalitaire !
+              </p>
+              <p class="service_menu_description">
+                Venez nous aider à réfléchir et à bâtir les outils pour réaliser ces utopies réalistes ! Prouvons que c'est possible...
+                en musique, si il vous plait !
+              </p>
+              <a class="service_menu_lien" href="http://musique-libre.org/asso/?page_id=6">En savoir plus...</a><br/>
+              <!--a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Historique</a><br/>
+              <a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Les statuts</a><br/-->
 
-              <section class="sub_menu_container">
-                  <h1>Faire un don</h1>
-                  <ul class="global_sub_menu">
-                   <li class="global_menu_list">
-                      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                        <input type="hidden" name="cmd" value="_donations">
-                        <input type="hidden" name="business" value="support@dogmazic.net">
-                        <input type="hidden" name="lc" value="FR">
-                        <input type="hidden" name="item_name" value="Association Musique Libre">
-                        <input type="hidden" name="no_note" value="0">
-                        <input type="hidden" name="currency_code" value="EUR">
-                        <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-                        <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
-                        <a class="FlattrButton" style="display:none;" href="http://dogmazic.net/"></a>
-                        <noscript><a href="http://flattr.com/thing/150302/Help-us-free-the-music" target="_blank">
-                        <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript> 
-                      </form>
-                    </li>
-                  </ul>
-              </section>
-          </li>
-      </ul>
-  </nav>
-  <div class="global_menu_list" id="connection_menu">
-      <?php
-      if(array_key_exists('sso_authent_mlo',$_COOKIE)){
-        echo '<button id="deconnection_button"  >deconnexion</button>';
-      }else{
-        echo '<a  href="http://musique-libre.org/user/index.php?r=user/registration" class="buttonified">inscription</a>
-         <button id="connection_button" >se connecter</button>';
-
-      }
-      ?>
-      <div class="sub_menu_container">
-        <div id="login_container"></div>
+            </li>
+          </ul>
+        </section>
       </div>
+      <div id="secondary_logo_box">
+        <div id="secondary_logo_box_title">Archive Dogmazic <br/>2004-2012</div>
+        <button type="button" class="header_button menu_more_button">les services publics <span class="pretty_font">ml&nbsp;!&nbsp;</span></button>
+        <div class="header_sub_button">...</div>
+        <section class="sub_menu_container">
+          <ul id="service_menu">
+            <li class="service_menu_item bullet_less">
+              <h2 class="service_menu_title bullet_less">Dogmazic</h2>
+              <span class="service_menu_status">Statut : Chasse aux bugs</h2>
+              <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
+              <p class="service_menu_description">
+                Dogmazic permet aux musiciens utilisant des licences libres et ouvertes de déposer leurs musiques en toute liberté,
+                et aux mélomanes d'aprécier une musique indépendante et éclectique
+              </p>
+              <p class="service_menu_description">
+                3ème version du site (fondé en 2004 !) cette mouture st basée sur <a href="http://mediagoblin.org">Mediagoblin</a>
+              </p>
+              <a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Dogmazic v3</a>
+
+            </li>
+            <li class="service_menu_item bullet_less">
+              <h2 class="service_menu_title">Archives Dogmazic</h2>
+              <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
+              <p class="service_menu_description">
+                Musique déposées sur les versions 1 et 2 de dogmazic entre 2004 et 2012
+              </p>
+              <a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Archives Dogmazic 2004/2012</a>
+
+            </li>
+            <li class="service_menu_item bullet_less">
+              <h2 class="service_menu_title">Spider Jessica</h2>
+              <span class="service_menu_status">Statut : Encore dans l'oeuf</h2>
+              <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
+              <p class="service_menu_description">
+                Les developpeurs informatique peuvent sans peine partager les sources de leur travail pour
+                travailler en équipe ou permettre à d'autre d'utiliser leur travail... Spider Jessica propose
+                d'adapter ses outils à la musique et aux musiciens pour faciliter les collaborations les remixs,
+                et le partage de savoir-faire.
+              </p>
+
+            </li>
+            <li class="service_menu_item bullet_less">
+              <h2 class="service_menu_title">Wreck a Tour</h2>
+              <span class="service_menu_status">Sur le papier</h2>
+              <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
+              <p class="service_menu_description">
+                Et si les petits groupes arrêtaient de galérer pour faire des concerts ? Et si les sous du live n'allait plus
+                seulement aux gros poissons là où ce sont les groupes locaux qui attirent du monde ?
+              </p>
+
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+    <div id="main_header_right">
+      <?php if(isset($player)){
+        echo '<section id="main_player_container" >
+                <audio id="main_player"></audio>
+                <button type="button" id="playlist_button" class="menu_more_button button_thick hollow_button">Playlist</button>
+                <!--div class="sub_menu_container">
+                  <ul id="current_playlist"> </ul>
+                </div-->
+                <div class="header_button">playlist<span class="pretty_font">&nbsp;!&nbsp;</span></div>
+                <div class="header_sub_button">...</div>
+              </section>';
+      };
+      ?>
+      <section id="main_connection" class="pretty_font">
+        <div id="connection_menu">
+            <?php
+            if(array_key_exists('sso_authent_mlo',$_COOKIE)){
+              echo '<button type="button" id="deconnection_button"  >deconnexion</button>';
+            }else{
+              echo '<a id="subscribe_link" href="http://musique-libre.org/user/index.php?r=user/registration">inscription</a>
+               <button type="button" id="connection_button" >se connecter</button>';
+
+            }
+            ?>
+            <div class="sub_menu_container">
+              <div id="login_container"></div>
+            </div>
+        </div>
+      </section>
+    </div>
   </div>
-</section>
+  <section id="global_menu_container" class="menu_container">
+    <nav id="global_nav">
+        <h1 id="main_title" class="out_of_the_way">Menu general pour les sites de musique libre !</h1>
+        <ul id="global_menu" class="global_menu">
+            <li class="global_menu_list">
+                <a href="http://musique-libre.org" id="menu_blog" class="menu_more global_menu_link">Blog</a>
+            </li>
+            <li class="global_menu_list">
+                <a href="http://musique-libre.org/forum" id="menu_doc" class="global_menu_link menu_more">Documentation</a>
+            </li>
+            <li class="global_menu_list">
+                <a href="http://musique-libre.org/forum" id="menu_forum" class="global_menu_link menu_more">Forum</a>
+            </li>
+            <li class="global_menu_list">
+                <a href="http://musique-libre.org/forum" id="menu_dev" class="global_menu_link menu_more">Blog des developpeurs</a>
+            </li>
+            <li class="global_menu_list non_site">
+                <a href="http://musique-libre.org/?page_id=285" class="global_menu_contact" id="global_menu_contact">Contact</a>
+            </li>
+            <li class="global_menu_list non_site" id="menu_contact">
+                <a  style="width:auto" type="button">Soutenir/Adhérer</a>
+            </li>
+        </ul>
+    </nav>
+  </section>
+  <div id="site_infos">
+    <h1 id="site_title"><?php echo $site_title; ?></h1>
+    <h2 id="site_description"><?php echo $site_description; ?></h2>
+  </div>
+  <section id="header_rss" style="display:none;">
+    <span id="header_rss_name">dernière publication du <span id="header_rss_name_site">Forum</span></span>
+    <h1 id="header_rss_title">test titre</h1>
+    <span id="header_rss_meta"></span>
+    <p id="header_rss_text"></p>
+  </section>
+</header>

@@ -9,8 +9,7 @@
 
 get_header(); ?>
 
-    <section id="primary" class="full-width">
-      <main id="content" role="main">
+      <main id="main_content">
 
         <?php while ( have_posts() ) : the_post(); ?>
 
@@ -21,6 +20,5 @@ get_header(); ?>
         <?php endwhile; // end of the loop. ?>
 
       </main><!-- #content -->
-    </section><!-- #primary -->
 
 <?php get_footer(); ?>

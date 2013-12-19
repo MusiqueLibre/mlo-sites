@@ -1,8 +1,8 @@
-user.dogmazic.net/protected/config/*
-user.dogmazic.net/protected/runtime/*
+user/protected/config/*
+user/protected/runtime/*
 build.prod.properties
 build.local.properties
 musiquelibre/*
-user.dogmazic.net/index.php
+user/index
 forum.dogmazic.net/plugins/MloSsoAuthent/config.php
 blog.dogmazic.net/wp-content/plugins/mlo_sso_authent/mlo_sso_config.php

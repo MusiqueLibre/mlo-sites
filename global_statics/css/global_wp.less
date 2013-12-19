@@ -15,21 +15,26 @@ and, like WordPress, licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 @import url('less/variables.less');
+@main_color: @blog_main_color;
 
-/* =Header
--------------------------------------------------------------- */
-
-
-#author-info {
-  margin-bottom: 30px;
+/* Color override */
+#wordpress_site #site_title{
+  color: @main_color;
 }
-
-.page-header h1, #author-description h2 {
-  margin-top: 0;
-  padding-top: 0;
+#wordpress_site #main_content_title{
+  background-color: @main_color_dark;
 }
-#logo_box{
-  margin-bottom:20px;
+#sidebar_header{
+  background: @main_color;
+}
+.side_filter_title{
+  background: @main_color;
+}
+.side_filter:nth-child(3) .side_filter_title{
+  background: @main_color_darker;
+}
+.side_filter:nth-child(2) .side_filter_title{
+  background: @main_color_dark;
 }
 
 /* =Structure
@@ -85,60 +90,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* =Content
 -------------------------------------------------------------- */
 
-.post_thumbnail{
-  text-align:center;
-}
 
-footer.entry-meta {
-  border-top: 1px solid @main_color_dark;
-  background: @pattern_menus;
-  padding: 10px 34px;
-  color: @text_color_light;
-  .rounded(5px);
+.index_list_columns a{
+  font-size: 1em; /*prevents this em to be added to h1 em*/
 }
-
-.entry-title a{
-  color: @main_color;
-}
-
-.entry-meta {
-  clear: both;
-  display: block;
-}
-
 .entry-header{
   margin-bottom: 10px;
 }
 
-
-#content nav .nav-previous {
-  float: left;
-  width: 50%;
-}
-
-#content nav .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-
-#nav-above:after{
-  clear:both;
-}
-
-#nav-below, #nav-above {
-  clear: both;
-  padding: 20px;
-  background: none;
-}
-#nav-above{
-  padding-top: 0;
-}
-
-.nav-previous, .nav-next,
-.previous-image, .next-image {
-  font-size: 12px;
-}
 
 .page-link {
   clear: both;
@@ -150,12 +109,6 @@ footer.entry-meta {
   display: block;
 }
 
-/*TODO : Replace by Salvattore*/
-.home article{
-  float:left;
-  max-width: 48%;
-  .boxSizing;
-}
 
 .entry-meta,
 .tag-archive-meta,
@@ -168,6 +121,16 @@ footer.entry-meta {
 .format-quote .entry-title, .format-video .entry-title, .format-audio .entry-title, .format-image .entry-title, .format-quote .entry-title a, .format-video .entry-title a, .format-audio .entry-title a, .format-image .entry-title a {
   font-size: 25px;
 }
+
+.wp-post-image{
+  float: left;
+  margin: 0 20px 20px 0;
+  max-width: 33%;
+}
+#article_header_meta{
+  float: right;
+}
+
 
 /* 404 page */
 .error404 .widget {
@@ -194,15 +157,7 @@ footer.entry-meta {
   padding: 1em;
 }
 
-/* Image Attachments */
-.image-attachment div.entry-meta {
-  float: left;
-}
 
-.image-attachment nav {
-  float: right;
-  margin: 0 0 1em 0;
-}
 
 .image-attachment .entry-content {
   clear: both;
@@ -294,10 +249,6 @@ footer.entry-meta {
 
 .format-quote:before {
   content: "\f036";
-}
-
-.infinite-scroll #nav-below, .infinite-scroll #nav-above, .infinite-scroll #colophon {
-  display: none;
 }
 
 /* =Images

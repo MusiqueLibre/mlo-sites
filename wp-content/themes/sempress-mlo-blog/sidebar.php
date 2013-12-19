@@ -7,36 +7,34 @@
  */
 ?>
   <aside id="sidebar">
-    <div id="secondary" class="widget-area" role="complementary">
-      <?php do_action( 'before_sidebar' ); ?>
-      <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
-
-        <section id="search" class="widget widget_search">
+      <header id="sidebar_header">
+          <h1 id="sidebar_title" class="search">Filtres</h1>
           <?php get_search_form(); ?>
-        </section>
+      </header>
+      <?php do_action( 'before_sidebar' ); ?>
+      <ul id="side_nav">
+        <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
-        <section id="archives" class="widget">
-          <h1 class="sidebar_title"><?php _e( 'Archives', 'sempress' ); ?></h1>
-          <ul>
-            <?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
-          </ul>
-        </section>
+          <li class="bullet_less side_filter" id="archives" class="widget">
+            <h1 class="sidebar_title"><?php _e( 'Archives', 'sempress' ); ?></h1>
+            <ul>
+              <?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+            </ul>
+          </li class="bullet_less side_filter">
 
-        <section id="meta" class="widget">
-          <h1 class="sidebar_title"><?php _e( 'Meta', 'sempress' ); ?></h1>
-          <ul>
-            <?php wp_register(); ?>
-            <li><?php wp_loginout(); ?></li>
-            <?php wp_meta(); ?>
-          </ul>
-        </section>
+          <li class="bullet_less side_filter" id="meta" class="widget">
+            <h1 class="sidebar_title"><?php _e( 'Meta', 'sempress' ); ?></h1>
+            <ul>
+              <?php wp_register(); ?>
+              <li><?php wp_loginout(); ?></li>
+              <?php wp_meta(); ?>
+            </ul>
+          </li class="bullet_less side_filter">
 
-      <?php endif; // end sidebar widget area ?>
-    </div><!-- #secondary .widget-area -->
+        <?php endif; // end sidebar widget area ?>
+    </ul>
 
     <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-    <div id="tertiary" class="widget-area" role="complementary">
       <?php dynamic_sidebar( 'sidebar-2' ); ?>
-    </div><!-- #tertiary .widget-area -->
     <?php endif; ?>
   </aside>

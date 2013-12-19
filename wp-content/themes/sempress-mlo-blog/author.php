@@ -8,8 +8,7 @@
 
 get_header(); ?>
 
-    <section id="primary">
-      <main id="content" role="main">
+      <main id="main_content">
 
       <?php if ( have_posts() ) : ?>
 
@@ -72,7 +71,6 @@ get_header(); ?>
       <?php endif; ?>
 
       </main><!-- #content -->
-    </section><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
