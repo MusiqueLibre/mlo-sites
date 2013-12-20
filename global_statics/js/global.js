@@ -260,7 +260,7 @@ function ajaxify(){
   first = true;
   $.address.crawlable(true).init(function(event) {
       // Initializes plugin support for links
-      $('a:not([href^=http])').address();
+      $('a:not([href^=http]):not([href$=mp3]):not([href$=ogg])').address();
   }).change(function(event) {
 
 
