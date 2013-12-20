@@ -12,7 +12,6 @@ if($my_morceau->suppr == 'O')
   <?php
 
     echo $my_morceau->titre;
-    echo $my_morceau->id;
     /*
     foreach (glob("../archive/MP3/".$artiste->id."/".$my_morceau->groupe."*") as $filename) {
       echo '<a href="/archive/MP3/'.$artiste->id.'/'.$filename.'">mp3</a>';
