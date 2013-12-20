@@ -3,7 +3,7 @@
 /* @var $data Artiste */
 ?>
 
-<li class="band_list_item index_list_columns three_columns item">
+<li class="band_list_item index_list_columns three_columns masonry_item">
 
 
 	<?php echo CHtml::link($data->nom, array('view','id'=>$data->id), array('class'=>'titlization')); ?>
