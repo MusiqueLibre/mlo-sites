@@ -39,6 +39,6 @@ $this->menu=array(
      'sorterHeader' => false,
      'cssFile'=>false,
      'itemsTagName'=>"ul",
-     'id'=>"masonry_container",
+     //'id'=>"masonry_container",
   ));
    ?>
