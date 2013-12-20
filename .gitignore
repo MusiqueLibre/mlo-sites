@@ -4,4 +4,4 @@ build.prod.properties
 build.local.properties
 musiquelibre/*
 forum/plugins/MloSsoAuthent/config.php
-blog/wp-content/plugins/mlo_sso_authent/mlo_sso_config.php
+wp-content/plugins/mlo_sso_authent/mlo_sso_config.php
