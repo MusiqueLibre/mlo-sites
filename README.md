@@ -125,5 +125,3 @@ under CC-BY-SA 3.0
 
 Also we're using some pattern from subtlepatterns.com
 =======
-mlo-sites
-=========
