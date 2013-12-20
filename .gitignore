@@ -3,5 +3,5 @@ user/protected/runtime/*
 build.prod.properties
 build.local.properties
 musiquelibre/*
-forum.dogmazic.net/plugins/MloSsoAuthent/config.php
-blog.dogmazic.net/wp-content/plugins/mlo_sso_authent/mlo_sso_config.php
+forum/plugins/MloSsoAuthent/config.php
+blog/wp-content/plugins/mlo_sso_authent/mlo_sso_config.php
