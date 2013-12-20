@@ -46,6 +46,9 @@
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
+.items {
+  position: relative;
+}
 .items + .pager {
   float: none;
   /*unfloat the footer pager which is alone*/

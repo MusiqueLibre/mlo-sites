@@ -26,7 +26,7 @@ $(function(){
 //
 //Adds the slide up/down behavior to the <summary> and <detail> elements
 $(function(){
-  if($('#masonry_container').legth > 0){
+  if($('#masonry_container').length > 0){
     var container = document.querySelector('#masonry_container');
     var msnry = new Masonry( container, {
         itemSelector: '.masonry_item'
