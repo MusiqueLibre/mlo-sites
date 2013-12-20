@@ -11,8 +11,8 @@
       '/lib/jquery.address-1.5.js',
     );
     $css_array = array(
-      "global_yii.css",
-      "old_dogma.css",
+      "global_yii.less",
+      "old_dogma.less",
     );
     include('../inc/global_statics.php');
     $baseUrl = Yii::app()->baseUrl;

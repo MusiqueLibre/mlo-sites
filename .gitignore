@@ -1,3 +1,5 @@
+dogma/protected/config/*
+dogma/protected/runtime/*
 user/protected/config/*
 user/protected/runtime/*
 build.prod.properties
