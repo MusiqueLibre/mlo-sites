@@ -1,6 +1,7 @@
 <?php
 /* @var $this ArtisteController */
 /* @var $data Artiste */
+$this->setPageTitle('Archives Dogmazic - '.$data->nom);
 ?>
 
   <h1><?php echo $data->nom; ?></h1>

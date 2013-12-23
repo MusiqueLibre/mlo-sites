@@ -135,11 +135,15 @@ class ArtisteController extends Controller
       $criteria->compare('morceaux.fk_pcdm', $_GET['genre'], true);
     }
     $dataProvider=new CActiveDataProvider('Artiste', array(
+      'criteria'=>$criteria,
       'pagination'=>array(
         'pageSize'=>100,
       ),
-      'criteria' => $criteria,
     ));
+    //Hack against the result number bug
+    $dataProvider->model->setDbCriteria($criteria);
+    $dataProvider->setTotalItemCount(count($dataProvider->getData()));
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
