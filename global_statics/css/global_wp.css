@@ -22,22 +22,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*Text colors*/
 /*#1 : LESS MIXINS*/
 /* Color override */
-.Asso #site_title {
+.MLO #site_title {
   color: #d45500;
 }
-.Asso #main_content_title {
+.MLO #main_content_title {
   background-color: #ab4500;
 }
-.Asso #sidebar_header {
+.MLO #sidebar_header {
   background: #d45500;
 }
-.Asso .side_filter_title {
+.MLO .side_filter_title {
   background: #d45500;
 }
-.Asso .side_filter:nth-child(3) .side_filter_title {
+.MLO .side_filter:nth-child(3) .side_filter_title {
   background: #4f2000;
 }
-.Asso .side_filter:nth-child(2) .side_filter_title {
+.MLO .side_filter:nth-child(2) .side_filter_title {
   background: #ab4500;
 }
 .DevBlog #site_title {
