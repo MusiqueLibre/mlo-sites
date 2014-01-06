@@ -33,7 +33,7 @@
 
 </head>
 
-<body id="wordpress_site" <?php body_class(); ?><?php sempress_blog_itemscope(); ?>>
+<body id="wordpress_site" <?php body_class(get_bloginfo('name')); ?><?php sempress_blog_itemscope(); ?>>
 <?php
   $site_title = get_bloginfo('name');
   $site_description = get_bloginfo("description");

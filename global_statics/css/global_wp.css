@@ -22,23 +22,77 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*Text colors*/
 /*#1 : LESS MIXINS*/
 /* Color override */
-#wordpress_site #site_title {
+.Asso #site_title {
+  color: #d45500;
+}
+.Asso #main_content_title {
+  background-color: #ab4500;
+}
+.Asso #sidebar_header {
+  background: #d45500;
+}
+.Asso .side_filter_title {
+  background: #d45500;
+}
+.Asso .side_filter:nth-child(3) .side_filter_title {
+  background: #4f2000;
+}
+.Asso .side_filter:nth-child(2) .side_filter_title {
+  background: #ab4500;
+}
+.DevBlog #site_title {
+  color: #78216a;
+}
+.DevBlog #main_content_title {
+  background-color: #58184e;
+}
+.DevBlog #sidebar_header {
+  background: #78216a;
+}
+.DevBlog .side_filter_title {
+  background: #78216a;
+}
+.DevBlog .side_filter:nth-child(3) .side_filter_title {
+  background: #10040e;
+}
+.DevBlog .side_filter:nth-child(2) .side_filter_title {
+  background: #58184e;
+}
+.Blog #site_title {
   color: #217844;
 }
-#wordpress_site #main_content_title {
+.Blog #main_content_title {
   background-color: #185832;
 }
-#sidebar_header {
+.Blog #sidebar_header {
   background: #217844;
 }
-.side_filter_title {
+.Blog .side_filter_title {
   background: #217844;
 }
-.side_filter:nth-child(3) .side_filter_title {
+.Blog .side_filter:nth-child(3) .side_filter_title {
   background: #041009;
 }
-.side_filter:nth-child(2) .side_filter_title {
+.Blog .side_filter:nth-child(2) .side_filter_title {
   background: #185832;
+}
+.Doc #site_title {
+  color: #2c8ca0;
+}
+.Doc #main_content_title {
+  background-color: #237080;
+}
+.Doc #sidebar_header {
+  background: #2c8ca0;
+}
+.Doc .side_filter_title {
+  background: #2c8ca0;
+}
+.Doc .side_filter:nth-child(3) .side_filter_title {
+  background: #0f3138;
+}
+.Doc .side_filter:nth-child(2) .side_filter_title {
+  background: #237080;
 }
 /* logged-in offset*/
 .logged-in {

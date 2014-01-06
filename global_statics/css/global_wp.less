@@ -15,27 +15,42 @@ and, like WordPress, licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 @import url('less/variables.less');
-@main_color: @blog_main_color;
 
 /* Color override */
-#wordpress_site #site_title{
-  color: @main_color;
+
+
+  @class_0: Asso;
+  @class_1: DevBlog;
+  @class_2: Blog;
+  @class_3: Doc;
+.copyColors(@iter){
+  @classSet : 'class_@{iter}';
+  @main_colorSet : 'wp_main_color_@{iter}';
+  @main_color : @@main_colorSet;
+  @class: @@classSet;
+  .@{class} #site_title{
+    color: @main_color;
+  }
+  .@{class} #main_content_title{
+    background-color: @main_color_dark;
+  }
+  .@{class} #sidebar_header{
+    background: @main_color;
+  }
+  .@{class} .side_filter_title{
+    background: @main_color;
+  }
+  .@{class} .side_filter:nth-child(3) .side_filter_title{
+    background: @main_color_darker;
+  }
+  .@{class} .side_filter:nth-child(2) .side_filter_title{
+    background: @main_color_dark;
+  }
 }
-#wordpress_site #main_content_title{
-  background-color: @main_color_dark;
-}
-#sidebar_header{
-  background: @main_color;
-}
-.side_filter_title{
-  background: @main_color;
-}
-.side_filter:nth-child(3) .side_filter_title{
-  background: @main_color_darker;
-}
-.side_filter:nth-child(2) .side_filter_title{
-  background: @main_color_dark;
-}
+.copyColors(0);
+.copyColors(1);
+.copyColors(2);
+.copyColors(3);
 
 /* logged-in offset*/
 .logged-in{
