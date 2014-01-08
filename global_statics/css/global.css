@@ -73,7 +73,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Liberation Mono;
+  font-family: sans;
   font-weight: 200;
   color: #555555;
 }
@@ -87,7 +87,7 @@ li {
 }
 li:before {
   content: "\25E3\00A0";
-  color: #e28f58;
+  color: #555;
   margin-left: -14px;
 }
 nav {
@@ -142,8 +142,9 @@ blockquote small:before {
   content: '\2014 \00A0';
 }
 summary {
-  color: #ab4500;
+  color: #0b7dc9;
   cursor: pointer;
+  text-decoration: underline;
 }
 summary:before {
   content: '\25BC \00A0';
@@ -1056,7 +1057,7 @@ textarea {
 .index_list_columns {
   float: left;
   margin: 0;
-  padding: 10px;
+  padding: 10px 20px 20px 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -1074,8 +1075,7 @@ textarea {
   font-size: 1.9em;
   font-weight: 200;
 }
-.index_list_columns.two_columns:nth-child(6n+1),
-.index_list_columns.two_columns:nth-child(6n+1),
+.index_list_columns.two_columns:nth-child(3n+1),
 .index_list_columns.three_columns:nth-child(6n+1),
 .index_list_columns.three_columns:nth-child(6n+2) {
   background: rgba(230, 230, 230, 0.4);

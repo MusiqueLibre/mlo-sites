@@ -40,7 +40,7 @@
           <ul id="service_menu">
             <li class="service_menu_item bullet_less">
               <h2 class="service_menu_title bullet_less">Dogmazic</h2>
-              <span class="service_menu_status">Statut : Chasse aux bugs</h2>
+              <span class="service_menu_status">Statut : Chasse aux bugs</span>
               <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
               <p class="service_menu_description">
                 Dogmazic permet aux musiciens utilisant des licences libres et ouvertes de déposer leurs musiques en toute liberté,
@@ -63,7 +63,7 @@
             </li>
             <li class="service_menu_item bullet_less">
               <h2 class="service_menu_title">Spider Jessica</h2>
-              <span class="service_menu_status">Statut : Encore dans l'oeuf</h2>
+              <span class="service_menu_status">Statut : Encore dans l'oeuf</span>
               <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
               <p class="service_menu_description">
                 Les developpeurs informatique peuvent sans peine partager les sources de leur travail pour
@@ -75,7 +75,7 @@
             </li>
             <li class="service_menu_item bullet_less">
               <h2 class="service_menu_title">Wreck a Tour</h2>
-              <span class="service_menu_status">Sur le papier</h2>
+              <span class="service_menu_status">Sur le papier</span>
               <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
               <p class="service_menu_description">
                 Et si les petits groupes arrêtaient de galérer pour faire des concerts ? Et si les sous du live n'allait plus

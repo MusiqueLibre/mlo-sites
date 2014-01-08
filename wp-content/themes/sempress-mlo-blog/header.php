@@ -27,9 +27,19 @@
 <link rel="profile" href="http://microformats.org/profile/specs" />
 <link rel="profile" href="http://microformats.org/profile/hatom" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
 <?php include 'inc/global_statics.php'; ?>
 <?php include 'inc/wp_statics.php'; ?>
-<?php  wp_enqueue_script('init', get_template_directory_uri() . '/js/init.js', false); ?>
+<script type="text/javascript">
+  $(function(){
+  //  ajaxify();
+  //  startPlayer();
+  });
+  function init(){
+
+    //do things
+  };
+</script>
 
 </head>
 

@@ -17,6 +17,29 @@ get_header(); ?>
 <main id="main_content">
 <h1 id="main_content_title">Derniers articles du blog</h1>
 
+<?php 
+if(get_option("hp_layout") == "category"){
+  //foreach( wp_list_categories( array('title_li' => false) );
+  echo '<ul id="home_category">';
+  foreach( get_categories() as $index => $category){
+    echo '<li class="home_category_list bullet_less index_list_columns two_columns">';
+    echo '<img class="home_category_img" src="'.z_taxonomy_image_url($category->term_id, 'thumbnail').'" />';
+    echo '<h2 class=" home_category_title home_title"><a href="'.get_category_link( $category->term_id ).'">'.$category->name.'</a></h2>';
+    echo '<p class="home_category_descr">'.$category->description.'</p>';
+    echo '<ul class="home_category_article">';
+    echo '<details>';
+    echo '<summary>'.__('Display articles', 'mlo').'</summary>';
+    foreach( get_posts(array('category' => $index)) as $post){
+      setup_postdata( $post );
+    ?>
+      <li id="home_category_article_list"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+    <?php
+    }
+    echo '</details></ul></li>';
+  }
+  echo '</ul>';
+}else{
+?>
 <div id="masonry_container">
   <?php if ( have_posts() ) : ?>
 
@@ -42,7 +65,7 @@ get_header(); ?>
 
     <article id="post-0" class="post no-results not-found">
       <header class="entry-header">
-        <h1 class="entry-title p-entry-title"><?php _e( 'Nothing Found', 'sempress' ); ?></h1>
+        <h1 class="entry-title home_title p-entry-title"><?php _e( 'Nothing Found', 'sempress' ); ?></h1>
       </header><!-- .entry-header -->
 
       <div class="entry-content e-entry-content">
@@ -58,4 +81,6 @@ get_header(); ?>
 </main><!-- #content -->
 
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_footer(); 
+}//closing the else
+?>

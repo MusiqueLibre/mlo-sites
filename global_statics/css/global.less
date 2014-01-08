@@ -63,7 +63,7 @@ h6{
 }
 
 h1,h2,h3,h4,h5,h6{
-  font-family:Liberation Mono;
+  font-family: sans;
   font-weight: 200;
   color:@text_color_light;
 }
@@ -76,7 +76,7 @@ li{
 }
 li:before{
  content: "\25E3\00A0";
- color: @main_color_desat;
+ color: #555;
  margin-left: -14px;
 }
 nav{ 
@@ -132,8 +132,9 @@ blockquote small:before {
   content: '\2014 \00A0';
 }
 summary{
-  color: @main_color_dark;
+  color: @complementary;
   cursor: pointer;
+  text-decoration: underline;
 }
 summary:before{
   content: '\25BC \00A0';
@@ -939,7 +940,7 @@ textarea {
 .index_list_columns{
   float:left;
   margin: 0;
-  padding: 10px;
+  padding: 10px 20px 20px 20px;
   .boxSizing;
 }
 .index_list_columns.three_columns{
@@ -953,8 +954,7 @@ textarea {
   font-size: 1.9em;
   font-weight: 200;
 }
-.index_list_columns.two_columns:nth-child(6n+1),
-.index_list_columns.two_columns:nth-child(6n+1),
+.index_list_columns.two_columns:nth-child(3n+1),
 .index_list_columns.three_columns:nth-child(6n+1),
 .index_list_columns.three_columns:nth-child(6n+2){
   background: rgba(230,230,230, 0.40);

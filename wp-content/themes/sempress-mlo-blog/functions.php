@@ -25,18 +25,13 @@
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
-if ( ! isset( $content_width ) )
-  $content_width = 600; /* pixels */
+/* Apearence menu options for this theme*/
+
+  require_once ( get_template_directory().'/options.php' );
 
 /**
  * Set a default theme color array for WP.com.
  */
-$themecolors = array(
-  'bg' => 'f0f0f0',
-  'border' => 'cccccc',
-  'text' => '555555',
-  'shadow' => 'ffffff'
-);
 
 class improved_main_menu extends Walker_Nav_Menu {
 
@@ -151,7 +146,6 @@ if ( ! function_exists( 'sempress_setup' ) ):
  * functions.php file.
  */
 function sempress_setup() {
-  global $themecolors;
 
   /**
    * Make theme available for translation
@@ -159,12 +153,13 @@ function sempress_setup() {
    * If you're building a theme based on sempress, use a find and replace
    * to change 'sempress' to the name of your theme in all the template files
    */
-  load_theme_textdomain( 'sempress', get_template_directory() . '/languages' );
+  load_theme_textdomain( 'mlo', get_template_directory() . '/languages' );
 
   $locale = get_locale();
   $locale_file = get_template_directory() . "/languages/$locale.php";
-  if ( is_readable( $locale_file ) )
+  if ( is_readable( $locale_file ) ){
     require_once( $locale_file );
+ }
 
   /**
    * Add default posts and comments RSS feed links to head
@@ -198,24 +193,6 @@ function sempress_setup() {
    * @see http://jetpack.me/support/infinite-scroll/
    */
   add_theme_support( 'infinite-scroll', array('container' => 'content', 'footer' => 'colophon') );
-  
-  /**
-   * This theme supports a custom header
-   */
-  $custom_header_args = array(
-    'width'         => 950,
-    'height'        => 200,
-    'header-text'   => false
-  );
-  add_theme_support( 'custom-header', $custom_header_args );
-  
-  /**
-   * This theme supports custom backgrounds
-   */
-  $custom_background_args = array(
-    'default-color' => $themecolors['bg'],
-    'default-image' => get_template_directory_uri() . '/img/noise.png',
-  );
   
   /**
    * Nicer WYSIWYG editor
@@ -266,43 +243,6 @@ add_filter( 'wp_title', 'sempress_wp_title', 10, 2 );
  *
  * @since 1.3.0
  */
-function sempress_customize_register( $wp_customize ) {
-  global $themecolors;
-
-  $wp_customize->add_setting( 'sempress_textcolor' , array(
-    'default'     => '#'.$themecolors['text'],
-    'transport'   => 'refresh',
-  ) );
-  
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'sempress_textcolor', array(
-    'label'      => __( 'Text Color', 'sempress' ),
-    'section'    => 'colors',
-    'settings'   => 'sempress_textcolor',
-  ) ) );
-  
-  $wp_customize->add_setting( 'sempress_shadowcolor' , array(
-    'default'     => '#'.$themecolors['shadow'],
-    'transport'   => 'refresh',
-  ) );
-
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'sempress_shadowcolor', array(
-    'label'      => __( 'Shadow Color', 'sempress' ),
-    'section'    => 'colors',
-    'settings'   => 'sempress_shadowcolor',
-  ) ) );
-  
-  $wp_customize->add_setting( 'sempress_bordercolor' , array(
-    'default'     => '#'.$themecolors['border'],
-    'transport'   => 'refresh',
-  ) );
-
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'sempress_bordercolor', array(
-    'label'      => __( 'Border Color', 'sempress' ),
-    'section'    => 'colors',
-    'settings'   => 'sempress_bordercolor',
-  ) ) );
-}
-add_action( 'customize_register', 'sempress_customize_register' );
 
 
 /**
