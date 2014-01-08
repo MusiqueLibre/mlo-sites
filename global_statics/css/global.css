@@ -1165,16 +1165,16 @@ textarea {
 #nav_below .nav_next {
   z-index: 10000;
   position: fixed;
-  bottom: 8px;
+  bottom: 5px;
   height: 1em;
   max-width: 300px;
   padding: 3px;
   border: 1px solid #999;
-  -webkit-box-shadow: 5px 5px 5px #dddddd;
-  -moz-box-shadow: 5px 5px 5px #dddddd;
-  -o-box-shadow: 5px 5px 5px #dddddd;
-  -ms-box-shadow: 5px 5px 5px #dddddd;
-  box-shadow: 5px 5px 5px #dddddd;
+  -webkit-box-shadow: 5px 5px 5px #555555;
+  -moz-box-shadow: 5px 5px 5px #555555;
+  -o-box-shadow: 5px 5px 5px #555555;
+  -ms-box-shadow: 5px 5px 5px #555555;
+  box-shadow: 5px 5px 5px #555555;
 }
 #nav_below .nav_previous {
   left: 0;
