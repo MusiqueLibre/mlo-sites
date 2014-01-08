@@ -1165,11 +1165,16 @@ textarea {
 #nav_below .nav_next {
   z-index: 10000;
   position: fixed;
-  bottom: 0;
+  bottom: 8px;
   height: 1em;
   max-width: 300px;
   padding: 3px;
-  border-top: 1px solid #999;
+  border: 1px solid #999;
+  -webkit-box-shadow: 5px 5px 5px #dddddd;
+  -moz-box-shadow: 5px 5px 5px #dddddd;
+  -o-box-shadow: 5px 5px 5px #dddddd;
+  -ms-box-shadow: 5px 5px 5px #dddddd;
+  box-shadow: 5px 5px 5px #dddddd;
 }
 #nav_below .nav_previous {
   left: 0;
