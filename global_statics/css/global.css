@@ -1166,29 +1166,18 @@ textarea {
   z-index: 10000;
   position: fixed;
   bottom: 0;
-  height: 2em;
+  height: 1em;
   max-width: 300px;
   padding: 3px;
+  border-top: 1px solid #999;
 }
 #nav_below .nav_previous {
   left: 0;
   background: #ffffff url("../images/triangles.png") no-repeat;
-  opacity: 0.4;
-  -webkit-transition: opacity 0.5s ease;
-  -moz-transition: opacity 0.5s ease;
-  -ms-transition: opacity 0.5s ease;
-  -o-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
 }
 #nav_below .nav_next {
   right: 0;
   background: #ffffff url("../images/triangles_r.png") no-repeat right;
-  opacity: 0.4;
-  -webkit-transition: opacity 0.5s ease;
-  -moz-transition: opacity 0.5s ease;
-  -ms-transition: opacity 0.5s ease;
-  -o-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
 }
 #nav_below .nav_next:hover {
   opacity: 1;

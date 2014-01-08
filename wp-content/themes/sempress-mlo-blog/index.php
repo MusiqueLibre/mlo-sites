@@ -78,9 +78,12 @@ if(get_option("hp_layout") == "category"){
 </div>
 
 <?php sempress_content_nav( 'nav_below' ); ?>
-</main><!-- #content -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); 
-}//closing the else
+<?php 
+  } //closing the else
+?>
+</main><!-- #content -->
+<?php
+  get_sidebar();
+  get_footer(); 
 ?>
