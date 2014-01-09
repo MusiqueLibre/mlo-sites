@@ -1089,10 +1089,10 @@ textarea {
   background-position: 500px 0;
 }
 .index_list_columns.three_columns:nth-child(6n+1) {
-  background-position: 500px 300px;
+  background-position: 1000px 0;
 }
 .index_list_columns.three_columns:nth-child(6n+2) {
-  background-position: 0 300px;
+  background-position: 1500px 0;
   background-color: rgba(230, 230, 230, 0.4);
 }
 /* Sidebar slideshow */
