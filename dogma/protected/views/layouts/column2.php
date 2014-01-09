@@ -4,7 +4,7 @@
   <?php echo $content; ?>
 </main>
 <aside id="sidebar">
-  <h1 id="sidebar_title">Filtres</h1>
+  <h1 id="sidebar_title">En plus :</h1>
     <ul id="side_nav">
       <li class="bullet_less side_filter">
         <div class="side_filter_content">

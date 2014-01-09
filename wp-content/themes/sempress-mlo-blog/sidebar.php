@@ -8,7 +8,7 @@
 ?>
   <aside id="sidebar">
       <header id="sidebar_header">
-          <h1 id="sidebar_title" class="search">Filtres</h1>
+          <h1 id="sidebar_title" class="search">En plus :</h1>
           <?php get_search_form(); ?>
       </header>
       <?php do_action( 'before_sidebar' ); ?>

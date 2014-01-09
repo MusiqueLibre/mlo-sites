@@ -923,7 +923,7 @@ textarea {
 #main_content{
   position: relative;
   z-index: 2;/*for the filter animation*/
-  background: url('../images/triangles_maxi.png') top right repeat-y @subtle_grey;
+  /*background: url('../images/triangles_maxi.png') top right repeat-y @subtle_grey;*/
   float: left;
   width: 73%;
 }
@@ -950,6 +950,7 @@ textarea {
   margin: 0;
   padding: 10px 20px 20px 20px;
   .boxSizing;
+  background-image: url('../images/triangles_bloc.png');
 }
 .index_list_columns.three_columns{
   width: 33%;
@@ -962,10 +963,15 @@ textarea {
   font-size: 1.9em;
   font-weight: 200;
 }
-.index_list_columns.two_columns:nth-child(3n+1),
-.index_list_columns.three_columns:nth-child(6n+1),
+.index_list_columns.two_columns:nth-child(2n){
+  background-position: 500px 0;
+}
+.index_list_columns.three_columns:nth-child(6n+1){
+  background-position: 500px 300px;
+}
 .index_list_columns.three_columns:nth-child(6n+2){
-  background: rgba(230,230,230, 0.40);
+  background-position: 0 300px;
+  background-color: rgba(230,230,230, 0.40);
 }
 /* Sidebar slideshow */
 #sidebar_title.search{
