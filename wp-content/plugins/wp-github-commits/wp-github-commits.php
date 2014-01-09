@@ -1,9 +1,9 @@
 <?php
 /**
 Plugin Name: WP Github Commits
-Plugin URI: http://sudarmuthu.com/wordpress/wp-github-commits
+Plugin URI: 
 Description: Displays the latest commits of a github repo in the sidebar.
-Author: Sudar
+Author: Sudar & Tumulte
 Version: 0.5
 Author URI: http://sudarmuthu.com/
 Text Domain: wp-github-commits
