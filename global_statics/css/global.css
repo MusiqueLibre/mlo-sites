@@ -183,6 +183,11 @@ summary:before {
   position: absolute;
   z-index: 99;
 }
+.bullet_less,
+.bullet_less_list {
+  margin: 0;
+  padding: 0;
+}
 .bullet_less:before {
   /*equivalent of a plain "list-style:none" class. The bullet is added with "before", so  it has to be like this*/
 
@@ -987,6 +992,9 @@ textarea {
 #sidebar .content {
   padding: 10px;
 }
+.sidebar_list {
+  margin: 15px 0;
+}
 .sidebar_title {
   margin: 0 0 10px;
   font-size: 2em;
@@ -1145,7 +1153,6 @@ textarea {
   top: 0;
   left: 0;
   background: #fff;
-  width: 203px;
   min-height: 500px;
   -webkit-transition: left 0.5s ease;
   -moz-transition: left 0.5s ease;
@@ -1153,6 +1160,11 @@ textarea {
   -o-transition: left 0.5s ease;
   transition: left 0.5s ease;
   z-index: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .side_filter_list {
   padding: 0;
@@ -1165,7 +1177,7 @@ textarea {
 #nav_below .nav_next {
   z-index: 10000;
   position: fixed;
-  bottom: 5px;
+  bottom: 7px;
   height: 1em;
   max-width: 300px;
   padding: 3px;

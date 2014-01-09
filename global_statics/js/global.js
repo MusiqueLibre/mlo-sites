@@ -83,7 +83,8 @@ $(function(){
 //Filters
   var filter_count = $(".side_filter_title").length;
   var filter_size = 30;
-  var filter_content_width  = $(".side_filter_content").outerWidth();
+  var filter_content_width  = $(".side_filter_content").outerWidth()-filter_size*filter_count;
+  $('.side_filter_content').css('width', 'calc(100% - '+filter_size*filter_count+'px)');
   $(".side_filter_title").click(function(){
     filter_right = 0;
     clicked_filter = $(this)
