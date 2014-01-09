@@ -236,11 +236,11 @@ class WP_Github_Commits {
 
             $github_api = new Github_API();
             $commits = $github_api->get_repo_commits($user, $repo);
-            $issues = $github_api->get_repo_issues($user, $repo, 'closed');
-            $wip = $github_api->get_repo_issues($user, $repo, 'open', true);
 
             set_transient($key, $commits, 5 * HOUR_IN_SECONDS); // 5 hours TODO: Make it configurable
         }
+        $issues = $github_api->get_repo_issues($user, $repo, 'closed');
+        $wip = $github_api->get_repo_issues($user, $repo, 'open', true);
 
 
         $output .= '<h3>'.__('Working on', 'wp-github-commits').' : '.'</h3>';
