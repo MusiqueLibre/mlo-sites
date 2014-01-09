@@ -1074,6 +1074,7 @@ textarea {
   box-sizing: border-box;
   background-image: url('../images/triangles_bloc.png');
   background-position: 0 top;
+  background-repeat: 0 no-repeat;
 }
 .index_list_columns.three_columns {
   width: 33%;
