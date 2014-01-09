@@ -228,13 +228,13 @@ class WP_Github_Commits {
 
         $key = self::CACHE_KEY_SLUG . "$user-$repo";
 
+        if(!class_exists('Github_API')){
+            require_once dirname(__FILE__) . '/include/class-github-api.php';
+        }
+
+        $github_api = new Github_API();
         if (false === ( $commits = get_transient( $key ) ) ) {
 
-            if(!class_exists('Github_API')){
-                require_once dirname(__FILE__) . '/include/class-github-api.php';
-            }
-
-            $github_api = new Github_API();
             $commits = $github_api->get_repo_commits($user, $repo);
 
             set_transient($key, $commits, 5 * HOUR_IN_SECONDS); // 5 hours TODO: Make it configurable
