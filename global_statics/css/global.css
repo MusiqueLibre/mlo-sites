@@ -1073,6 +1073,7 @@ textarea {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   background-image: url('../images/triangles_bloc.png');
+  background-position: 0 top;
 }
 .index_list_columns.three_columns {
   width: 33%;
@@ -1086,13 +1087,13 @@ textarea {
   font-weight: 200;
 }
 .index_list_columns.two_columns:nth-child(2n) {
-  background-position: 500px 0;
+  background-position: -500px top;
 }
 .index_list_columns.three_columns:nth-child(6n+1) {
-  background-position: 1000px 0;
+  background-position: -1000px top;
 }
 .index_list_columns.three_columns:nth-child(6n+2) {
-  background-position: 1500px 0;
+  background-position: 1500px bottom;
   background-color: rgba(230, 230, 230, 0.4);
 }
 /* Sidebar slideshow */
