@@ -236,20 +236,27 @@ class WP_Github_Commits {
         if (false === ( $commits = get_transient( $key ) ) ) {
 
             $commits = $github_api->get_repo_commits($user, $repo);
+            $issues = $github_api->get_repo_issues($user, $repo, 'closed');
+            $wip = $github_api->get_repo_issues($user, $repo, 'open', true);
 
-            set_transient($key, $commits, 5 * HOUR_IN_SECONDS); // 5 hours TODO: Make it configurable
+            set_transient($key, $commits, 2 * HOUR_IN_SECONDS); // 5 hours TODO: Make it configurable
+            set_transient($key.'issues', $issues, 2 * HOUR_IN_SECONDS); // 5 hours TODO: Make it configurable
+            set_transient($key.'wip', $wip, 2 * HOUR_IN_SECONDS); // 5 hours TODO: Make it configurable
         }
-        $issues = $github_api->get_repo_issues($user, $repo, 'closed');
-        $wip = $github_api->get_repo_issues($user, $repo, 'open', true);
 
 
         $output .= '<h3>'.__('Working on', 'wp-github-commits').' : '.'</h3>';
         $output .= '<ul class = "github-wip bullet_less_list">';
         foreach($wip as $work) {
+            $counter ++;
             $output .= '<li class = "github-issue sidebar_list bullet_less">';
             $output .= ' &#9000; <a href="'.$work->html_url.'">'.$work->title.'</a>';
             $output .= '</li>';
+            if ($count == $counter) {
+                break;
+            }
         }
+        $counter = 0;
         $output .= '</ul>';
         $output .= '<h3>'.__('Solved recently', 'wp-github-commits').' : '.'</h3>';
         $output .= '<ul class = "github-issues bullet_less_list">';

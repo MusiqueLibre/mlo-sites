@@ -44,6 +44,10 @@ $(function(){
   });
 
   
+  //make the entire menu boxes clickable
+  $('#secondary_logo_box_title, #logo_box_title, .header_sub_button').click(function(){
+    $(this).siblings('.header_button').click();
+  });
   //displaying drop down menu properly 
   $('.sub_menu_container').each(function(){
     parentheight = $(this).parents(".menu_container").outerHeight();

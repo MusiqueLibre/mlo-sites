@@ -1,7 +1,7 @@
 <header id="main_header">
   <div id="main_header_upper" class="menu_container">
     <section id="logos">
-      <div id="logo_box">
+      <div id="logo_box" class="logo_box">
         <div id="logo_box_title">Musique Libre !</div>
         <button type="button" class="header_button menu_more_button">l'association <span class="pretty_font">ml &nbsp;!&nbsp;</span></button>
         <div class="header_sub_button">...</div>
@@ -32,7 +32,7 @@
           </ul>
         </section>
       </div>
-      <div id="secondary_logo_box">
+      <div id="secondary_logo_box" class="logo_box">
         <div id="secondary_logo_box_title"><img title="Services" src="/global_statics/images/logos/logos_services.jpg"></div>
         <button type="button" class="header_button menu_more_button">les services publics <span class="pretty_font">ml&nbsp;!&nbsp;</span></button>
         <div class="header_sub_button">...</div>
@@ -133,9 +133,13 @@
             </li>
             <li class="global_menu_list">
                 <a href="http://musique-libre.org/dev" id="menu_dev" class="global_menu_link menu_more">Blog des developpeurs</a>
+                <span class="pretty_font" id="dev_blog_hint"> &#10149; Suivez l'avancée des sites en direct !</span>
             </li>
             <li class="global_menu_list non_site">
                 <a href="http://musique-libre.org/?page_id=285" class="global_menu_contact" id="global_menu_contact">Contact</a>
+            </li>
+            <li class="global_menu_list non_site">
+                <a href="http://musique-libre.org:7778" class="global_menu_contact" id="global_menu_chat" target="_blank">Discutez avec l'équipe</a>
             </li>
             <!--li class="global_menu_list non_site" id="menu_contact">
                 <a  style="width:auto" type="button">Soutenir/Adhérer</a>

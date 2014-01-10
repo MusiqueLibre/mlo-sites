@@ -257,7 +257,9 @@ button, .buttonified, .BigButton, input[type="submit"], input[type="button"],{/*
   .shadowyBox(@main_grey, 1px, 1px);
   padding: 0 15px;
 }
-button:hover, .buttonified:hover, .BigButton:hover, input[type="button"]:hover,input[type="submit"]:hover, .lower_button, .selected_button{
+  button:hover, .buttonified:hover, .BigButton:hover, 
+  input[type="button"]:hover,input[type="submit"]:hover, .lower_button, .selected_button,
+  .logo_box:hover button{
   color:@main_grey;
   text-decoration: none;
   background: #fff url("../images/triangles_micro.png") repeat-y;
@@ -288,6 +290,9 @@ button:active, .buttonified:active, .BigButton:active, input[type="button"]:acti
   -webkit-box-shadow: 0 9px 0 #e0e0e0;
   -ms-box-shadow: 0 9px 0 #e0e0e0;
   -o-box-shadow: 0 9px 0 #e0e0e0;
+}
+#logo_box, #secondary_logo_box{
+  cursor: pointer;
 }
 #logos, #secondary_logo_box, #main_header_right, #main_player_container,
 #logo_box, #secondary_logo_box, #main_connection{/*make sure the headr elements stay in one line*/
@@ -339,7 +344,7 @@ button:active, .buttonified:active, .BigButton:active, input[type="button"]:acti
 #secondary_logo_box .header_button{
   background-color: @service_main_color;
 }
-#secondary_logo_box .header_button:hover{
+#secondary_logo_box:hover .header_button{ /* Needed to override the ID else the hover doesn't change the BG*/
   background-color: #fff;
 }
 .header_sub_button{
@@ -714,12 +719,22 @@ textarea {
   margin:0;
   padding: 0;
 }
+#dev_blog_hint{
+  color: #555555;
+  left: 115px;
+  opacity: 0.5;
+  position: absolute;
+  top: 34px;
+  transform: rotate(3deg);
+  width: 260px;
+}
 
 .global_menu_list{
   padding: 0px;
   display:inline-block;
   margin-left: -4px;
   background: url("../images/triangles_mini.png") repeat-y;
+  position: relative;
 }
 .global_menu_list:hover{
   background-color: #fff;

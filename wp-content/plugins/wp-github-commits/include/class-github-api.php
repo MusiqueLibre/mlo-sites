@@ -21,7 +21,7 @@ class Github_API {
      */
     public function get_repo_issues($user, $repo, $state, $assigned=false) {
         if($assigned){
-          $assigned = "&filter=assigned";
+          $assigned = "&labels=en+travaux";
         }
         $path = "/repos/$user/$repo/issues?state=".$state.$assigned;
 
