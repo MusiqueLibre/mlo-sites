@@ -236,14 +236,18 @@ class WP_Github_Commits {
         if (false === ( $commits = get_transient( $key ) ) ) {
 
             $commits = $github_api->get_repo_commits($user, $repo);
-            $issues = $github_api->get_repo_issues($user, $repo, 'closed');
-            $wip = $github_api->get_repo_issues($user, $repo, 'open', true);
 
             set_transient($key, $commits, 2 * HOUR_IN_SECONDS); // 5 hours TODO: Make it configurable
+        }
+        if (false === ( $issues = get_transient( $key.'issues' ) ) ) {
             set_transient($key.'issues', $issues, 2 * HOUR_IN_SECONDS); // 5 hours TODO: Make it configurable
-            set_transient($key.'wip', $wip, 2 * HOUR_IN_SECONDS); // 5 hours TODO: Make it configurable
+            $issues = $github_api->get_repo_issues($user, $repo, 'closed');
         }
 
+        if (false === ( $wip = get_transient( $key.'wip' ) ) ) {
+            $wip = $github_api->get_repo_issues($user, $repo, 'open', true);
+            set_transient($key.'wip', $wip, 2 * HOUR_IN_SECONDS); // 5 hours TODO: Make it configurable
+        }
 
         $output .= '<h3>'.__('Working on', 'wp-github-commits').' : '.'</h3>';
         $output .= '<ul class = "github-wip bullet_less_list">';
