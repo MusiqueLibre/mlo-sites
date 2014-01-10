@@ -139,7 +139,7 @@
                 <a href="http://musique-libre.org/?page_id=285" class="global_menu_contact" id="global_menu_contact">Contact</a>
             </li>
             <li class="global_menu_list non_site">
-                <a href="http://musique-libre.org:7778" class="global_menu_contact" id="global_menu_chat" target="_blank">Discutez avec l'équipe</a>
+                <a href="http://musique-libre.org:7778" class="global_menu_contact" id="global_menu_chat" target="_blank">Chattez avec l'équipe</a>
             </li>
             <!--li class="global_menu_list non_site" id="menu_contact">
                 <a  style="width:auto" type="button">Soutenir/Adhérer</a>

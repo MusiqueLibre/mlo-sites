@@ -94,10 +94,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .Doc .side_filter:nth-child(2) .side_filter_title {
   background: #237080;
 }
-/* logged-in offset*/
-.logged-in {
-  margin-top: 32px;
-}
 /* =Structure
 -------------------------------------------------------------- */
 /* Increase the size of the content area for templates without sidebars */
