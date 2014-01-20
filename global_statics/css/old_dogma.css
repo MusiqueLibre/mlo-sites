@@ -18,3 +18,64 @@
   max-width: 50%;
   margin: 0 20px 20px 0;
 }
+.items .band_list_link {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+#band_list .band_list_item {
+  padding-top: 0;
+  margin-left: -4px;
+  text-align: left;
+  background: #fefefe;
+}
+.full_track_item {
+  background: transparent;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+}
+.full_track_item:hover {
+  background: #f0f0f0;
+}
+.full_track_item .track_button {
+  opacity: 0;
+}
+.full_track_item:hover .track_button {
+  opacity: 1;
+}
+.add_track {
+  -webkit-transition: text-shadow 1s ease;
+  -moz-transition: text-shadow 1s ease;
+  -ms-transition: text-shadow 1s ease;
+  -o-transition: text-shadow 1s ease;
+  transition: text-shadow 1s ease;
+  position: absolute;
+  right: 0;
+}
+.add_track {
+  -webkit-text-shadow: 0 0 9px #0b7dc9;
+  -moz-text-shadow: 0 0 9px #0b7dc9;
+  -o-text-shadow: 0 0 9px #0b7dc9;
+  -ms-text-shadow: 0 0 9px #0b7dc9;
+  text-shadow: 0 0 9px #0b7dc9;
+  background: #fff;
+  color: #666;
+}
+.track_button.download {
+  z-index: 100;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.download:hover + .add_track {
+  -webkit-text-shadow: 0 0 0 #ffffff;
+  -moz-text-shadow: 0 0 0 #ffffff;
+  -o-text-shadow: 0 0 0 #ffffff;
+  -ms-text-shadow: 0 0 0 #ffffff;
+  text-shadow: 0 0 0 #ffffff;
+  opacity: 0.3;
+}

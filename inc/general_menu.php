@@ -91,11 +91,10 @@
       <?php if(isset($player)){
         echo '<section id="main_player_container" >
                 <audio id="main_player"></audio>
-                <button type="button" id="playlist_button" class="menu_more_button button_thick hollow_button">Playlist</button>
-                <!--div class="sub_menu_container">
+                <div class="sub_menu_container">
                   <ul id="current_playlist"> </ul>
-                </div-->
-                <div class="header_button">playlist<span class="pretty_font">&nbsp;!&nbsp;</span></div>
+                </div>
+                <button class="header_button menu_more_button ">playlist ( <span id="playlist_count">0</span> )<span class="pretty_font">&nbsp;!&nbsp;</span></button>
                 <div class="header_sub_button">...</div>
               </section>';
       };

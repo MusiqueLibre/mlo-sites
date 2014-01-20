@@ -15,9 +15,9 @@ var postalcodes;
 //starts with "1", cause the member 0 is already displayed
 var member_no = 0;
 
+//use this when you need something to be reloaded after the ajax call as well as at normal page load
 //MAIN FUNCTIONS TRIGGER
 $(function(){
-  init()
 });
 
 //#######################
@@ -115,6 +115,12 @@ function closeMenu(){
       $('.sub_menu_container').slideUp(200);
 
 }
+$(".full_track_item").click(function(){
+  $(this).children('.media_entry_wrapper').click();
+});
+
+//Extending the "add to player" button in 2.5
+//
 
 //_______________________
 //|                      |
@@ -151,6 +157,12 @@ function toggleMenu(thisButton){
 //### PLAYER  ###
 //###############
 //
+function changeTrack(){
+  player = projekktor('#main_player');
+  index = player.getItemIdx();
+  $('#current_playlist').children().removeClass("played");
+  $('#current_playlist').children().eq(index).addClass("played");
+}
 /* Main player method */
 function startPlayer(){
   var template = [
@@ -175,46 +187,79 @@ function startPlayer(){
                 //Always show controls
             }
         }
-    );
+    ).addListener('item', function(){changeTrack()});
     if(projekktor('#main_player').getItemCount() == 0){
       $('#main_player').addClass('empty');
     }
+    playlistButtons();
 
 };
 //Adapts the player behavior to the user's actions on the playlist.
-function playerButtons(){ 
+function playlistButtons(){ 
 
     $('#main_player').removeClass('empty');
     $('#main_player').removeClass('tooltip');
-    //discover new playlist elements and make them do stuffs
-    $('.play_track').click(function(){
-        projekktor('#main_player').setActiveItem($(this).parent().index());
-    });
-    $('.remove_track').click(function(){
-        player = projekktor('#main_player');
-        parent = $(this).parent();
-        parent_index = parent.index();
+      parent = $(this).parent();
+      parent_index = parent.index();
+      $('#current_playlist').on('click', '.play_track', function(){
+          projekktor('#main_player').setActiveItem($(this).parent().index());
+          player.setPlay();
+      });
+      $('#current_playlist').on('click', '.remove_track', function(){
+          player = projekktor('#main_player');
+          parent = $(this).parent();
+          parent_index = parent.index();
 
-        if(player.getItemCount() == 1){ //the player shows an error when removing the last object
-          $("#main_player").addClass("empty");
-        }else{
-          player.setItem(null ,parent_index);
-        }
-        parent.remove();
-    });
+          if(player.getItemCount() == 1){ //the player shows an error when removing the last object
+            $("#main_player").addClass("empty");
+          }else{
+            player.setItem(null ,parent_index);
+          }
+          parent.remove();
+          playlistCountUpdate();
+     });
 }
 //Allow the user to use the playlist to interact with the player. Adding and removing items from both the site's and the player's JSON
 //playlist.
-function loadPlaylist(page_playlist){
-    player = projekktor('#main_player');
-    $.getJSON(page_playlist, function(data){
-      //add a single track
-      $("body").on('click', ".media_entry_wrapper" ,function(){
-         button_index = $(this).parents('.thumb_gallery').find('.media_entry_wrapper').index($(this));
-         track = data[button_index];
+function playlistPageButtons(){
+      json_playlists = {};
+      id = [];
+      this_album = []
+      //store the data for each playlist's albums
+      $(".band_album_list").each(function(index){
+        //using an array cause the each is faster than the json request. If not, the variable changes too soon
+        ////using an array cause the each is faster than the json request. If not, the variable changes too soon
+        id[index] = $(this).attr('data-id');
+        playlist = $(this).attr('data-playlist');
+        //the "$this" changes after the doe/fail, I need to store the one I need here
+        this_album[index] = $(this);
+        $.getJSON(playlist, function(data){
+          json_playlists[id[index]] = data;
+        }).done(function(){
+                this_album[index].children('.media_entry_wrapper')
+                                                                  .removeClass('loading_playlist');
+                this_album[index].siblings('.add_album_to_playlist').removeClass('loading_playlist');
+                playlistPageButtonsLoaded(this_album[index], json_playlists[id[index]]);
+              }).fail(function(){
+                            this_album[index].children('.media_entry_wrapper').addClass('loading_problem');
+                            this_album[index].siblings('.add_album_to_playlist').addClass('loading_problem');
+                            this_album[index].children('.loading_problem .add_track').html(reload);
+                          });
+      });
+
+}
+//wait until the json succeed to launch this
+function playlistPageButtonsLoaded(this_album, data){
+      this_album.children(".media_entry_wrapper").click(function(){
+         if(typeof player === 'undefined'){
+           player = projekktor('#main_player');
+         }
+         id= $(this).parents('.band_album_list').attr('data-id');
+         button_index = $(this).index();
+         track = data[button_index]
          $('#current_playlist').
          append('<li class="bullet_less"><button class="play_track">'+track.config['title']+'</button><button class="remove_track hollow_button">'+remove+'</button></li>');
-         playerButtons();
+         //relaunch the buttons actions for the new DOM
          //if the player is empty add the first file
          if(player.getItemCount() == 0){
            player.setFile(data.slice(button_index, button_index+1),0);
@@ -222,9 +267,15 @@ function loadPlaylist(page_playlist){
            //if there's already something, append the new track
            player.setItem(data[button_index],player.getItemCount());
          }
+         playlistCountUpdate();
       });
       //add album
-      $("body").on('click', "#add_album_to_playlist" ,function(){
+      album_button = this_album.siblings(".add_album_to_playlist");
+      album_button.click(function(){
+            if(typeof player === 'undefined'){
+              player = projekktor('#main_player');
+            }
+            id= $(this).next('.band_album_list').attr('data-id');
             //I have to setFile if empty or happend to the existing tracks if there's already something with setItem 
             if(player.getItemCount() == 0){
                player.setFile(data);
@@ -237,18 +288,20 @@ function loadPlaylist(page_playlist){
                $('#current_playlist').
                  append('<li class="bullet_less"><button class="play_track">'+track.config['title']+'</button><button class="remove_track hollow_button">'+remove+'</button></li>');
             });
-            playerButtons();
+            playlistCountUpdate();
       });
       $("body").on('click', "#add_album_and_clear_playlist" ,function(){
+            playlistCountUpdate();
             player.setFile(data);
             $('#current_playlist').html('');
             $.each( data, function(index, track){
                $('#current_playlist').
                  append('<li class="bullet_less"><button class="play_track">'+track.config['title']+'</button><button class="remove_track hollow_button">'+remove+'</button></li>');
             });
-            playerButtons();
      });
-    });
+}
+function playlistCountUpdate(){
+  $('#playlist_count').html($('#current_playlist').children().length);
 }
 
 //###############################
@@ -265,8 +318,6 @@ function ajaxify(){
       // Initializes plugin support for links
       $('a:not([href^=http]):not([href$=mp3]):not([href$=ogg])').address();
   }).change(function(event) {
-
-
   if(first){
     first = false;
     $.address.state('/');
@@ -287,7 +338,7 @@ function ajaxify(){
           },
           success: function(data, textStatus, XMLHttpRequest) {
               handler(data);
-              init();
+              initAtPageLoad();
           }
       });
   }

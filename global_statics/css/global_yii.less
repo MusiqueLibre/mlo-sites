@@ -7,10 +7,10 @@
   padding: 0;
   background: @less_subtle_grey;
   border-bottom: 9px solid #e0e0e0;
+  padding: 0 10px;
 }
-.pager li, .sorter li{
-  margin: 0;
-  padding: 0;
+.pager, .sorter{
+  display: table-cell;
 }
 .pager li, .sorter li{
   display: inline-block;
@@ -26,19 +26,15 @@
   text-decoration: underline;
   font-weight: bold;
 }
-.pager, .sorter{
-  width: 50%;
-  float: left;
-  .boxSizing;
+.context_nav_wrapper{
+  display: table;
+  width: 100%;
 }
 .items{
+  text-align: center;
+  margin: 0;
+  padding: 0;
   position: relative;
-}
-.items + .pager{
-  float: none;/*unfloat the footer pager which is alone*/
-  clear: both;
-  text-align: right;
-  width: 100%
 }
 .sorter a:after{
   content: " \25B3";

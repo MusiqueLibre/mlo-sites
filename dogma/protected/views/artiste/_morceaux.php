@@ -1,14 +1,26 @@
 <?php
-foreach($morceaux as $my_morceau):
-//if the album_less option is true : display only tracks without albums
-if(isset($album_less) && $my_morceau->album != NULL){
-  continue;
+if(isset($album)){
+  $morceaux = $album->morceaux;
+  $album_titre = $album->titre;
+}else{
+  $album_titre = "no album";
 }
+$separator = ',';
+
+//count the number of element to be able to remove the last comma
+$count = count($morceaux);
+
+foreach($morceaux as $index =>  $my_morceau):
+//if the album_less option is true : display only tracks without albums
 //TODO : a proper criteria rather than this whould be better
-if($my_morceau->suppr == 'O')
-  continue;
-?>
-<li>
+  //remove the comma for the last element
+  if($index+1 == $count){
+    $separator = '';
+  }
+  if($my_morceau->suppr == 'O')
+    continue;
+  ?>
+<li class="full_track_item media_entry_wrapper loading_playlist">
   <?php
 
     echo $my_morceau->titre;
@@ -17,7 +29,6 @@ if($my_morceau->suppr == 'O')
       echo '<a href="/archive/MP3/'.$artiste->id.'/'.$filename.'">mp3</a>';
     }
     */
-    echo " - ";
     //check if the file name's in the DB
     if(!$my_morceau->url_archive_ogg){
       //if not, just find the file starting with the id and ending with the proper format (the ']' checks it's properly named
@@ -30,7 +41,7 @@ if($my_morceau->suppr == 'O')
       }
     }else{
       if($my_morceau->url_archive_ogg != "not_found"){
-        echo '<a href="'.$my_morceau->url_archive_ogg.'">ogg</a>';
+        echo '<a class="buttonified download track_button" href="'.$my_morceau->url_archive_ogg.'" download="'.$my_morceau->titre.'.ogg">ogg &#11015;</a>';
       }
     }
     if(!$my_morceau->url_archive_mp3){
@@ -45,11 +56,18 @@ if($my_morceau->suppr == 'O')
       $my_morceau->save();
     }else{
       if($my_morceau->url_archive_mp3 != "not_found"){
-        echo " - ";
-        echo '<a href="'.$my_morceau->url_archive_mp3.'">mp3</a>';
+        echo '<a class="buttonified download track_button" href="'.$my_morceau->url_archive_mp3.'" download="'.$my_morceau->titre.'.mp3">mp3 &#11015;</a>';
       }
     }
+    echo '<button class="add_track track_button">&#8853; Ajouter au lecteur</button>';
 
+    //create playliste if it doesn't exist
+    if(!$is_playlist){
+      $data = '{"0":{"src":"'.$my_morceau->url_archive_ogg."\"},\n";
+      $data .= '"config":{"title":"'.$artiste_name.' - '.$album_titre.' - '.$my_morceau->titre."\"}\n";
+      $data .= "}".$separator."\n";
+      fwrite($file, $data);
+    }
 
   ?>
 </li>

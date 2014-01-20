@@ -30,7 +30,7 @@ $this->menu=array(
                      'nextPageLabel' => 'Suite',
                      'prevPageLabel' => 'Précédent',
                      ),
-    'template'=>"{pager}\n{sorter}\n{items}\n{pager}",
+    'template'=>"<div class='context_nav_wrapper'>{pager}{sorter}</div>\n{items}\n<div class='context_nav_wrapper'>{pager}</div>",
     'sortableAttributes'=>array(
             'nom',
             'pays',
