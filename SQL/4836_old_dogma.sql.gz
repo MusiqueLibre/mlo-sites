@@ -1,0 +1,247 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.11.3
+-- http://www.phpmyadmin.net
+--
+-- Serveur: 127.0.0.1
+-- Généré le : Jeu 06 Février 2014 à 16:20
+-- Version du serveur: 5.1.58
+-- Version de PHP: 5.3.23
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de données: `4836_old_dogma`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `album`
+--
+
+CREATE TABLE IF NOT EXISTS `album` (
+  `id_album` bigint(20) NOT NULL AUTO_INCREMENT,
+  `titre` varchar(255) DEFAULT NULL,
+  `titre_alpha` varchar(255) DEFAULT NULL,
+  `casse` char(1) NOT NULL DEFAULT 'N',
+  `annee` varchar(4) DEFAULT NULL,
+  `nbtpa` varchar(4) DEFAULT NULL,
+  `nb_dispo` bigint(20) NOT NULL DEFAULT '0',
+  `url` varchar(255) DEFAULT NULL,
+  `pochette` varchar(255) DEFAULT NULL,
+  `prix` varchar(15) NOT NULL DEFAULT '',
+  `date_insc` varchar(11) DEFAULT NULL,
+  `date_insc1` varchar(10) DEFAULT NULL,
+  `commentaire` text,
+  `id_groupe` int(10) DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL,
+  `url_recto` varchar(255) DEFAULT NULL,
+  `url_verso` varchar(255) DEFAULT NULL,
+  `url_cmde` varchar(255) DEFAULT NULL,
+  `clic_cmde` bigint(20) NOT NULL DEFAULT '0',
+  `url_p2p` varchar(255) DEFAULT NULL,
+  `url_torrent` varchar(255) DEFAULT NULL,
+  `url_zip` varchar(255) DEFAULT NULL,
+  `url_archive` varchar(255) DEFAULT NULL,
+  `lien_album_pragma` varchar(255) DEFAULT NULL,
+  `cpt_page_album` bigint(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_album`),
+  KEY `id_user` (`id_user`),
+  KEY `id_groupe` (`id_groupe`),
+  KEY `titre_alpha` (`titre_alpha`),
+  KEY `date_insc` (`date_insc`),
+  KEY `date_insc1` (`date_insc1`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7510 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `artiste`
+--
+
+CREATE TABLE IF NOT EXISTS `artiste` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(150) NOT NULL DEFAULT '',
+  `casse_artiste` char(2) DEFAULT NULL,
+  `forme` varchar(12) DEFAULT 'non précisé',
+  `inscrit_par` varchar(150) NOT NULL DEFAULT '',
+  `date_insc` int(14) NOT NULL DEFAULT '0',
+  `ville` varchar(120) DEFAULT NULL,
+  `pays` varchar(120) DEFAULT NULL,
+  `musicien` tinytext,
+  `logo` varchar(255) DEFAULT NULL,
+  `commentaire` text,
+  `commentaire_en` text NOT NULL,
+  `site` varchar(255) DEFAULT NULL,
+  `mail` varchar(255) DEFAULT NULL,
+  `pass` varchar(30) NOT NULL DEFAULT 'pass',
+  `french` mediumtext,
+  `english` mediumtext,
+  `don_status` char(1) NOT NULL DEFAULT 'N',
+  `don_chaine` varchar(25) DEFAULT NULL,
+  `cpt_page_artiste` bigint(20) NOT NULL DEFAULT '0',
+  `lien_groupe_pragma` varchar(255) DEFAULT NULL,
+  `suppr` char(1) NOT NULL DEFAULT 'N',
+  `date_suppr` varchar(10) DEFAULT NULL,
+  `automazic` char(1) NOT NULL DEFAULT 'O',
+  `suppr_automazic` varchar(8) DEFAULT NULL,
+  `compte_paypal` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `suppr` (`suppr`),
+  KEY `nom` (`nom`),
+  KEY `automazic` (`automazic`),
+  KEY `date_insc` (`date_insc`),
+  KEY `ville` (`ville`),
+  KEY `pays` (`pays`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7396 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `label`
+--
+
+CREATE TABLE IF NOT EXISTS `label` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `label` varchar(80) NOT NULL DEFAULT '',
+  `structure` varchar(20) DEFAULT NULL,
+  `adresse` varchar(250) DEFAULT NULL,
+  `cp` varchar(12) DEFAULT NULL,
+  `ville` varchar(240) DEFAULT NULL,
+  `etat` varchar(120) DEFAULT NULL,
+  `pays` varchar(50) DEFAULT NULL,
+  `mail` varchar(50) DEFAULT NULL,
+  `site` varchar(100) DEFAULT NULL,
+  `commentaire` text,
+  `img` varchar(100) DEFAULT NULL,
+  `pass` varchar(30) NOT NULL DEFAULT 'pass',
+  `inscrit_par` smallint(6) DEFAULT NULL,
+  `date_insc` int(14) DEFAULT NULL,
+  `date_insc1` varchar(10) DEFAULT NULL,
+  `french` mediumtext,
+  `english` mediumtext,
+  `don_status` char(1) NOT NULL DEFAULT 'N',
+  `don_chaine` varchar(25) DEFAULT NULL,
+  `cpt_page_label` bigint(20) NOT NULL DEFAULT '0',
+  `lien_label_pragma` varchar(255) DEFAULT NULL,
+  `suppr` char(1) NOT NULL DEFAULT 'N',
+  `date_suppr` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `label` (`label`),
+  KEY `suppr` (`suppr`),
+  KEY `structure` (`structure`),
+  KEY `ville` (`ville`),
+  KEY `pays` (`pays`),
+  KEY `date_insc` (`date_insc`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=596 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `morceau`
+--
+
+CREATE TABLE IF NOT EXISTS `morceau` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id_membre` int(11) DEFAULT NULL,
+  `date_insc1` char(10) DEFAULT NULL,
+  `date_insc` int(10) unsigned DEFAULT NULL,
+  `titre` varchar(240) DEFAULT NULL,
+  `casse` char(2) DEFAULT NULL,
+  `album` varchar(255) DEFAULT NULL,
+  `album_alpha` varchar(255) DEFAULT NULL,
+  `id_album` int(11) DEFAULT NULL,
+  `ordre_album` int(11) DEFAULT '0',
+  `ordre_groupe` int(11) NOT NULL DEFAULT '0',
+  `visible_groupe` char(1) NOT NULL DEFAULT 'O',
+  `groupe` int(10) DEFAULT NULL,
+  `groupe_alpha` varchar(240) DEFAULT NULL,
+  `auteur` varchar(255) DEFAULT NULL,
+  `compositeur` varchar(240) DEFAULT NULL,
+  `interprete` varchar(240) DEFAULT NULL,
+  `date_compo` char(10) DEFAULT NULL,
+  `duree` char(10) DEFAULT NULL,
+  `style` varchar(240) DEFAULT NULL,
+  `fk_pcdm` char(5) DEFAULT NULL,
+  `commentaire` text,
+  `label` varchar(100) DEFAULT NULL,
+  `label_alpha` varchar(255) DEFAULT NULL,
+  `licence` varchar(240) DEFAULT '23',
+  `licence_avenant` varchar(240) DEFAULT NULL,
+  `prix` char(10) DEFAULT NULL,
+  `hits` bigint(20) NOT NULL DEFAULT '0',
+  `stream` bigint(20) NOT NULL DEFAULT '0',
+  `radio` bigint(20) NOT NULL DEFAULT '0',
+  `url_titre` varchar(255) DEFAULT NULL,
+  `url_p2p` varchar(255) DEFAULT NULL,
+  `actif` char(1) NOT NULL DEFAULT 'O',
+  `desac_404` char(1) NOT NULL DEFAULT 'N',
+  `note` char(10) DEFAULT NULL,
+  `post` char(15) NOT NULL DEFAULT 'user',
+  `taille` int(11) NOT NULL DEFAULT '0',
+  `taille_mp3` int(11) NOT NULL DEFAULT '0',
+  `taille_ogg` int(11) NOT NULL DEFAULT '0',
+  `url_torrent` varchar(50) DEFAULT NULL,
+  `autorise_vote` char(1) NOT NULL DEFAULT 'O',
+  `autorise_comment` char(1) NOT NULL DEFAULT 'O',
+  `url_archive_ogg` varchar(255) DEFAULT NULL,
+  `url_archive_mp3` varchar(255) NOT NULL,
+  `suppr` char(1) NOT NULL DEFAULT 'N',
+  `date_suppr` char(10) DEFAULT NULL,
+  `id_borne` varchar(255) DEFAULT NULL,
+  `reclassement_par` varchar(25) DEFAULT NULL,
+  `date_reclassement` varchar(10) DEFAULT NULL,
+  `date_mod` int(11) NOT NULL,
+  `nom_fichier` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `groupe` (`groupe`),
+  KEY `style` (`style`),
+  KEY `label` (`label`),
+  KEY `licence` (`licence`),
+  KEY `actif` (`actif`),
+  KEY `suppr` (`suppr`),
+  KEY `groupe_alpha` (`groupe_alpha`),
+  KEY `album_alpha` (`album_alpha`),
+  KEY `visible_groupe` (`visible_groupe`),
+  KEY `album` (`album`),
+  KEY `id_membre` (`id_membre`),
+  KEY `date_insc` (`date_insc`),
+  KEY `suppractif` (`suppr`,`actif`),
+  KEY `suppr_style` (`suppr`,`style`),
+  KEY `label_alpha` (`label_alpha`),
+  KEY `fk_pcdm` (`fk_pcdm`),
+  KEY `id_borne` (`id_borne`),
+  KEY `date_mod` (`date_mod`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=77736 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `pcdm`
+--
+
+CREATE TABLE IF NOT EXISTS `pcdm` (
+  `pk_pcdm` char(5) NOT NULL,
+  `niv1` char(1) DEFAULT NULL,
+  `niv2` char(1) DEFAULT NULL,
+  `niv3` char(1) DEFAULT NULL,
+  `niv4` char(1) DEFAULT NULL,
+  `niv5` char(1) DEFAULT NULL,
+  `lib_pcdm` varchar(255) DEFAULT NULL,
+  `old_style_dogma` varchar(255) DEFAULT 'Autre',
+  `pcdm_actif` varchar(1) NOT NULL DEFAULT 'O',
+  `nombre_morceaux` int(6) NOT NULL,
+  PRIMARY KEY (`pk_pcdm`),
+  KEY `niv1` (`niv1`),
+  KEY `niv2` (`niv2`),
+  KEY `niv3` (`niv3`),
+  KEY `niv4` (`niv4`),
+  KEY `niv5` (`niv5`),
+  KEY `pcdm_actif` (`pcdm_actif`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='classement PCDM4';

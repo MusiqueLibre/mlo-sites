@@ -152,7 +152,6 @@ dd{
   color: #555;
 }
 dt{
-  text-align: right;
   background: rgba(238, 238, 238, 0.5);
   font-size: 0.8em;
 }
@@ -702,6 +701,9 @@ textarea {
   margin: 10px 0;
 }
 /*###1 GENERIC STYLES (styles applied to several elements) */
+body .clear_bg{
+  background-color: #fff;
+}
 /*###2 : MENUS */
 .enphazied_block{
   background-image:@pattern_menus;
@@ -1049,7 +1051,7 @@ textarea {
 #sidebar_title.search{
   display: inline-block;
 }
-#sidebar_header .search_form{
+#sidebar_header .search_form, #search_form{
   float:right;
   margin: 8px 0
 }

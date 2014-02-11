@@ -102,7 +102,7 @@ class Morceau extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-      'artiste' => array(self::BELONGS_TO, 'Artiste', 'groupe')
+      'artiste' => array(self::BELONGS_TO, 'Artiste', 'groupe'),
 		);
 	}
 

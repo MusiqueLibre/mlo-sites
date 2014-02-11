@@ -77,7 +77,7 @@ class Artiste extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
       'albums' => array(self::HAS_MANY, 'Album', 'id_groupe'),
-      'morceaux' => array(self::HAS_MANY, 'Morceau', 'groupe', 'condition'=>"id_album IS NOT NULL"),
+      'morceaux' => array(self::HAS_MANY, 'Morceau', 'groupe', 'condition'=>"id_album IS NOT NULL AND suppr = 'N'"),
       'morceaux_no_album' => array(self::HAS_MANY, 'Morceau', 'groupe', 'condition'=>"id_album IS NULL")
 		);
 	}

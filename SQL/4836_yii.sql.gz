@@ -1,0 +1,196 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.11.3
+-- http://www.phpmyadmin.net
+--
+-- Serveur: 127.0.0.1
+-- Généré le : Jeu 06 Février 2014 à 16:35
+-- Version du serveur: 5.1.58
+-- Version de PHP: 5.3.23
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de données: `4836_yii`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `AuthAssignment`
+--
+
+CREATE TABLE IF NOT EXISTS `AuthAssignment` (
+  `itemname` varchar(64) NOT NULL,
+  `userid` varchar(64) NOT NULL,
+  `bizrule` text,
+  `data` text,
+  PRIMARY KEY (`itemname`,`userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `AuthItem`
+--
+
+CREATE TABLE IF NOT EXISTS `AuthItem` (
+  `name` varchar(64) NOT NULL,
+  `type` int(11) NOT NULL,
+  `description` text,
+  `bizrule` text,
+  `data` text,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `AuthItemChild`
+--
+
+CREATE TABLE IF NOT EXISTS `AuthItemChild` (
+  `parent` varchar(64) NOT NULL,
+  `child` varchar(64) NOT NULL,
+  PRIMARY KEY (`parent`,`child`),
+  KEY `child` (`child`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `messages`
+--
+
+CREATE TABLE IF NOT EXISTS `messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sender_id` int(11) NOT NULL,
+  `receiver_id` int(11) NOT NULL,
+  `subject` varchar(256) NOT NULL DEFAULT '',
+  `body` text,
+  `is_read` enum('0','1') NOT NULL DEFAULT '0',
+  `deleted_by` enum('sender','receiver') DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sender` (`sender_id`),
+  KEY `reciever` (`receiver_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `profiles`
+--
+
+CREATE TABLE IF NOT EXISTS `profiles` (
+  `user_id` int(11) NOT NULL,
+  `lastname` varchar(50) NOT NULL DEFAULT '',
+  `firstname` varchar(50) NOT NULL DEFAULT '',
+  `birthday` date NOT NULL DEFAULT '0000-00-00',
+  `url` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `profiles_fields`
+--
+
+CREATE TABLE IF NOT EXISTS `profiles_fields` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `varname` varchar(50) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `field_type` varchar(50) NOT NULL,
+  `field_size` int(3) NOT NULL DEFAULT '0',
+  `field_size_min` int(3) NOT NULL DEFAULT '0',
+  `required` int(1) NOT NULL DEFAULT '0',
+  `match` varchar(255) NOT NULL DEFAULT '',
+  `range` varchar(255) NOT NULL DEFAULT '',
+  `error_message` varchar(255) NOT NULL DEFAULT '',
+  `other_validator` varchar(5000) NOT NULL DEFAULT '',
+  `default` varchar(255) NOT NULL DEFAULT '',
+  `widget` varchar(255) NOT NULL DEFAULT '',
+  `widgetparams` varchar(5000) NOT NULL DEFAULT '',
+  `position` int(3) NOT NULL DEFAULT '0',
+  `visible` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `varname` (`varname`,`widget`,`visible`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `Rights`
+--
+
+CREATE TABLE IF NOT EXISTS `Rights` (
+  `itemname` varchar(64) NOT NULL,
+  `type` int(11) NOT NULL,
+  `weight` int(11) NOT NULL,
+  PRIMARY KEY (`itemname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tbl_migration`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_migration` (
+  `version` varchar(255) NOT NULL,
+  `apply_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(128) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `salt` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `DateAllViewed` datetime DEFAULT NULL,
+  `activkey` varchar(128) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `createtime` int(10) NOT NULL,
+  `lastvisit` int(10) DEFAULT NULL,
+  `superuser` int(1) NOT NULL,
+  `status` int(1) NOT NULL,
+  `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_User_Name` (`username`),
+  KEY `IX_User_Email` (`email`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=27935 ;
+
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `AuthAssignment`
+--
+ALTER TABLE `AuthAssignment`
+  ADD CONSTRAINT `AuthAssignment_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `AuthItem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `AuthItemChild`
+--
+ALTER TABLE `AuthItemChild`
+  ADD CONSTRAINT `AuthItemChild_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `AuthItem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `AuthItemChild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `AuthItem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Contraintes pour la table `Rights`
+--
+ALTER TABLE `Rights`
+  ADD CONSTRAINT `Rights_ibfk_1` FOREIGN KEY (`itemname`) REFERENCES `AuthItem` (`name`) ON DELETE CASCADE ON UPDATE CASCADE;
