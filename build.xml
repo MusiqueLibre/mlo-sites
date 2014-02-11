@@ -151,6 +151,7 @@
                 </replaceregexp>
             </filterchain>
         </reflexive>
+        <echo message="Converting less files" />
         <exec command="lessc global.less global.css" dir="./global_statics/css" />
         <exec command="lessc global_wp.less global_wp.css" dir="./global_statics/css" />
         <exec command="lessc global_vanilla.less global_vanilla.css" dir="./global_statics/css" />
