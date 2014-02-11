@@ -108,7 +108,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
-
   clip: rect(1px, 1px, 1px, 1px);
 }
 /* Alignment */
@@ -165,7 +164,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .index_list_columns a {
   font-size: 1em;
   /*prevents this em to be added to h1 em*/
-
 }
 .entry-header {
   margin-bottom: 10px;
@@ -309,7 +307,6 @@ a img {
 p img {
   margin-bottom: 0.5em;
   /* a small bottom margin prevents content floating under images */
-
 }
 /*
 Resize images to fit the main content area.
@@ -326,10 +323,8 @@ img.size-medium,
 .entry-content img {
   max-width: 100%;
   /* When images are too wide for containing element, force them to fit. */
-
   height: auto;
   /* Override height to match resized width for correct aspect ratio. */
-
 }
 img.alignleft {
   margin-right: 1em;
@@ -607,7 +602,7 @@ ol.commentlist li.pingback:before {
   img {
     max-width: 100% !important;
   }
-  @page  {
+  @page {
     margin: 0.5cm;
   }
   p,

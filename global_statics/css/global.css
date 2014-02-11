@@ -32,7 +32,6 @@ GENERIC STYLES
 /*###1 : NAKED TAGS*/
 body {
   /*background-image: url("../images/worn_dots.png");*/
-
   color: #333333;
   background-color: #fefefe;
   font-family: Liberation Sans, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -162,7 +161,6 @@ dd {
   color: #555;
 }
 dt {
-  text-align: right;
   background: rgba(238, 238, 238, 0.5);
   font-size: 0.8em;
 }
@@ -203,7 +201,6 @@ dt {
 }
 .bullet_less:before {
   /*equivalent of a plain "list-style:none" class. The bullet is added with "before", so  it has to be like this*/
-
   content: "";
   margin-left: 0;
 }
@@ -257,7 +254,6 @@ dt {
 .Active,
 Highlight {
   /*Vanilla classes are camel case which sucks*/
-
   border-bottom: 2px solid #6a6a6a;
   border-right: 2px solid #6a6a6a;
 }
@@ -273,18 +269,17 @@ main img {
   color: #d45500;
 }
 /*###1 SPECIFIC STYLING*/
-/*###2 BUTTONS AND VISUAL ELEMENTS*/button,
+/*###2 BUTTONS AND VISUAL ELEMENTS*/
+button,
 .buttonified,
 .BigButton,
 input[type="submit"],
 input[type="button"] {
   /*buttonified exists to make a link looks like a button, when <button> is not semantic*/
-
   font-size: 1.3em;
   vertical-align: middle;
   border: none;
   /*.shadowyBox(@main_color_dark);*/
-
   color: #6a6a6a;
   margin: 0 4px;
   background-color: transparent;
@@ -387,7 +382,6 @@ input[type="submit"]:active,
 #secondary_logo_box,
 #main_connection {
   /*make sure the headr elements stay in one line*/
-
   float: left;
   height: 70px;
 }
@@ -437,7 +431,6 @@ input[type="submit"]:active,
   font-family: sans;
   margin: 0;
   /*canceling buttons styles*/
-
   width: 100%;
 }
 #secondary_logo_box .header_button {
@@ -445,7 +438,6 @@ input[type="submit"]:active,
 }
 #secondary_logo_box:hover .header_button {
   /* Needed to override the ID else the hover doesn't change the BG*/
-
   background-color: #fff;
 }
 .header_sub_button {
@@ -465,7 +457,6 @@ input[type="submit"]:active,
 }
 #home_link {
   /*color given to the link inside the site title*/
-
   color: #ff9c5a;
 }
 #home_link:hover {
@@ -798,6 +789,9 @@ textarea {
   margin: 10px 0;
 }
 /*###1 GENERIC STYLES (styles applied to several elements) */
+body .clear_bg {
+  background-color: #fff;
+}
 /*###2 : MENUS */
 .enphazied_block {
   background-image: url("../images/subtle_dots.png");
@@ -1108,9 +1102,7 @@ textarea {
   position: relative;
   z-index: 2;
   /*for the filter animation*/
-
   /*background: url('../images/triangles_maxi.png') top right repeat-y @subtle_grey;*/
-
   background: #fefefe;
   float: left;
   width: 73%;
@@ -1177,7 +1169,8 @@ textarea {
 #sidebar_title.search {
   display: inline-block;
 }
-#sidebar_header .search_form {
+#sidebar_header .search_form,
+#search_form {
   float: right;
   margin: 8px 0;
 }
