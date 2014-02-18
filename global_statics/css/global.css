@@ -264,6 +264,12 @@ main img {
   -ms-box-shadow: 3px 3px 12px #dddddd;
   box-shadow: 3px 3px 12px #dddddd;
 }
+#main_content .show_slow,
+#main_content_full .show_slow,
+aside .show_slow {
+  opacity: 1;
+  height: 100%;
+}
 /*###2 SITES COLORS*/
 .dogma_archive_main_color {
   color: #d45500;
@@ -405,6 +411,10 @@ input[type="submit"]:active,
   background-repeat: no-repeat, no-repeat;
   background-position: top left, top right;
 }
+#secondary_logo_box_text {
+  font-size: 1.3em;
+  padding: 10px;
+}
 #secondary_logo_box_title {
   font-size: 20px;
   padding: 0;
@@ -455,7 +465,8 @@ input[type="submit"]:active,
   width: calc(100% - 483px);
   float: right;
 }
-#home_link {
+#home_link,
+#home_link_link:visited {
   /*color given to the link inside the site title*/
   color: #ff9c5a;
 }
@@ -644,6 +655,36 @@ player
 }
 #current_playlist .played:before {
   content: "\25B6";
+}
+.player_notif {
+  color: #d45500;
+  font-family: pacifico;
+  font-size: 1.2em;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: top ease 1s, opacity ease 1s;
+  -moz-transition: top ease 1s, opacity ease 1s;
+  -ms-transition: top ease 1s, opacity ease 1s;
+  -o-transition: top ease 1s, opacity ease 1s;
+  transition: top ease 1s, opacity ease 1s;
+}
+.player_notif.show_slow {
+  top: -30px;
+}
+#player_helper {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  border: 2px solid #ddd;
+  background: url('../images/triangles_r.png') #ffffff top right no-repeat;
+}
+#player_remote {
+  position: relative;
+  z-index: 10000;
+  background: url('../images/triangles_r.png') #ffffff top right no-repeat;
 }
 /* ###1 FORMS */
 form {
@@ -1040,6 +1081,10 @@ body .clear_bg {
   font-family: pacifico;
   color: #d45500;
 }
+#site_title_link {
+  color: #d45500;
+  text-decoration: none;
+}
 #site_description {
   width: 59%;
   font-size: 1.2em;
@@ -1116,6 +1161,17 @@ body .clear_bg {
   color: #fff;
   font-family: pacifico;
   margin: 0;
+  display: table;
+  width: 100%;
+  padding: 0;
+}
+#main_title_band,
+#main_content_title_inner {
+  font-size: 1.2em;
+  color: #fff;
+  font-family: pacifico;
+  background: #d45500 url("../images/spect.png");
+  display: table-cell;
 }
 #sidebar > h1,
 #sidebar_header {
