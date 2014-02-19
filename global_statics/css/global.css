@@ -1100,9 +1100,6 @@ body .clear_bg {
   box-sizing: border-box;
   background: #fff;
 }
-#sidebar .content {
-  padding: 10px;
-}
 .sidebar_list {
   margin: 15px 0;
 }
@@ -1137,7 +1134,7 @@ body .clear_bg {
 }
 /*###2 CONTENT*/
 .content {
-  padding: 15px 10px;
+  padding: 20px 40px;
 }
 .breadcrumbs {
   font-size: 0.8em;
@@ -1180,9 +1177,6 @@ body .clear_bg {
 #main_content > h1,
 #main_content_title {
   background: #ab4500 url("../images/spect.png");
-}
-#main_content .content {
-  padding: 20px;
 }
 .index_list_columns {
   margin: 0;

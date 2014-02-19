@@ -72,6 +72,7 @@
   <?php endif; ?>
 
   <?php 
+      // replace link to wp-login by a scroll to top
       $args['must_log_in'] = '<p class="must-log-in">' .
           sprintf(
                   __( 'You must be <a class="go_to_loggin" href="#connection_button">logged in</a> to post a comment.' ),

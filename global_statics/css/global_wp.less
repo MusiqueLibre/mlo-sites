@@ -159,9 +159,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .wp-post-image{
-  float: left;
-  margin: 0 20px 20px 0;
-  max-width: 33%;
+  margin: 40px auto;
+  max-width: 83%;
 }
 #article_header_meta{
   float: right;
@@ -298,24 +297,6 @@ p img {
   /* a small bottom margin prevents content floating under images */
 }
 
-/*
-Resize images to fit the main content area.
-- Applies only to images uploaded via WordPress by targeting size-* classes.
-- Other images will be left alone. Use "size-auto" class to apply to other images.
-*/
-img.size-auto,
-img.size-full,
-img.size-large,
-img.size-medium,
-.attachment img,
-.widget-area img,
-.wp-caption,
-.entry-content img {
-  max-width: 100%;
-  /* When images are too wide for containing element, force them to fit. */
-  height: auto;
-  /* Override height to match resized width for correct aspect ratio. */
-}
 
 img.alignleft {
   margin-right: 1em;
