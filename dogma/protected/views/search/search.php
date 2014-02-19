@@ -13,7 +13,7 @@ $this->breadcrumbs=array(
                 $artiste = Artiste::model()->find('nom = "'.$artiste_nom.'"');
 ?>                  
                     <dl>
-                    <dt>Artiste :</dt> <dd><a href="/dogma/index.php/artiste/<?php echo $artiste->id ?>"><?php echo CHtml::encode($results[$i]->Artiste); ?></a><dd/>
+                    <dt>Artiste :</dt> <dd><a title="<?php $artiste->nom ?> page"></a>" href="/dogma/index.php/artiste/<?php echo $artiste->id ?>"><?php echo CHtml::encode($results[$i]->Artiste); ?></a><dd/>
                     <dt>Title:</dt><dd> <?php echo CHtml::encode($results[$i]->Titre); ?><dd/>
                     <dt>Genre :</dt><dd> <?php echo CHtml::encode($results[$i]->Genre); ?><dd/>
                     </dl>
