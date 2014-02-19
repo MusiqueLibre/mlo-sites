@@ -74,7 +74,7 @@
   <?php 
       $args['must_log_in'] = '<p class="must-log-in">' .
           sprintf(
-                  __( 'You must be <a id="go_to_loggin" href="#connection_button">logged in</a> to post a comment.' ),
+                  __( 'You must be <a class="go_to_loggin" href="#connection_button">logged in</a> to post a comment.' ),
                         wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
                             ) . '</p>';
       comment_form($args, $post_id); 

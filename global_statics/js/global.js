@@ -22,7 +22,7 @@ var member_no = 0;
 //Adds the slide up/down behavior to the <summary> and <detail> elements
 $(function(){
   //Go to login menu
-  $('#go_to_loggin').click(function(){
+  $('.go_to_loggin').click(function(){
     $('html, body').animate({ scrollTop: 0 }, 'slow');
     $('#connection_button').click();
   });

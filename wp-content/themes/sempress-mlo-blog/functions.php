@@ -385,7 +385,13 @@ function sempress_comment( $comment, $args, $depth ) {
       <div class="comment-content"><?php comment_text(); ?></div>
 
       <div class="reply">
-        <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+        <?php
+        if ( is_user_logged_in() ) {
+           comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); 
+        }else{
+          echo '<a class="go_to_loggin" href="#connection_button">'.__('Log in to reply').'</a>';
+        }
+       ?>
       </div><!-- .reply -->
     </article><!-- #comment-## -->
 
