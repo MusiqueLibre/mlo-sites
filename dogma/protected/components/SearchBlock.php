@@ -15,7 +15,7 @@ class SearchBlock extends CPortlet
     {
         echo CHtml::beginForm(array('search/search'), 'get', array('style'=> 'inline')) .
         CHtml::textField('q', '', array('placeholder'=> 'search...','style'=>'width:140px;')) .
-        CHtml::submitButton('Go!',array('class'=>'clear_bg')) .
+        CHtml::submitButton('Go!',array('class'=>'clear_bg search_submit')) .
         CHtml::endForm('');
     }
 

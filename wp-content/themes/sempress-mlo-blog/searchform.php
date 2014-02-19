@@ -3,5 +3,5 @@
     <span class="screen-reader-text">Search for:</span>
     <input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:" />
   </label>
-  <button class="search_submit">Search<button/>
+  <button class="search_submit">Search</button>
 </form>
