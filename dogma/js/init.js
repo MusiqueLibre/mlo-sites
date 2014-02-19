@@ -1,5 +1,6 @@
 $(function(){
   //transpations
+  address_state = "/dogma/";
   remove = "Enlever";
   reload = "La playlist ne s'est pas chargée";
   ajaxify();
