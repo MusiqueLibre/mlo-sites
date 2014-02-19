@@ -1226,7 +1226,8 @@ body .clear_bg {
   margin: 8px 0;
 }
 #sidebar_header .search_submit,
-#search_form .search_submit {
+#search_form .search_submit,
+.search_form .search_submit {
   position: absolute;
   left: -9999px;
 }
