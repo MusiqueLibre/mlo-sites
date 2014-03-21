@@ -613,3 +613,8 @@ ol.commentlist li.pingback:before {
     width: auto;
   }
 }
+/*Olimometer*/
+.oliometer {
+  display: block;
+  margin: 20px auto;
+}
