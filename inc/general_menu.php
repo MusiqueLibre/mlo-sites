@@ -165,7 +165,7 @@
     <h2 id="site_description" class="header_description"><?php echo $site_description; ?></h2>
     <div class="header_description" id="meeting_info">
       <span id="meeting_title">Réunions IRC</span>
-      <img class="meeting_img dev_style" src="global_statics/images/dev_meeting.png"/>
+      <img class="meeting_img dev_style" src="/global_statics/images/dev_meeting.png"/>
       <div class="header_description">
         <span class="dev_style meeting_text">
           Prochaine réunion <strong>sites</strong><br/> 
@@ -196,7 +196,7 @@
           </span>
         </span>
       </div>
-      <img class="meeting_img orga_style" src="global_statics/images/orga_meeting.png"/>
+      <img class="meeting_img orga_style" src="/global_statics/images/orga_meeting.png"/>
     </div>
   </div>
   <section id="header_rss" style="display:none;">
