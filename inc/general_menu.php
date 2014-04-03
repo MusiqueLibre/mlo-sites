@@ -132,13 +132,13 @@
             </li>
             <li class="global_menu_list">
                 <a href="http://musique-libre.org/dev" id="menu_dev" class="global_menu_link menu_more">Blog des developpeurs</a>
-                <span class="pretty_font" id="dev_blog_hint"> &#10149; Suivez l'avancée des sites en direct !</span>
+                <!--span class="pretty_font" id="dev_blog_hint"> &#10149; Suivez l'avancée des sites en direct !</span-->
             </li>
             <li class="global_menu_list non_site">
                 <a href="http://musique-libre.org/?page_id=285" class="global_menu_contact" id="global_menu_contact">Contact</a>
             </li>
-            <li class="global_menu_list non_site">
-                <a href="http://musique-libre.org:7778" class="global_menu_contact" id="global_menu_chat" target="_blank">Chattez avec l'équipe</a>
+            <li class="global_menu_list" id="menu_chat">
+                <a href="http://musique-libre.org:7778" class="global_menu_link menu_more" id="global_menu_chat" target="_blank">Chattez avec l'équipe</a>
             </li>
             <!--li class="global_menu_list non_site" id="menu_contact">
                 <a  style="width:auto" type="button">Soutenir/Adhérer</a>
@@ -146,9 +146,58 @@
         </ul>
     </nav>
   </section>
+  <?php
+    //Displaying meeting dates
+    $date_format = "d/m/Y";
+    $now = strtotime("today midnight");
+    $dev_date = strtotime("second wednesday of this month");
+    $orga_date = strtotime("last wednesday of this month");
+    //display next month's date if it's too late
+    if($now > $dev_date){
+      $dev_date = strtotime("second wednesday of next month");
+    }
+    if($now > $orga_date){
+      $orga_date = strtotime("last wednesday of next month");
+    }
+  ?>
   <div id="site_infos">
-    <h1 id="site_title"><?php echo $site_title; ?></h1>
-    <h2 id="site_description"><?php echo $site_description; ?></h2>
+    <h1 id="site_title" class="header_description"><?php echo $site_title; ?></h1>
+    <h2 id="site_description" class="header_description"><?php echo $site_description; ?></h2>
+    <div class="header_description" id="meeting_info">
+      <span id="meeting_title">Réunions IRC</span>
+      <img class="meeting_img dev_style" src="global_statics/images/dev_meeting.png"/>
+      <div class="header_description">
+        <span class="dev_style meeting_text">
+          Prochaine réunion <strong>sites</strong><br/> 
+          (code, design, ergonomie)
+          <br/>
+          <span class="meeting_date">
+            <strong>
+              <?php
+                echo date($date_format, $now) == date($date_format,$dev_date) ?  '<span style="color:red">'.date($date_format,$dev_date).'</span>' : date($date_format,$dev_date) ;
+              ?>
+              20h-21h
+            </strong>
+          </span>
+        </span>
+        <br/>
+        <br/>
+        <span class="orga_style meeting_text">
+          Prochaine réunion <strong>asso</strong> </br>
+          (son projet, ses action...)
+          <br/>
+          <span class="meeting_date">
+            <strong>
+              <?php
+                echo date($date_format,$orga_date);
+              ?>
+              20h-21h
+            </strong>
+          </span>
+        </span>
+      </div>
+      <img class="meeting_img orga_style" src="global_statics/images/orga_meeting.png"/>
+    </div>
   </div>
   <section id="header_rss" style="display:none;">
     <span id="header_rss_name">dernière publication du <span id="header_rss_name_site">Forum</span></span>

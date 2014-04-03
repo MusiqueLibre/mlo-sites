@@ -1067,7 +1067,6 @@ body .clear_bg {
 }
 /*###1 SITE DESCRIPTION*/
 #site_infos {
-  width: 70%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -1079,12 +1078,11 @@ body .clear_bg {
 #site_title,
 #site_description {
   display: inline-block;
-  vertical-align: middle;
 }
 #site_title {
-  width: 30%;
+  width: 25%;
   font-size: 2.5em;
-  line-height: 1.1em;
+  line-height: 1.3em;
   font-family: pacifico;
   color: #d45500;
 }
@@ -1093,8 +1091,52 @@ body .clear_bg {
   text-decoration: none;
 }
 #site_description {
-  width: 59%;
+  width: 20%;
   font-size: 1.2em;
+}
+.header_description {
+  vertical-align: top;
+  display: inline-block;
+}
+.meeting_text {
+  width: 185px;
+  color: #6a6a6a;
+  font-family: sans;
+  font-size: 0.75em;
+}
+#meeting_info {
+  background: #fafafa;
+  padding: 15px 0 0 0;
+}
+.meeting_date {
+  font-size: 1.2em;
+}
+.dev_style {
+  display: inline-block;
+}
+.orga_style {
+  display: inline-block;
+}
+#meeting_title {
+  font-family: pacifico;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  display: inline-block;
+  color: #aaa;
+  position: relative;
+  top: -54px;
+  margin: 0 -31px;
+  font-size: 1.2em;
+  color: #C20013;
+}
+#menu_chat {
+  background: #fff;
+}
+#menu_chat .global_menu_link {
+  color: #C20013;
 }
 /*###2 COLUMNS  */
 #sidebar {
