@@ -150,14 +150,14 @@
     //Displaying meeting dates
     $date_format = "d/m/Y";
     $now = strtotime("today midnight");
-    $dev_date = strtotime("second wednesday of this month");
-    $orga_date = strtotime("last wednesday of this month");
+    $dev_date = strtotime("second tuesday of this month");
+    $orga_date = strtotime("last tuesday of this month");
     //display next month's date if it's too late
     if($now > $dev_date){
-      $dev_date = strtotime("second wednesday of next month");
+      $dev_date = strtotime("second tuesday of next month");
     }
     if($now > $orga_date){
-      $orga_date = strtotime("last wednesday of next month");
+      $orga_date = strtotime("last tuesday of next month");
     }
   ?>
   <div id="site_infos">
