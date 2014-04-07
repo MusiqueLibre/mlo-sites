@@ -148,6 +148,7 @@
   </section>
   <?php
     //Displaying meeting dates
+    date_default_timezone_set('Europe/Paris');
     $date_format = "d/m/Y";
     $now = strtotime("today midnight");
     $dev_date = strtotime("second tuesday of this month");
