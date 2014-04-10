@@ -1,93 +1,4 @@
 <header id="main_header">
-  <div id="main_header_upper" class="menu_container">
-    <section id="logos">
-      <div id="logo_box" class="logo_box">
-        <div id="logo_box_title">Musique Libre !</div>
-        <button type="button" class="header_button menu_more_button">l'association <span class="pretty_font">ml &nbsp;!&nbsp;</span></button>
-        <div class="header_sub_button">...</div>
-        <section class="sub_menu_container">
-          <ul id="service_menu">
-            <li class="service_menu_item bullet_less">
-              <h2 class="service_menu_title bullet_less">L'association Musique Libre ! en quelques mots...</h2>
-              <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
-              <p class="service_menu_description">
-                "Musique Libre !" est une association loi 1901 de défense et de promotion des musiques libres. Depuis
-                2004, celle-ci oeuvre pour mettre en avant les artistes qui choisissent de partager leur musique, tout en leur
-                offrant des outils pour qu'ils puissent diffuser leurs musique dans les meilleures conditions. Le tout gratuitement
-                et sans pub depuis toujours !
-              </p>
-              <p class="service_menu_description">
-                Vous trouverez ici des musiques en tout genre qui n'ont que pour seul point commun d'êtres les oeuvres d'artistes
-                qui veulent une culture libre, partageuse, juste et égalitaire !
-              </p>
-              <p class="service_menu_description">
-                Venez nous aider à réfléchir et à bâtir les outils pour réaliser ces utopies réalistes ! Prouvons que c'est possible...
-                en musique, si il vous plait !
-              </p>
-              <a class="service_menu_lien" href="http://musique-libre.org/asso/?page_id=6">En savoir plus...</a><br/>
-              <!--a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Historique</a><br/>
-              <a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Les statuts</a><br/-->
-
-            </li>
-          </ul>
-        </section>
-      </div>
-      <div id="secondary_logo_box" class="logo_box">
-        <div id="secondary_logo_box_title"><img title="Services" src="/global_statics/images/logos/logos_services.jpg"></div>
-        <button type="button" class="header_button menu_more_button">les services publics <span class="pretty_font">ml&nbsp;!&nbsp;</span></button>
-        <div class="header_sub_button">...</div>
-        <section class="sub_menu_container">
-          <ul id="service_menu">
-            <li class="service_menu_item bullet_less">
-              <h2 class="service_menu_title bullet_less">Dogmazic</h2>
-              <span class="service_menu_status">Statut : Chasse aux bugs</span>
-              <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
-              <p class="service_menu_description">
-                Dogmazic permet aux musiciens utilisant des licences libres et ouvertes de déposer leurs musiques en toute liberté,
-                et aux mélomanes d'aprécier une musique indépendante et éclectique
-              </p>
-              <p class="service_menu_description">
-                3ème version du site (fondé en 2004 !) cette mouture st basée sur <a href="http://mediagoblin.org">Mediagoblin</a>
-              </p>
-              <a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Dogmazic v3</a>
-
-            </li>
-            <li class="service_menu_item bullet_less">
-              <h2 class="service_menu_title">Archives Dogmazic</h2>
-              <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
-              <p class="service_menu_description">
-                Musique déposées sur les versions 1 et 2 de dogmazic entre 2004 et 2012
-              </p>
-              <a class="service_menu_lien" href="http://www.musique-libre.org/dogma">Archives Dogmazic 2004/2012</a>
-
-            </li>
-            <li class="service_menu_item bullet_less">
-              <h2 class="service_menu_title">Spider Jessica</h2>
-              <span class="service_menu_status">Statut : Encore dans l'oeuf</span>
-              <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
-              <p class="service_menu_description">
-                Les developpeurs informatique peuvent sans peine partager les sources de leur travail pour
-                travailler en équipe ou permettre à d'autre d'utiliser leur travail... Spider Jessica propose
-                d'adapter ses outils à la musique et aux musiciens pour faciliter les collaborations les remixs,
-                et le partage de savoir-faire.
-              </p>
-
-            </li>
-            <li class="service_menu_item bullet_less">
-              <h2 class="service_menu_title">Wreck a Tour</h2>
-              <span class="service_menu_status">Sur le papier</span>
-              <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
-              <p class="service_menu_description">
-                Et si les petits groupes arrêtaient de galérer pour faire des concerts ? Et si les sous du live n'allait plus
-                seulement aux gros poissons là où ce sont les groupes locaux qui attirent du monde ?
-              </p>
-
-            </li>
-          </ul>
-        </section>
-      </div>
-    </section>
-    <div id="main_header_right">
       <?php if(isset($player)){
         echo '<section id="main_player_container" >
                 <audio id="main_player"></audio>
@@ -95,32 +6,94 @@
                   <ul id="current_playlist"> </ul>
                 </div>
                 <button class="header_button menu_more_button ">playlist ( <span id="playlist_count">0</span> )<span class="pretty_font">&nbsp;!&nbsp;</span></button>
-                <div class="header_sub_button">...</div>
               </section>';
       };
       ?>
-      <section id="main_connection" class="pretty_font">
-        <div id="connection_menu">
-            <?php
-            if(array_key_exists('sso_authent_mlo',$_COOKIE)){
-              echo '<button type="button" id="deconnection_button"  >deconnexion</button>';
-            }else{
-              echo '<a id="subscribe_link" href="http://musique-libre.org/user/index.php?r=user/registration">inscription</a>
-               <button type="button" id="connection_button" >se connecter</button>';
-
-            }
-            ?>
-            <div class="sub_menu_container">
-              <div id="login_container"></div>
-            </div>
-        </div>
-      </section>
-    </div>
-  </div>
   <section id="global_menu_container" class="menu_container">
     <nav id="global_nav">
         <h1 id="main_title" class="out_of_the_way">Menu general pour les sites de musique libre !</h1>
         <ul id="global_menu" class="global_menu">
+            <li class="global_menu_list">
+              <button type="button" class="header_button menu_more_button">association <span class="pretty_font">ml&nbsp;!&nbsp;&#9663;</span></button>
+              <section class="sub_menu_container">
+                <ul id="service_menu">
+                  <li class="service_menu_item bullet_less">
+                    <h2 class="service_menu_title bullet_less">L'association Musique Libre ! en quelques mots...</h2>
+                    <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
+                    <p class="service_menu_description">
+                      "Musique Libre !" est une association loi 1901 de défense et de promotion des musiques libres. Depuis
+                      2004, celle-ci oeuvre pour mettre en avant les artistes qui choisissent de partager leur musique, tout en leur
+                      offrant des outils pour qu'ils puissent diffuser leurs musique dans les meilleures conditions. Le tout gratuitement
+                      et sans pub depuis toujours !
+                    </p>
+                    <p class="service_menu_description">
+                      qui veulent une culture libre, partageuse, juste et égalitaire !
+                      Vous trouverez ici des musiques en tout genre qui n'ont que pour seul point commun d'êtres les oeuvres d'artistes
+                    </p>
+                    <p class="service_menu_description">
+                      Venez nous aider à réfléchir et à bâtir les outils pour réaliser ces utopies réalistes ! Prouvons que c'est possible...
+                      en musique, si il vous plait !
+                    </p>
+                    <a class="service_menu_lien" href="http://musique-libre.org/asso/?page_id=6">En savoir plus...</a><br/>
+                    <!--a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Historique</a><br/>
+                    <a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Les statuts</a><br/-->
+
+                  </li>
+                </ul>
+              </section>
+            </li>
+            <li class="global_menu_list">
+              <button type="button" class="header_button menu_more_button" id="project_button">musique coopérative <span class="pretty_font">&#9663;</span></button>
+              <section class="sub_menu_container">
+                <ul id="service_menu">
+                  <li class="service_menu_item bullet_less">
+                    <h2 class="service_menu_title bullet_less">Dogmazic</h2>
+                    <span class="service_menu_status">Statut : Chasse aux bugs</span>
+                    <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
+                    <p class="service_menu_description">
+                      Dogmazic permet aux musiciens utilisant des licences libres et ouvertes de déposer leurs musiques en toute liberté,
+                      et aux mélomanes d'aprécier une musique indépendante et éclectique
+                    </p>
+                    <p class="service_menu_description">
+                      3ème version du site (fondé en 2004 !) cette mouture st basée sur <a href="http://mediagoblin.org">Mediagoblin</a>
+                    </p>
+                    <a class="service_menu_lien" href="http://www.dogmazic.net/alpha">Dogmazic v3</a>
+
+                  </li>
+                  <li class="service_menu_item bullet_less">
+                    <h2 class="service_menu_title">Archives Dogmazic</h2>
+                    <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
+                    <p class="service_menu_description">
+                      Musique déposées sur les versions 1 et 2 de dogmazic entre 2004 et 2012
+                    </p>
+                    <a class="service_menu_lien" href="http://www.musique-libre.org/dogma">Archives Dogmazic 2004/2012</a>
+
+                  </li>
+                  <li class="service_menu_item bullet_less">
+                    <h2 class="service_menu_title">Spider Jessica</h2>
+                    <span class="service_menu_status">Statut : Encore dans l'oeuf</span>
+                    <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
+                    <p class="service_menu_description">
+                      Les developpeurs informatique peuvent sans peine partager les sources de leur travail pour
+                      travailler en équipe ou permettre à d'autre d'utiliser leur travail... Spider Jessica propose
+                      d'adapter ses outils à la musique et aux musiciens pour faciliter les collaborations les remixs,
+                      et le partage de savoir-faire.
+                    </p>
+
+                  </li>
+                  <li class="service_menu_item bullet_less">
+                    <h2 class="service_menu_title">Wreck a Tour</h2>
+                    <span class="service_menu_status">Sur le papier</span>
+                    <img title="logo dogmazic v3" src="../images/logos/dogmav3.png"/>
+                    <p class="service_menu_description">
+                      Et si les petits groupes arrêtaient de galérer pour faire des concerts ? Et si les sous du live n'allait plus
+                      seulement aux gros poissons là où ce sont les groupes locaux qui attirent du monde ?
+                    </p>
+
+                  </li>
+                </ul>
+              </section>
+            </li>
             <li class="global_menu_list">
                 <a href="http://musique-libre.org" id="menu_blog" class="menu_more global_menu_link">Blog</a>
             </li>
@@ -139,6 +112,20 @@
             </li>
             <li class="global_menu_list" id="menu_chat">
                 <a href="http://musique-libre.org:7778" class="global_menu_link menu_more" id="global_menu_chat" target="_blank">Chattez avec l'équipe</a>
+            </li>
+            <li id="connection_menu">
+                  <?php
+                  if(array_key_exists('sso_authent_mlo',$_COOKIE)){
+                    echo '<button type="button" id="deconnection_button"  >deconnexion</button>';
+                  }else{
+                    echo '<a id="subscribe_link" href="http://musique-libre.org/user/index.php?r=user/registration">inscription</a>
+                     <button type="button" id="connection_button" >se connecter</button>';
+
+                  }
+                  ?>
+                  <div class="sub_menu_container">
+                    <div id="login_container"></div>
+                  </div>
             </li>
             <!--li class="global_menu_list non_site" id="menu_contact">
                 <a  style="width:auto" type="button">Soutenir/Adhérer</a>

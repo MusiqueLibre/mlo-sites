@@ -40,41 +40,59 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .ml-o .side_filter:nth-child(2) .side_filter_title {
   background: #ab4500;
 }
+.ml-o main a,
+.ml-o main a:visited,
+.ml-o aside a,
+.ml-o aside a:visited {
+  color: #085f99;
+}
 .DevBlog #site_title {
-  color: #78216a;
+  color: #82577b;
 }
 .DevBlog #main_content_title {
-  background-color: #58184e;
+  background-color: #6a4764;
 }
 .DevBlog #sidebar_header {
-  background: #78216a;
+  background: #82577b;
 }
 .DevBlog .side_filter_title {
-  background: #78216a;
+  background: #82577b;
 }
 .DevBlog .side_filter:nth-child(3) .side_filter_title {
-  background: #10040e;
+  background: #332230;
 }
 .DevBlog .side_filter:nth-child(2) .side_filter_title {
-  background: #58184e;
+  background: #6a4764;
+}
+.DevBlog main a,
+.DevBlog main a:visited,
+.DevBlog aside a,
+.DevBlog aside a:visited {
+  color: #4b5b4e;
 }
 .Blog #site_title {
-  color: #217844;
+  color: #83ad67;
 }
 .Blog #main_content_title {
-  background-color: #185832;
+  background-color: #6f9952;
 }
 .Blog #sidebar_header {
-  background: #217844;
+  background: #83ad67;
 }
 .Blog .side_filter_title {
-  background: #217844;
+  background: #83ad67;
 }
 .Blog .side_filter:nth-child(3) .side_filter_title {
-  background: #041009;
+  background: #435d32;
 }
 .Blog .side_filter:nth-child(2) .side_filter_title {
-  background: #185832;
+  background: #6f9952;
+}
+.Blog main a,
+.Blog main a:visited,
+.Blog aside a,
+.Blog aside a:visited {
+  color: #755a87;
 }
 .Doc #site_title {
   color: #2c8ca0;
@@ -93,6 +111,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .Doc .side_filter:nth-child(2) .side_filter_title {
   background: #237080;
+}
+.Doc main a,
+.Doc main a:visited,
+.Doc aside a,
+.Doc aside a:visited {
+  color: #703529;
 }
 /* =Structure
 -------------------------------------------------------------- */
