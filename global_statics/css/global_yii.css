@@ -32,7 +32,7 @@
 }
 .pager .page.selected a {
   cursor: default;
-  color: #6a6a6a;
+  color: #7d7d7d;
   text-decoration: underline;
   font-weight: bold;
 }

@@ -15,13 +15,13 @@ if(isset($script_array)){
 <script type="text/javascript" src="/global_statics/js/lib/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="/global_statics/js/global.js"></script>
 
-<link rel="stylesheet/less" type="text/css" href="/global_statics/css/normalize.less">
-<link rel="stylesheet/less" type="text/css" href="/global_statics/css/global.less">
+<link rel="stylesheet" type="text/css" href="/global_statics/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="/global_statics/css/global.css">
 <?php
   if(isset($css_array)){
     foreach( $css_array as $my_css){
-      echo '<link rel="stylesheet/less" type="text/css" href="/global_statics/css/'.$my_css.'">';
+      echo '<link rel="stylesheet" type="text/css" href="/global_statics/css/'.$my_css.'">';
     };
   }
 ?>
-<?php include "less_proccess.php"; ?>
+<?php //include the LESS JS processor here ?>
