@@ -165,8 +165,6 @@
         <exec command="git add -A" dir="." passthru="true"/>
         <input propertyname="commit_message" defaultValue="commiting some improvements">Enter your commit message</input>
         <exec command="git commit -m '${commit_message}'" dir="." passthru="true"/>
-        <echo message="pushing to ftp : git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}"/>
-        <exec command="git ftp push --user ${ftp_user} --passwd ${ftp_pass} ${ftp_host}${ftp_folder}" dir="." passthru="true" />
         <echo message="Reverting to local settings" />
         <exec command="phing -Denv=local" dir="." />
       </else>
