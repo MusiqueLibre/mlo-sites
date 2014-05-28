@@ -135,6 +135,14 @@ return array(
 			'charset' => 'utf8',
 			'tablePrefix' => 'wp_',
     ),
+		'dbmg'=>array(
+      'class'=>'CDbConnection',
+			'connectionString' => 'pgsql:host=localhost;dbname=@@mgDBName@@',
+			'emulatePrepare' => true,
+			'username' => '@@mgDBUser@@',
+      'password' => '@@mgDBPass@@',
+			'charset' => 'utf8',
+    ),
 
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

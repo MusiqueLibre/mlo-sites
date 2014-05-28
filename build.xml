@@ -19,6 +19,9 @@
           <token key="blogDBName" value="${blog_db}" />
           <token key="blogDBUser" value="${blog_db_user}" />
           <token key="blogDBPass" value="${blog_db_pass}" />
+          <token key="mgDBName" value="${mg_db}" />
+          <token key="mgDBUser" value="${mg_db_user}" />
+          <token key="mgDBPass" value="${mg_db_pass}" />
         </replacetokens>
       </filterchain>
   </copy>

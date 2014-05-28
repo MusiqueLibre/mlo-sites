@@ -12,7 +12,7 @@ add_action('wp', 'logOnIfSso', 1);
 function logOnIfSso(){
   //check that that there's a cookie and that the user isn't logged on to prevent
   //useless queries
-  $user_id = $_COOKIE['sso_authent_mlo']['id'];
+  $user_id = $_COOKIE['sso_authent_coomute']['id'];
   if (! is_user_logged_in() && $user_id){
     //DB config
     include('mlo_sso_config.php');
@@ -25,7 +25,7 @@ function logOnIfSso(){
     $result = mysql_result($session_id, 0);
 
     //IF there is a user, and the token in the cookie matches the one in the DB : logon !
-    if($_COOKIE['sso_authent_mlo']['token'] == $result){
+    if($_COOKIE['sso_authent_coomute']['token'] == $result){
       wp_set_auth_cookie($user_id);
     }
   }elseif(is_user_logged_in() && !$user_id){

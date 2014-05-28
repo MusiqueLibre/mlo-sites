@@ -3866,3 +3866,382 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/user/index.php?r=user/registration
 ---
+2014/05/12 15:35:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'user'@'localhost' (using password: YES)' in /var/www/html/mlo-sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/mlo-sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/mlo-sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/mlo-sites/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#7 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(212): CActiveRecord->getMetaData()
+#8 /var/www/html/mlo-sites/SRC/user/protected/modules/user/components/UserIdentity.php(28): CActiveRecord->__call('notsafe', Array)
+#9 /var/www/html/mlo-sites/SRC/user/protected/modules/user/components/UserIdentity.php(28): User->notsafe()
+#10 /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#11 /var/www/html/mlo-sites/framework/validators/CInlineValidator.php(42): UserLogin->authenticate('password', Array)
+#12 /var/www/html/mlo-sites/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#13 /var/www/html/mlo-sites/framework/base/CModel.php(159): CValidator->validate(Object(UserLogin), NULL)
+#14 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#15 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): LoginController->actionLogin()
+#16 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#18 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#20 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/login')
+#21 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /var/www/html/mlo-sites/user/index.php(9): CApplication->run()
+#23 {main}
+REQUEST_URI=/user/index.php?r=user/login
+HTTP_REFERER=http://coomute.loc/user/index.php?r=user/login
+---
+2014/05/26 14:37:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Impossible de résoudre la requête « user/register ».' in /var/www/html/mlo-sites/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/register')
+#1 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/user/index.php?r=user/register
+---
+2014/05/26 14:37:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'user'@'localhost' (using password: YES)' in /var/www/html/mlo-sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/mlo-sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/mlo-sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/mlo-sites/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(RegistrationForm))
+#7 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php(25): CActiveRecord->__construct()
+#9 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#10 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#14 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#15 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#17 {main}
+REQUEST_URI=/user/index.php?r=user/registration
+---
+2014/05/26 14:37:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'user'@'localhost' (using password: YES)' in /var/www/html/mlo-sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/mlo-sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/mlo-sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/mlo-sites/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(RegistrationForm))
+#7 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php(25): CActiveRecord->__construct()
+#9 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#10 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#12 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#14 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#15 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#17 {main}
+REQUEST_URI=/user/index.php?r=user/registration
+---
+2014/05/26 14:44:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'www-data'@'localhost' (using password: NO)' in /var/www/html/mlo-sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/mlo-sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/mlo-sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/mlo-sites/framework/base/CModule.php(103): CModule->getComponent('dbforum')
+#4 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(5): CModule->__get('dbforum')
+#5 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(14): copyValues->database()
+#6 /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/RegistrationForm.php(35): copyValues->copy('1', 'test1', '$2a$10$2RWR9eNB...', 'test1@t.fr', '$2a$10$2RWR9eNB...')
+#7 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(1097): RegistrationForm->afterSave()
+#8 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#9 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php(62): CActiveRecord->save()
+#10 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#11 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#16 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#18 {main}
+REQUEST_URI=/user/index.php?r=user/registration
+HTTP_REFERER=http://coomute.loc/user/index.php?r=user/registration
+---
+2014/05/26 14:46:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'www-data'@'localhost' (using password: NO)' in /var/www/html/mlo-sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/mlo-sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/mlo-sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/mlo-sites/framework/base/CModule.php(103): CModule->getComponent('dbforum')
+#4 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(5): CModule->__get('dbforum')
+#5 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(14): copyValues->database()
+#6 /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/RegistrationForm.php(35): copyValues->copy('2', 'test2', '$2a$10$UT27lQuI...', 'test2@t.fr', '$2a$10$UT27lQuI...')
+#7 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(1097): RegistrationForm->afterSave()
+#8 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#9 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php(62): CActiveRecord->save()
+#10 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#11 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#16 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#18 {main}
+REQUEST_URI=/user/index.php?r=user/registration
+HTTP_REFERER=http://coomute.loc/user/index.php?r=user/registration
+---
+2014/05/26 14:47:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'www-data'@'localhost' (using password: NO)' in /var/www/html/mlo-sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/mlo-sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/mlo-sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/mlo-sites/framework/base/CModule.php(103): CModule->getComponent('dbblog')
+#4 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(6): CModule->__get('dbblog')
+#5 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(14): copyValues->database()
+#6 /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/RegistrationForm.php(35): copyValues->copy('3', 'test3', '$2a$10$bsTYUUXO...', 'test3@t.fr', '$2a$10$bsTYUUXO...')
+#7 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(1097): RegistrationForm->afterSave()
+#8 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#9 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php(62): CActiveRecord->save()
+#10 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#11 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#16 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#18 {main}
+REQUEST_URI=/user/index.php?r=user/registration
+HTTP_REFERER=http://coomute.loc/user/index.php?r=user/registration
+---
+2014/05/26 14:49:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /var/www/html/mlo-sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/mlo-sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/mlo-sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/mlo-sites/framework/base/CModule.php(103): CModule->getComponent('dbmg')
+#4 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(7): CModule->__get('dbmg')
+#5 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(14): copyValues->database()
+#6 /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/RegistrationForm.php(35): copyValues->copy('4', 'test4', '$2a$10$/RBBHKxT...', 'test4@t.fr', '$2a$10$/RBBHKxT...')
+#7 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(1097): RegistrationForm->afterSave()
+#8 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#9 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php(62): CActiveRecord->save()
+#10 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#11 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#16 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#18 {main}
+REQUEST_URI=/user/index.php?r=user/registration
+HTTP_REFERER=http://coomute.loc/user/index.php?r=user/registration
+---
+2014/05/26 14:59:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08006] [7] FATAL:  la base de données « core__users » n'existe pas' in /var/www/html/mlo-sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/mlo-sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/mlo-sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/mlo-sites/framework/base/CModule.php(103): CModule->getComponent('dbmg')
+#4 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(7): CModule->__get('dbmg')
+#5 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(14): copyValues->database()
+#6 /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/RegistrationForm.php(35): copyValues->copy('5', 'test5', '$2a$10$X0gjyUqd...', 'test5@t.fr', '$2a$10$X0gjyUqd...')
+#7 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(1097): RegistrationForm->afterSave()
+#8 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#9 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php(62): CActiveRecord->save()
+#10 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#11 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#16 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#18 {main}
+REQUEST_URI=/user/index.php?r=user/registration
+HTTP_REFERER=http://coomute.loc/user/index.php?r=user/registration
+---
+2014/05/26 15:01:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08006] [7] FATAL:  la base de données « core__users » n'existe pas' in /var/www/html/mlo-sites/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/html/mlo-sites/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/html/mlo-sites/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/html/mlo-sites/framework/base/CModule.php(103): CModule->getComponent('dbmg')
+#4 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(7): CModule->__get('dbmg')
+#5 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(14): copyValues->database()
+#6 /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/RegistrationForm.php(35): copyValues->copy('6', 'test6', '$2a$10$2EBvUXCf...', 'test1@tz.fr', '$2a$10$2EBvUXCf...')
+#7 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(1097): RegistrationForm->afterSave()
+#8 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#9 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php(62): CActiveRecord->save()
+#10 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#11 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#13 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#15 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#16 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#18 {main}
+REQUEST_URI=/user/index.php?r=user/registration
+HTTP_REFERER=http://coomute.loc/user/index.php?r=user/registration
+---
+2014/05/26 15:01:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « created ». The SQL statement executed was: INSERT INTO core__users (id, username, pw_hash, email ) 
+        VALUES (7, 'test7','$2a$10$q2yrdqoBqjpsydDOPZddueen/Tkg8i9KTAnPUIpxRtiN2DcuAWWPG', 'test12@tz.fr');.
+in /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php (39)
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/RegistrationForm.php (35)
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php (62)
+2014/05/26 15:01:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand n'a pas pu exécuter la commande SQL : SQLSTATE[23502]: Not null violation: 7 ERREUR:  une valeur NULL viole la contrainte NOT NULL de la colonne « created ». The SQL statement executed was: INSERT INTO core__users (id, username, pw_hash, email ) 
+        VALUES (7, 'test7','$2a$10$q2yrdqoBqjpsydDOPZddueen/Tkg8i9KTAnPUIpxRtiN2DcuAWWPG', 'test12@tz.fr');' in /var/www/html/mlo-sites/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(39): CDbCommand->execute()
+#1 /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/RegistrationForm.php(35): copyValues->copy('7', 'test7', '$2a$10$q2yrdqoB...', 'test12@tz.fr', '$2a$10$q2yrdqoB...')
+#2 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(1097): RegistrationForm->afterSave()
+#3 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#4 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php(62): CActiveRecord->save()
+#5 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#6 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#10 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#11 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#13 {main}
+REQUEST_URI=/user/index.php?r=user/registration
+HTTP_REFERER=http://coomute.loc/user/index.php?r=user/registration
+---
+2014/05/26 15:05:02 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 7 ERREUR:  syntaxe en entrée invalide pour le type timestamp : « 1401109502 »
+LINE 2: ...2CzgU9M9oTZXBzyeepTH1Xbpdx7CXwuLxcGiut5svC6etfO', '140110950...
+                                                             ^. The SQL statement executed was: INSERT INTO core__users (id, username, pw_hash, created, email ) 
+        VALUES (8, 'test8','$2a$10$38iJoi2CzgU9M9oTZXBzyeepTH1Xbpdx7CXwuLxcGiut5svC6etfO', '1401109502','test8@tz.fr');.
+in /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php (40)
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/RegistrationForm.php (35)
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php (62)
+2014/05/26 15:05:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand n'a pas pu exécuter la commande SQL : SQLSTATE[22007]: Invalid datetime format: 7 ERREUR:  syntaxe en entrée invalide pour le type timestamp : « 1401109502 »
+LINE 2: ...2CzgU9M9oTZXBzyeepTH1Xbpdx7CXwuLxcGiut5svC6etfO', '140110950...
+                                                             ^. The SQL statement executed was: INSERT INTO core__users (id, username, pw_hash, created, email ) 
+        VALUES (8, 'test8','$2a$10$38iJoi2CzgU9M9oTZXBzyeepTH1Xbpdx7CXwuLxcGiut5svC6etfO', '1401109502','test8@tz.fr');' in /var/www/html/mlo-sites/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/html/mlo-sites/SRC/user/protected/components/copyValues.php(40): CDbCommand->execute()
+#1 /var/www/html/mlo-sites/SRC/user/protected/modules/user/models/RegistrationForm.php(35): copyValues->copy('8', 'test8', '$2a$10$38iJoi2C...', 'test8@tz.fr', '$2a$10$38iJoi2C...')
+#2 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(1097): RegistrationForm->afterSave()
+#3 /var/www/html/mlo-sites/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#4 /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/RegistrationController.php(62): CActiveRecord->save()
+#5 /var/www/html/mlo-sites/framework/web/actions/CInlineAction.php(49): RegistrationController->actionRegistration()
+#6 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/html/mlo-sites/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /var/www/html/mlo-sites/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): CController->run('')
+#10 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController('user/registrati...')
+#11 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/html/mlo-sites/user/index.php(10): CApplication->run()
+#13 {main}
+REQUEST_URI=/user/index.php?r=user/registration
+HTTP_REFERER=http://coomute.loc/user/index.php?r=user/registration
+---
+2014/05/27 11:10:29 [error] [php] Undefined index: sso_authent_mlo (/var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php:13)
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/html/mlo-sites/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/mlo-sites/user/index.php(10): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php (13)
+in /var/www/html/mlo-sites/user/index.php (10)
+2014/05/27 11:10:31 [error] [php] Undefined index: sso_authent_mlo (/var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php:13)
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/html/mlo-sites/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/mlo-sites/user/index.php(10): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php (13)
+in /var/www/html/mlo-sites/user/index.php (10)
+2014/05/27 11:12:35 [error] [php] Undefined index: sso_authent_mlo (/var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php:13)
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/html/mlo-sites/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/mlo-sites/user/index.php(10): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php (13)
+in /var/www/html/mlo-sites/user/index.php (10)
+2014/05/27 11:14:46 [error] [php] Undefined index: sso_authent_mlo (/var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php:13)
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/html/mlo-sites/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/mlo-sites/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php (13)
+in /var/www/html/mlo-sites/user/index.php (9)
+2014/05/27 11:14:59 [error] [php] Undefined index: sso_authent_mlo (/var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php:13)
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/html/mlo-sites/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/mlo-sites/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php (13)
+in /var/www/html/mlo-sites/user/index.php (9)
+2014/05/27 11:15:05 [error] [php] Undefined index: sso_authent_mlo (/var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php:13)
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/html/mlo-sites/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/mlo-sites/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php (13)
+in /var/www/html/mlo-sites/user/index.php (9)
+2014/05/27 11:18:37 [error] [php] Undefined index: sso_authent_mlo (/var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php:13)
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/html/mlo-sites/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/mlo-sites/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php (13)
+in /var/www/html/mlo-sites/user/index.php (9)
+2014/05/27 11:20:14 [error] [php] Undefined index: sso_authent_mlo (/var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php:14)
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/web/CController.php(286): LoginController->runAction()
+#1 /var/www/html/mlo-sites/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#2 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): LoginController->run()
+#3 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/html/mlo-sites/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php (14)
+in /var/www/html/mlo-sites/user/index.php (9)
+2014/05/27 11:33:50 [error] [php] array_key_exists() expects parameter 2 to be array, string given (/var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php:13)
+Stack trace:
+#0 /var/www/html/mlo-sites/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/html/mlo-sites/framework/web/CController.php(286): LoginController->runAction()
+#2 /var/www/html/mlo-sites/framework/web/CController.php(265): LoginController->runActionWithFilters()
+#3 /var/www/html/mlo-sites/framework/web/CWebApplication.php(282): LoginController->run()
+#4 /var/www/html/mlo-sites/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/html/mlo-sites/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/html/mlo-sites/user/index.php(9): CWebApplication->run()
+REQUEST_URI=/user/index.php?r=user/login
+in /var/www/html/mlo-sites/SRC/user/protected/modules/user/controllers/LoginController.php (13)
+in /var/www/html/mlo-sites/user/index.php (9)

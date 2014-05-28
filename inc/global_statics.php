@@ -3,6 +3,8 @@
 }else{ 
   echo '<script type="text/javascript" src="/global_statics/js/lib/jquery-2.0.1.min.js"></script>';
 };
+?>
+<?php
 if(isset($script_array)){
   foreach( $script_array as $my_script){
     echo '<script type="text/javascript" src="/global_statics/js/'.$my_script.'"></script>';

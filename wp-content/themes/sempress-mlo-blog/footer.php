@@ -11,10 +11,8 @@
 
 
   <footer id="colophon" role="contentinfo">
-    <div id="site-generator">
-      <?php do_action( 'sempress_credits' ); ?>
-      <?php printf( __( 'This site is powered by %1$s and styled with %2$s', 'sempress' ), '<a href="http://wordpress.org/" rel="generator">WordPress</a>', '<a href="http://notizblog.org/projects/sempress/">SemPress</a>'); ?>
-    </div>
+    <div id="chat_container"></div>
+    <button id="chat_button" class="open" type="button">chat</button>
   </footer><!-- #colophon -->
 
 <?php wp_footer(); ?>

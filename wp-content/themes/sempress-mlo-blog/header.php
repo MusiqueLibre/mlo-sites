@@ -27,15 +27,20 @@
 <link rel="profile" href="http://microformats.org/profile/specs" />
 <link rel="profile" href="http://microformats.org/profile/hatom" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<?php $script_array=array(
+   '/lib/jquery-migrate-1.0.0.js',
+   '/lib/jquery.address-1.5.js',
+); ?>
 
 <?php include 'inc/global_statics.php'; ?>
 <?php include 'inc/wp_statics.php'; ?>
 <script type="text/javascript">
   $(function(){
-  //  ajaxify();
+    address_state = "";
+    ajaxify();
   //  startPlayer();
   });
-  function init(){
+  function initAtPageLoad(){
 
     //do things
   };

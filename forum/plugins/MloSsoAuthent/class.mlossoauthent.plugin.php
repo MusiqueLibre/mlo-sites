@@ -35,7 +35,7 @@ class MloSsoAuthentPlugin extends Gdn_Plugin {
    public function __construct() {
    }
    public function Base_Render_Before($Sender) {
-      $user_id = $_COOKIE['sso_authent_mlo']['id'];
+      $user_id = $_COOKIE['sso_authent_coomute']['id'];
       if($user_id && !Gdn::Session()->IsValid()){
         //DB config
         include('config.php');
@@ -47,7 +47,7 @@ class MloSsoAuthentPlugin extends Gdn_Plugin {
         $session_id = mysql_query($query);
         $result = mysql_result($session_id, 0);
         //IF there is a user, and the token in the cookie matches the one in the DB : logon !
-        if($_COOKIE['sso_authent_mlo']['token'] == $result){
+        if($_COOKIE['sso_authent_coomute']['token'] == $result){
           Gdn::Session()->Start($user_id);
         }
       }elseif( Gdn::Session()->IsValid() && !$user_id){

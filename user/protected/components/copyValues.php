@@ -2,8 +2,9 @@
 class copyValues extends CApplicationComponent{
     public function database(){
       return  array(
-        'forum' => Yii::app()->dbforum,
+        //'forum' => Yii::app()->dbforum,
         'blog' => Yii::app()->dbblog,
+        'MG' => Yii::app()->dbmg,
       );
     }
 
@@ -11,7 +12,7 @@ class copyValues extends CApplicationComponent{
     public function copy($id, $username,$password,$email){
       //Insert user data in the forum. I use 'Deleted' because of the activation
       $connection= $this->database();
-
+      /*
       //###########  FORUM  ##############
       $sqlForum="INSERT INTO GDN_User (UserID, Name, Password, HashMethod,  Email,Deleted) 
             VALUES ($id, '$username','$password', 'dogma','$email','1');";
@@ -23,21 +24,30 @@ class copyValues extends CApplicationComponent{
                 VALUES ('$id', '4432');";
       $commandRole=$connection['forum']->createCommand($sqlForumRole);
       $commandRole->execute();
-
+      */
       //############  BLOG ##########
       $nice_name = strtolower($username);
       $sqlBlog="INSERT INTO wp_users (ID, user_login, user_pass, user_email, user_nicename) 
         VALUES ($id, '$username','$password', '$email', '$nice_name');";
       $command=$connection['blog']->createCommand($sqlBlog);
       $command->execute();
+      //############  BLOG ##########
+      $nice_name = strtolower($username);
+      $now = date('Y-m-d H:i:s');
+      $sqlMG="INSERT INTO core__users (id, username, pw_hash, created, email ) 
+        VALUES ($id, '$username','$password', '$now','$email');";
+      $command=$connection['MG']->createCommand($sqlMG);
+      $command->execute();
     }
 
     public function updatePassword($username,$password){
       $connection= $this->database();
+      /*
       ####### FORUM #####
       $sql="UPDATE GDN_User SET Password = '$password' WHERE Name = '$username'";
       $command=$connection['forum']->createCommand($sql);
       $command->execute();
+       */
       ####### BLOG  #######
       $sql="UPDATE wp_users SET user_pass = '$password' WHERE user_login = '$username'";
       $command=$connection['blog']->createCommand($sql);
@@ -45,11 +55,13 @@ class copyValues extends CApplicationComponent{
     }
 
     public function activateAccount($username){
+      /*
       ####### FORUM #####
       $connection=$this->database();
       $sql="UPDATE GDN_User SET Deleted = '0' WHERE Name = '$username'";
       $command=$connection['forum']->createCommand($sql);
       $command->execute();
+      */
 
       ###### BLOG ######
       //Get the ID of the newly created user
