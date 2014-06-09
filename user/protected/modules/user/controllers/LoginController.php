@@ -41,8 +41,8 @@ class LoginController extends Controller
     $user->session = uniqid(crypt(rand()).'_', 'true');
 
     //create the cookie with the user ID and the token
-    setcookie("sso_authent_coomute[id]", $user->id, 0,"/", 'coomute.loc');
-    setcookie("sso_authent_coomute[token]", $user->session, 0,"/", 'coomute.loc');
+    setcookie("sso_authent_coomute[id]", $user->id, 0,"/", 'coomute.net');
+    setcookie("sso_authent_coomute[token]", $user->session, 0,"/", 'coomute.net');
     //strore the time of last visit
     $user->lastvisit = time();
     $user->save();

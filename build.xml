@@ -13,9 +13,6 @@
           <token key="yiiDBName" value="${yii_db}" />
           <token key="yiiDBUser" value="${yii_db_user}" />
           <token key="yiiDBPass" value="${yii_db_pass}" />
-          <token key="forumDBName" value="${forum_db}" />
-          <token key="forumDBUser" value="${forum_db_user}" />
-          <token key="forumDBPass" value="${forum_db_pass}" />
           <token key="blogDBName" value="${blog_db}" />
           <token key="blogDBUser" value="${blog_db_user}" />
           <token key="blogDBPass" value="${blog_db_pass}" />
@@ -46,15 +43,6 @@
         </replacetokens>
       </filterchain>
   </copy>
-  <copy tofile="./forum/plugins/MloSsoAuthent/config.php" file="./forum/plugins/MloSsoAuthent/config-example.php"  overwrite="true">
-      <filterchain>
-        <replacetokens begintoken="@@" endtoken="@@">
-          <token key="yiiDBName" value="${yii_db}" />
-          <token key="yiiDBUser" value="${yii_db_user}" />
-          <token key="yiiDBPass" value="${yii_db_pass}" />
-        </replacetokens>
-      </filterchain>
-    </copy>
     <!--Remove Debug mode for prod-->
       <if>
         <equals arg1="${env}" arg2="local" />
