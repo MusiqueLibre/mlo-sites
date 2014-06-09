@@ -18,7 +18,7 @@
 
 	<div class="form_row submit">
     <?php echo CHtml::link(UserModule::t("Lost Password?"),Yii::app()->getModule('user')->recoveryUrl); ?>
-		<?php echo CHtml::htmlButton(UserModule::t("Login"), array('type'=>'submit', 'class' => 'darker_button')); ?>
+		<?php echo CHtml::htmlButton(UserModule::t("Login"), array('type'=>'submit', 'class' => 'big_submit')); ?>
 	</div>
 	
 <?php echo CHtml::endForm(); ?>

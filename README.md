@@ -17,8 +17,7 @@ VHOST
 
 If you want to work in local you must set up two vhosts with the
 fallowing urls : 
-mlo.loc that redirects to /
-user.mlo.loc that redirects to /user.musique-libre.org
+coomute.loc that redirects to /
 
 WORDPRESS
 ========

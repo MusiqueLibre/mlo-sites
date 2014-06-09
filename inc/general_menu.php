@@ -3,12 +3,12 @@
         <h1 id="main_title" class="out_of_the_way">Menu general pour les sites de musique libre !</h1>
         <ul id="global_menu" class="global_menu">
             <?php include 'menu.html' ?>
-            <li id="connection_menu">
+            <li class="bullet_less" id="connection_menu">
                   <?php
                   if(array_key_exists('sso_authent_coomute',$_COOKIE)){
                     echo '<button type="button" id="deconnection_button"  >deconnexion</button>';
                   }else{
-                    echo '<a id="subscribe_link" href="http://musique-libre.org/user/index.php?r=user/registration">inscription</a>
+                    echo '<a id="subscribe_link" href="http://coomute.net/user/index.php?r=user/registration">inscription</a>
                      <button type="button" id="connection_button" >se connecter</button>';
 
                   }

@@ -12,7 +12,7 @@ $this->breadcrumbs=array(
 </div>
 <?php else: ?>
 
-<div class="form">
+<div class="form content">
 <?php $form=$this->beginWidget('UActiveForm', array(
 	'id'=>'registration-form',
 	'enableAjaxValidation'=>true,
@@ -20,7 +20,7 @@ $this->breadcrumbs=array(
 	'htmlOptions' => array('enctype'=>'multipart/form-data'),
 )); ?>
 
-	<p class="note"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
+	<p class="form_hint"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
 	
 	<?php echo $form->errorSummary(array($model,$profile)); ?>
 	
@@ -34,7 +34,7 @@ $this->breadcrumbs=array(
 	<?php echo $form->labelEx($model,'password'); ?>
 	<?php echo $form->passwordField($model,'password'); ?>
 	<?php echo $form->error($model,'password'); ?>
-	<p class="hint">
+	<p class="form_hint">
 	<?php echo UserModule::t("Minimal password length 4 symbols."); ?>
 	</p>
 	</div>
@@ -79,17 +79,17 @@ $this->breadcrumbs=array(
 	<div class="row">
 		<?php echo $form->labelEx($model,'verifyCode'); ?>
 		
-		<?php $this->widget('CCaptcha'); ?>
 		<?php echo $form->textField($model,'verifyCode'); ?>
 		<?php echo $form->error($model,'verifyCode'); ?>
 		
-		<p class="hint"><?php echo UserModule::t("Please enter the letters as they are shown in the image above."); ?>
-		<br/><?php echo UserModule::t("Letters are not case-sensitive."); ?></p>
+    <p class="form_hint">
+      <?php echo UserModule::t("Please enter those letters  :"); ?>
+      <?php $this->widget('CCaptcha'); ?><br/>
 	</div>
 	<?php endif; ?>
 	
 	<div class="row submit">
-		<?php echo CHtml::submitButton(UserModule::t("Register")); ?>
+		<?php echo CHtml::submitButton(UserModule::t("Register"), array('id'=>'main_form_submit')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
