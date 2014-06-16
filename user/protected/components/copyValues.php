@@ -55,9 +55,9 @@ class copyValues extends CApplicationComponent{
     }
 
     public function activateAccount($username){
+      $connection=$this->database();
       /*
       ####### FORUM #####
-      $connection=$this->database();
       $sql="UPDATE GDN_User SET Deleted = '0' WHERE Name = '$username'";
       $command=$connection['forum']->createCommand($sql);
       $command->execute();
@@ -78,8 +78,8 @@ class copyValues extends CApplicationComponent{
       $command=$connection['blog']->createCommand($sqlBlogRole);
       $command->execute();
       //MG
-      $sqlMGRole =  "INSERT INTO core__privileges_users SET core__user_id = '$ID', core__privilege_id='2' ;";
-      $command=$connection['mg']->createCommand($sqlMGRole);
+      $sqlMGRole =  "INSERT INTO core__privileges_users (\"user\", _privilege) VALUES ('$ID', '2') ;";
+      $command=$connection['MG']->createCommand($sqlMGRole);
       $command->execute();
 
     }
