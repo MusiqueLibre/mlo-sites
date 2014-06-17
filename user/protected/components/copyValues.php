@@ -78,7 +78,7 @@ class copyValues extends CApplicationComponent{
       $command=$connection['blog']->createCommand($sqlBlogRole);
       $command->execute();
       //MG
-      $sqlMGRole =  "INSERT INTO core__privileges_users (\"user\", _privilege) VALUES ('$ID', '2') ;";
+      $sqlMGRole =  "INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$ID', '2') ;";
       $command=$connection['MG']->createCommand($sqlMGRole);
       $command->execute();
 
