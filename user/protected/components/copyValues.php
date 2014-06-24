@@ -80,7 +80,8 @@ class copyValues extends CApplicationComponent{
       //MG
       $sqlMGRole =  "INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '3') ;
                      INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '4') ;
-                     INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '5') ;";
+                     INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '5') ;
+                     INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '6') ;";
       $command=$connection['MG']->createCommand($sqlMGRole);
       $command->execute();
 
