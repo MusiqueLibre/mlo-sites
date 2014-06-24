@@ -69,18 +69,18 @@ class copyValues extends CApplicationComponent{
       $commandID=$connection['blog']->createCommand($getIDSqlBlog);
       $IDQuery = $commandID->query();
       $IDQuery = $IDQuery->readAll();
-      $ID = $IDQuery[0]['ID'];
+      $ID_blog = $IDQuery[0]['ID'];
       //add user ID and role in the table
       //wp_ is the blog, they are contributors (can write but can't publish)
       //wp_2_ is doc, it's a wiki-like, therefore, they are editors (can publish and edit, including others' posts)
-      $sqlBlogRole =  "INSERT INTO wp_usermeta SET user_id = '$ID', meta_key ='wp_capabilities', meta_value='a:1:{s:11:\"contributor\";b:1;}';
-                       INSERT INTO wp_usermeta SET user_id = '$ID', meta_key ='nickname', meta_value='$username';";
+      $sqlBlogRole =  "INSERT INTO wp_usermeta SET user_id = '$ID_blog', meta_key ='wp_capabilities', meta_value='a:1:{s:11:\"contributor\";b:1;}';
+                       INSERT INTO wp_usermeta SET user_id = '$ID_blog', meta_key ='nickname', meta_value='$username';";
       $command=$connection['blog']->createCommand($sqlBlogRole);
       $command->execute();
       //MG
-      $sqlMGRole =  "INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$ID', '3') ;
-                     INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$ID', '4') ;
-                     INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$ID', '5') ;";
+      $sqlMGRole =  "INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '3') ;
+                     INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '4') ;
+                     INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '5') ;";
       $command=$connection['MG']->createCommand($sqlMGRole);
       $command->execute();
 
