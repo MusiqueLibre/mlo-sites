@@ -54,7 +54,7 @@ class copyValues extends CApplicationComponent{
       $command->execute();
     }
 
-    public function activateAccount($username){
+    public function activateAccount($username, $id){
       $connection=$this->database();
       /*
       ####### FORUM #####

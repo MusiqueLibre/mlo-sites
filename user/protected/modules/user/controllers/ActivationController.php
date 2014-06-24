@@ -20,7 +20,7 @@ class ActivationController extends Controller
 				$find->status = 1;
 				$find->save();
         //copy the changes in other database
-        Yii::app()->copyvalues->activateAccount($find->username);
+        Yii::app()->copyvalues->activateAccount($find->username, $find->id);
 
 			    $this->render('/user/message',array('title'=>UserModule::t("User activation"),'content'=>UserModule::t("You account is activated.")));
 			} else {
