@@ -52,7 +52,11 @@ class LoginController extends Controller
 
   public function actionRemoteLogin(){
 		$model=new UserLogin;
-    $this->renderPartial('/user/loginminimal',array('model'=>$model, 'url'=>$_GET['url']));
+    //don't redirect to activation, else you'd get errors
+    if(strstr($_GET['url'], 'user/activation/activation')){
+      $url = '/';
+    } 
+    $this->renderPartial('/user/loginminimal',array('model'=>$model, 'url'=>$url));
   }
 
 }
