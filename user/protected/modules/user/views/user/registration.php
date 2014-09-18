@@ -6,13 +6,13 @@ $this->breadcrumbs=array(
 
 <h1 id="main_content_title"><?php echo UserModule::t("Registration"); ?></h1>
 
+<div class="form content">
 <?php if(Yii::app()->user->hasFlash('registration')): ?>
 <div class="success">
 <?php echo Yii::app()->user->getFlash('registration'); ?>
 </div>
 <?php else: ?>
 
-<div class="form content">
 <?php $form=$this->beginWidget('UActiveForm', array(
 	'id'=>'registration-form',
 	'enableAjaxValidation'=>true,

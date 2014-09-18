@@ -22,102 +22,45 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*Text colors*/
 /*#1 : LESS MIXINS*/
 /* Color override */
-.ml-o #site_title {
-  color: #d45500;
+/*
+  @class_0: ml-o;
+  @class_1: DevBlog;
+  @class_2: Blog;
+  @class_3: Doc;
+.copyColors(@iter){
+  @classSet : 'class_@{iter}';
+  @main_colorSet : 'wp_main_color_@{iter}';
+  @main_color : @@main_colorSet;
+  @class: @@classSet;
+  .@{class} #site_title{
+    color: @main_color;
+  }
+  .@{class} #main_content_title{
+    background-color: @main_color_dark;
+  }
+  .@{class} #sidebar_header{
+    background: @main_color;
+  }
+  .@{class} .side_filter_title{
+    background: @main_color;
+  }
+  .@{class} .side_filter:nth-child(3) .side_filter_title{
+    background: @main_color_darker;
+  }
+  .@{class} .side_filter:nth-child(2) .side_filter_title{
+    background: @main_color_dark;
+  }
+  .@{class} main a, .@{class} main  a:visited,
+  .@{class} aside a, .@{class} aside  a:visited{
+    color: @complementary_dark;
+  }
+
 }
-.ml-o #main_content_title {
-  background-color: #ab4500;
-}
-.ml-o #sidebar_header {
-  background: #d45500;
-}
-.ml-o .side_filter_title {
-  background: #d45500;
-}
-.ml-o .side_filter:nth-child(3) .side_filter_title {
-  background: #4f2000;
-}
-.ml-o .side_filter:nth-child(2) .side_filter_title {
-  background: #ab4500;
-}
-.ml-o main a,
-.ml-o main a:visited,
-.ml-o aside a,
-.ml-o aside a:visited {
-  color: #085f99;
-}
-.DevBlog #site_title {
-  color: #82577b;
-}
-.DevBlog #main_content_title {
-  background-color: #6a4764;
-}
-.DevBlog #sidebar_header {
-  background: #82577b;
-}
-.DevBlog .side_filter_title {
-  background: #82577b;
-}
-.DevBlog .side_filter:nth-child(3) .side_filter_title {
-  background: #332230;
-}
-.DevBlog .side_filter:nth-child(2) .side_filter_title {
-  background: #6a4764;
-}
-.DevBlog main a,
-.DevBlog main a:visited,
-.DevBlog aside a,
-.DevBlog aside a:visited {
-  color: #4b5b4e;
-}
-.Blog #site_title {
-  color: #83ad67;
-}
-.Blog #main_content_title {
-  background-color: #6f9952;
-}
-.Blog #sidebar_header {
-  background: #83ad67;
-}
-.Blog .side_filter_title {
-  background: #83ad67;
-}
-.Blog .side_filter:nth-child(3) .side_filter_title {
-  background: #435d32;
-}
-.Blog .side_filter:nth-child(2) .side_filter_title {
-  background: #6f9952;
-}
-.Blog main a,
-.Blog main a:visited,
-.Blog aside a,
-.Blog aside a:visited {
-  color: #755a87;
-}
-.Doc #site_title {
-  color: #2c8ca0;
-}
-.Doc #main_content_title {
-  background-color: #237080;
-}
-.Doc #sidebar_header {
-  background: #2c8ca0;
-}
-.Doc .side_filter_title {
-  background: #2c8ca0;
-}
-.Doc .side_filter:nth-child(3) .side_filter_title {
-  background: #0f3138;
-}
-.Doc .side_filter:nth-child(2) .side_filter_title {
-  background: #237080;
-}
-.Doc main a,
-.Doc main a:visited,
-.Doc aside a,
-.Doc aside a:visited {
-  color: #703529;
-}
+.copyColors(0);
+.copyColors(1);
+.copyColors(2);
+.copyColors(3);
+*/
 /* =Structure
 -------------------------------------------------------------- */
 /* Increase the size of the content area for templates without sidebars */
@@ -125,14 +68,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .image-attachment #content,
 .error404 #content {
   margin: 0;
-}
-/* Text meant only for screen readers */
-.screen-reader-text,
-.assistive-text {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
 }
 /* Alignment */
 .alignleft {
@@ -220,6 +155,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .category-archive-meta,
 .author-note {
   font-size: 0.65em;
+  margin: 2.4em;
 }
 .format-quote .entry-title,
 .format-video .entry-title,
@@ -229,10 +165,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .format-video .entry-title a,
 .format-audio .entry-title a,
 .format-image .entry-title a {
-  font-size: 25px;
+  font-size: 0.65em;
 }
 .wp-post-image {
-  margin: 40px auto;
+  margin: 1.6em auto;
   max-width: 83%;
 }
 .attachment-thumbnail {

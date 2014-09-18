@@ -6,7 +6,7 @@
             <li class="bullet_less" id="connection_menu">
                   <?php
                   if(array_key_exists('sso_authent_coomute',$_COOKIE)){
-                    echo '<button type="button" id="deconnection_button"  >deconnexion</button>';
+                    echo '<button type="button" id="logout_button"  >deconnexion</button>';
                   }else{
                     echo '<a id="subscribe_link" href="http://coomute.net/user/index.php?r=user/registration">inscription</a>
                      <button type="button" id="connection_button" >se connecter</button>';

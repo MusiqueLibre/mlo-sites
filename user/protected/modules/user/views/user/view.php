@@ -4,10 +4,10 @@ $this->breadcrumbs=array(
 	$model->username,
 );
 ?>
-<h1><?php echo UserModule::t('View User').' "'.$model->username.'"'; ?></h1>
+<h1 id="main_content_title"><?php echo UserModule::t('View User').' "'.$model->username.'"'; ?></h1>
 
 <ul class="actions">
-	<li><?php echo CHtml::link(UserModule::t('List User'),array('index')); ?></li>
+	<li class="bullet_less"><?php echo CHtml::link(UserModule::t('List User'),array('index')); ?></li>
 </ul><!-- actions -->
 
 <?php 
@@ -39,6 +39,7 @@ $this->breadcrumbs=array(
 	);
 			
 	$this->widget('zii.widgets.CDetailView', array(
+    'cssFile'=> False,
 		'data'=>$model,
 		'attributes'=>$attributes,
 	));

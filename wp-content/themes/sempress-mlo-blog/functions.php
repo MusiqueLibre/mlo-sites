@@ -263,8 +263,8 @@ function sempress_widgets_init() {
     'id' => 'sidebar-1',
     'before_widget' => '<li id="%1$s" class="bullet_less side_filter %2$s">',
     'after_widget' => "</div></li>",
-    'before_title' => '<h2 class="side_filter_title"><span class="make_vertical">',
-    'after_title' => '</span></h2><div class="side_filter_content">',
+    'before_title' => '<h2 class="side_filter_title">',
+    'after_title' => '</h2><div class="side_filter_content">',
   ) );
 
   register_sidebar( array(

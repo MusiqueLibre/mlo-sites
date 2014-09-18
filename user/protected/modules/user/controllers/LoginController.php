@@ -55,7 +55,9 @@ class LoginController extends Controller
     //don't redirect to activation, else you'd get errors
     if(strstr($_GET['url'], 'user/activation/activation')){
       $url = '/';
-    } 
+    }else{ 
+      $url = $_GET['url'];
+    }
     $this->renderPartial('/user/loginminimal',array('model'=>$model, 'url'=>$url));
   }
 

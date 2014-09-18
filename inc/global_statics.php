@@ -20,7 +20,7 @@ if(isset($script_array)){
 <?php
   if(isset($css_array)){
     foreach( $css_array as $my_css){
-      echo '<link rel="stylesheet" type="text/css" href="/global_statics/css/'.$my_css.'">';
+      echo '<link rel="stylesheet" type="text/css" href="/global_statics/css/'.$my_css.'.css">';
     };
   }
 ?>
