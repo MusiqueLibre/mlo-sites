@@ -1,4 +1,6 @@
 /*#1 : LESS GLOBAL VARIABLES*/
+/*@main_color: #C63B33;*/
+/*b03030*/
 /*a very subtle blue*/
 /* SUB-SITES COLORS */
 /*Services*/
@@ -12,7 +14,7 @@
   margin: 0 20px;
   min-height: 110px;
   background: #fff;
-  border: 1px solid #e2cbca;
+  border: 1px solid #ddbbb5;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -265,7 +267,7 @@ div.Search form input.InputBox,
 .MenuTitle {
   color: #333333;
   padding: 5px;
-  border: 1px solid #e2cbca;
+  border: 1px solid #ddbbb5;
   font-size: 0.8em;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -341,7 +343,7 @@ div.Search form input.InputBox,
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #a6312b;
+  border: 1px solid #98331e;
   font-size: 0.8em;
   margin: 5px 0;
   padding: 3px 10px;
@@ -462,7 +464,7 @@ p.NoResults {
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #a6312b;
+  border: 1px solid #98331e;
   padding: 10px;
 }
 .main_button {
@@ -472,7 +474,7 @@ p.NoResults {
 }
 .new_message {
   padding: 0 10px 0 0;
-  color: #c63374;
+  color: #ba2556;
 }
 .MessageList .Meta {
   min-height: 0;
@@ -852,7 +854,7 @@ table.PreferenceGroup tbody td {
   font-weight: 400;
   padding: 0 5px;
   margin-left: 5px;
-  border: 1px solid #e2cbca;
+  border: 1px solid #ddbbb5;
 }
 .MessageMeta {
   font-size: 11px;
@@ -866,12 +868,12 @@ table.PreferenceGroup tbody td {
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
-  color: #c63b33;
-  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #c63b33;
-  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #c63b33;
-  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #c63b33;
-  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #c63b33;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #c63b33;
+  color: #ba3e25;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ba3e25;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ba3e25;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ba3e25;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ba3e25;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ba3e25;
   margin: 20px;
   display: inline-block;
   line-height: 1;
@@ -1076,7 +1078,7 @@ div.Popup #Form_User .Warning,
 .DataList .Closed {
   border-radius: 2px 2px 2px 2px;
   font-size: 12px;
-  border: 1px solid #e2cbca;
+  border: 1px solid #ddbbb5;
   color: #333333;
   display: inline-block;
   margin: 10px;
@@ -1216,12 +1218,12 @@ textarea.MultiComplete {
   text-transform: uppercase;
   font-weight: bold;
   font-family: Liberation Mono, Liberation Sans;
-  color: #c63b33;
-  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #c63b33;
-  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #c63b33;
-  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #c63b33;
-  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #c63b33;
-  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #c63b33;
+  color: #ba3e25;
+  -webkit-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ba3e25;
+  -moz-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ba3e25;
+  -o-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ba3e25;
+  -ms-text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ba3e25;
+  text-shadow: 1px 1px 0 #ffffff, 2px 2px 0 #ba3e25;
 }
 #popup_contols {
   margin: 5px 0;
@@ -1233,12 +1235,12 @@ textarea.MultiComplete {
   background: url("../images/subtle_dots.png");
   width: 75%;
   margin: auto;
-  -webkit-box-shadow: 4px 4px 4px #7d7d7d;
-  -moz-box-shadow: 4px 4px 4px #7d7d7d;
-  -o-box-shadow: 4px 4px 4px #7d7d7d;
-  -ms-box-shadow: 4px 4px 4px #7d7d7d;
-  box-shadow: 4px 4px 4px #7d7d7d;
-  border: 1px solid #a6312b;
+  -webkit-box-shadow: 4px 4px 4px #707070;
+  -moz-box-shadow: 4px 4px 4px #707070;
+  -o-box-shadow: 4px 4px 4px #707070;
+  -ms-box-shadow: 4px 4px 4px #707070;
+  box-shadow: 4px 4px 4px #707070;
+  border: 1px solid #98331e;
   padding: 10px;
 }
 .Overlay {

@@ -1,5 +1,8 @@
 /*#1 : LESS GLOBAL VARIABLES*/
-@main_color: #C63B33;
+/*@main_color: #C63B33;*/
+/*b03030*/
+@main_color: #BA3E25;
+@main_color_neg: #E8DDCD;
 @main_color_light: lighten(@main_color, 9%);
 @main_color_lighter: lighten(@main_color, 26%);
 @main_color_dark: darken(@main_color, 8,2%);
@@ -10,7 +13,7 @@
 @main_color_desat_lighter: lighten(@main_color_desat, 25%);
 @main_color_desat_dark: darken(@main_color_desat, 15%);
 @main_color_grey: desaturate(@main_color, 100%);
-@complementary: desaturate(spin(@main_color, 180), 10%);
+@complementary: spin(@main_color, -14);
 @complementary_dark: darken(@complementary, 10%);
 @analog1: spin(@main_color, 330);
 @analog2: spin(@main_color, 30);
@@ -22,7 +25,8 @@
 @pattern_menus:  url("../images/subtle_dots.png");
 
 @main_grey: desaturate(@main_color, 100%);
-@base_grey: #111;
+@base_grey: #151411;
+@base_grey_neg: #a2a2a2;
 @subtle_grey: #fefefe;
 @less_subtle_grey: #f0f0f0;
 

@@ -1,4 +1,6 @@
 /*#1 : LESS GLOBAL VARIABLES*/
+/*@main_color: #C63B33;*/
+/*b03030*/
 /*a very subtle blue*/
 /* SUB-SITES COLORS */
 /*Services*/
@@ -58,11 +60,11 @@
   right: 0;
 }
 .add_track {
-  -webkit-text-shadow: 0 0 9px #3fb3ba;
-  -moz-text-shadow: 0 0 9px #3fb3ba;
-  -o-text-shadow: 0 0 9px #3fb3ba;
-  -ms-text-shadow: 0 0 9px #3fb3ba;
-  text-shadow: 0 0 9px #3fb3ba;
+  -webkit-text-shadow: 0 0 9px #ba252f;
+  -moz-text-shadow: 0 0 9px #ba252f;
+  -o-text-shadow: 0 0 9px #ba252f;
+  -ms-text-shadow: 0 0 9px #ba252f;
+  text-shadow: 0 0 9px #ba252f;
   background: #fff;
   color: #666;
 }

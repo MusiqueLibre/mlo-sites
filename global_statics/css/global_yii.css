@@ -1,4 +1,6 @@
 /*#1 : LESS GLOBAL VARIABLES*/
+/*@main_color: #C63B33;*/
+/*b03030*/
 /*a very subtle blue*/
 /* SUB-SITES COLORS */
 /*Services*/
@@ -32,7 +34,7 @@
 }
 .pager .page.selected a {
   cursor: default;
-  color: #7d7d7d;
+  color: #707070;
   text-decoration: underline;
   font-weight: bold;
 }

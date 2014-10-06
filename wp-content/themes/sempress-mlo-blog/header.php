@@ -41,6 +41,7 @@
   //  startPlayer();
   });
   function initAtPageLoad(){
+    filterPositionning();
 
     //do things
   };

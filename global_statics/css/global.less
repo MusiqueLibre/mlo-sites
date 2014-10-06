@@ -24,20 +24,20 @@ GENERIC STYLES
   font-style: normal;
 }
 @font-face {
-  font-family: "universe-light";
-  src: url("../fonts/UniversElse-Light.ttf");
+  font-family: "altfont";
+  src: url("../fonts/Gauge-Regular.ttf");
+  /*
+  src: url("../fonts/Cousine-Regular-Latin.ttf");
+  src: url("../fonts/Alfphabet-IV.ttf");
+  src: url("../fonts/NEW ACADEMY.ttf");
+  */
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "universe";
-  src: url("../fonts/UniversElse-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "universe-bold";
-  src: url("../fonts/UniversElse-Bold.ttf");
+  font-family: "altfont_bold";
+  src: url("../fonts/Gauge-Heavy.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -79,7 +79,7 @@ a:hover{
   text-decoration: underline;
 }
 h1,h2,h3,h4,h5,h6{
-  font-family: universe-light, sans-serif;
+  font-family: altfont, sans-serif;
   font-weight: 200;
   color:@text_color_light;
   color:@main_grey;
@@ -90,24 +90,24 @@ h1{
   margin: 0.63em 0 0;
 }
 h2{
-  font-family: universe-light;
+  font-family: altfont;
   font-size: 1.25em;
   margin: 1.28em 0 0 0;
   line-height: 1.28em;
 }
 h3{
   font-size: 1em;
-  font-family: universe-light;
+  font-family: altfont;
   margin: 1.6em 0 0 0;
 }
 h4{
   font-size: 1em;
-  font-family: universe-light;
+  font-family: altfont;
 }
 h5, h6{
   font-size: 1em;
   margin: 1.6em 0 0 0;
-  font-family: universe-light;
+  font-family: altfont;
 }
 
 nav{ 
@@ -169,16 +169,17 @@ summary:before{
   content: '\2A3A \00A0';
 }
 /*dt styling is with generic classes*/
+dl{
+  margin: 1.6em 0;
+}
 dd{
   text-align: left;
   padding: 0;
   margin: 0;
   font-size: 0.8em;
-  background: rgba(254, 254, 254, 0.5);
   color: #555;
 }
 dt{
-  background: rgba(238, 238, 238, 0.5);
   font-size: 0.8em;
 }
 table{
@@ -186,16 +187,19 @@ table{
 }
 th{
   text-align: left;
-  padding: 20px 40px;
+  padding: 0.8em 1.6em;
 }
 td{
-  padding: 20px 40px;
-}
-tr{
-  line-height: 2em;
+  padding: 0.8em 1.6em;
 }
 tr:nth-child(even){
   background: #fafafa;
+}
+mark{
+  font-weight: bold;
+  background: @main_color;
+  color: #fff;
+  padding: 0 1.6em;
 }
 
 /*###1 GENERIC CLASSES*/
@@ -247,17 +251,17 @@ tr:nth-child(even){
   margin: 15px 0 5px 0;
 }
 .slight_highlight, dt{
-  text-decoration: none;
-  color: #555;
   .shadowyText(#ddd, 2px, 0);
-  font-weight: 200;
-  font-family: "Lucida Sans Unicode", "Lucida Grande";
+  font-family: "altfont";
 }
 /*Hiding a semantic element useful for accessibility*/
 .out_of_the_way{
   position:absolute;
   top:-9999px; 
   left:auto;
+}
+.rightify{
+  text-align: right;
 }
 .menu_more_button{
   z-index:9990;
@@ -292,17 +296,17 @@ main img{
 /*###2 BUTTONS AND VISUAL ELEMENTS*/ 
 button, .buttonified, .BigButton, input[type="submit"], input[type="button"],{/*buttonified exists to make a link looks like a button, when <button> is not semantic*/
   /*.shadowyBox(@main_color_dark);*/
-  color: @main_grey;
   background-color: transparent;
   border: none;
   line-height: 1.6em;
   font-weight: bold;
+  padding: 0 0.8em;
+  border: 1px solid @main_grey
 }
 .buttonified{
   display:inline-block;
   text-decoration:none;
-  height:30px;
-  padding: 0 1px 0 6px;
+  padding: 0 0.8em;
 }
 .main_menu_more{
   border:none;
@@ -333,6 +337,9 @@ button:active, .buttonified:active, .BigButton:active, input[type="button"]:acti
   border-bottom: 2px solid @main_grey;
 }
 /*###2 : LOGO*/
+#main_header{
+  background: url("../images/header_bg.png");
+}
 #main_header button{
   border: none;
 }
@@ -615,13 +622,16 @@ player
   display: none;
   position: fixed;
   right: 0;
-  bottom: 105px;
-  width: 100px;
-  padding: 10px 0
+  bottom: 4.8em; 
+  padding: 0.8em 0
   border: 2px solid #ddd;
   background: #fff;
   text-align: center;
+  z-index: 10000;
 
+}
+#player_helper button{
+  border: none;
 }
 #player_remote{
   position: relative;
@@ -636,7 +646,6 @@ player
 form {
   margin: 0 0 1.6em;
   padding: 1.6em;
-  background:#fafafa;
 }
 fieldset {
   padding: 0;
@@ -658,12 +667,13 @@ legend small {
   font-size: 13.5px;
   color: #999;
 }
+label{
+  font-family: altfont;
+}
 label,
 input,
 textarea {
   font-weight: 200;
-  font-family: "Lucida Sans Unicode", "Lucida Grande";
-  padding: 4px;
   display: block;
   text-align: center;
 }
@@ -676,10 +686,15 @@ select{
 }
 progress{
   font-size: 1em;
+  height: 1.6em;
+  margin-bottom: 1.6em;
+  width: 100%;
   color: #555;
-  width: 70% ;
   background-color: #fff;
   border: 1px solid #ccc;
+}
+input[type="file"]{
+  line-height: 1.6em;
 }
 textarea,
 select,
@@ -698,23 +713,22 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
   display: block;
-  width: ~"calc(100% - 80px)";
+  width: ~"calc(100% - 3.2em)";
   .boxSizing;
-  padding: 0.8em; 
+  padding: 0.95em 0.8em; 
   margin: 1.6em; 
-  line-height: 1.6em; 
   color: #555;
   background-color: #fff;
-  border: none;
+  border: 1px solid #ddd;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
   -ms-border-radius: 3px;
   -khtml-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 4px 7px rgba(0, 0, 0, 0.075);
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s, width ease-out 0.3s;
   -moz-transition: border linear 0.2s, box-shadow linear 0.2s, width ease-out 0.3s;
   -ms-transition: border linear 0.2s, box-shadow linear 0.2s, width ease-out 0.3s;
@@ -757,9 +771,8 @@ input:required:valid{
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 3px 0;
   cursor: pointer;
-  vertical-align: top;
+  vertical-align: middle;
 }
 input[type="submit"],
 input[type="reset"],
@@ -791,10 +804,11 @@ input[type="checkbox"] {
   color: #fff;
 }
 #login_form .big_submit{
-  background: #fff;
+  background: @main_color_neg;
 }
 #login_form .big_submit:hover{
   background:@complementary;
+  color: @main_color_neg;
 }
 .submit{
   text-align: right;
@@ -822,14 +836,14 @@ textarea {
 .form_row {
   margin: 1.6em;
 }
-.form_hint{
-  font-family: "Lucida Sans Unicode", "Lucida Grande";
+.form_hint, .form_field_description{
   font-weight: 200;
   text-align: right;
+  font-size: 0.8em;
 }
-.form_hint:before{
+.form_hint:before, .form_field_description:before{
   content: "\2757";
-  font-size: 1.5em;
+  font-size: 1.2em;
   .rotate(-10deg);
   display: inline-block;
   width: 26px;
@@ -858,6 +872,16 @@ body .clear_bg{
   cursor: default;
 }
 /*###3 : GLOBAL MENU*/
+#global_nav{
+  position: relative;
+  z-index:10;
+  background: rgba(0,0,0,0.3);
+  font-family: altfont;
+}
+#global_nav a{
+  color: @main_color_neg;
+  font-family: altfont_bold;
+}
 .global_sub_menu_container a{
   text-decoration:none;
   color:@text_color_main;
@@ -964,12 +988,10 @@ body .clear_bg{
   border-bottom: 9px solid @wp_main_color_1;
 }
 #main_logo{
-  font-weight: bold;
-  margin: 0 18px 0 0;
-  padding: 0 0 0 18px;
-  display: inline-block;
-  height: 20px;
+  padding: 0 0.8em;
+  vertical-align: middle;
 }
+
 #main_logo_container{
   display: inline-block;
   white-space: nowrap; /* chromium bugfix*/
@@ -981,20 +1003,17 @@ body .clear_bg{
   float: right;
   white-space: nowrap; /* chromium bugfix*/
 }
+#logout_button{
+  color: @main_color_neg;
+}
 #dashboard_button{
    background: @main_color;
    color: #fff;
    display: inline-block;
-   height: 63px;
-   line-height:57px;
-   padding: 0 10px;
 }
 #dashboard_button:hover{
    background: @main_color_light;
    color: #fff;
-}
-#logout_button{
-  font-size: 0.8em
 }
 #connection_button{
   background-color: #c63b33;
@@ -1084,20 +1103,18 @@ body .clear_bg{
 }
 /*###1 SITE DESCRIPTION*/
 #site_infos{
-  .boxSizing;
-  padding: 0 20px;
-  background: url("../images/dna.png") no-repeat 0 -25px;
-  margin: -50px 0 0 0;
-  padding: 50px 20px 0 20px;
+  padding: 3.2em 1.6em 1.6em 1.6em;
+  margin-top: -1.6em;
 }
 #site_title, #site_description{
   display: inline-block;
   margin: 0;
+  font-family: altfont_bold;
+  font-size: 2em;
+  line-height: 1.6em;
 }
 #site_title{
   margin-right: 1.6em;
-  font-size: 2em;
-  line-height: 1.6em;
   color: @main_color;
 }
 #site_title_link{
@@ -1105,8 +1122,7 @@ body .clear_bg{
   text-decoration: none;
 }
 #site_description{
-  font-size: 1em;
-  line-height: 3.2em;
+  color: @main_color_neg;
 }
 .header_description{
   vertical-align: top;
@@ -1152,7 +1168,7 @@ body .clear_bg{
 #sidebar {
   width: 27%;
   .boxSizing;
-  background: #fff;
+  background: @main_color_neg;
   background-image: url("../images/noise.png");
   overflow: visible;
 }
@@ -1171,7 +1187,7 @@ body .clear_bg{
 }
 /*###2 CONTENT*/
 .content{
-  padding: 20px 40px;
+  padding: 0.8em 1.6em;
 }
 .breadcrumbs{
   font-size: 0.8em;
@@ -1183,6 +1199,7 @@ body .clear_bg{
 }
 
 #main_content,  #sidebar{
+  vertical-align: top;
   display: table-cell;
 }
 #main_content{
@@ -1191,37 +1208,24 @@ body .clear_bg{
   /*background: url('../images/triangles_maxi.png') top right repeat-y @subtle_grey;*/
     background: @subtle_grey;
   width: 73%;
-  box-shadow: -3px 37px 5px #ddd inset;
-  -moz-box-shadow: -3px 37px 5px #ddd inset;
-  -webkit-box-shadow: -3px 37px 5px #ddd inset;
-  -ms-box-shadow: -3px 37px 5px #ddd inset ;
-  -o-box-shadow: -3px 37px 5px #ddd inset ;
+  box-shadow: -3px 69px 5px #ddd inset;
+  -moz-box-shadow: -3px 69px 5px #ddd inset;
+  -webkit-box-shadow: -3px 69px 5px #ddd inset;
+  -ms-box-shadow: -3px 69px 5px #ddd inset ;
+  -o-box-shadow: -3px 69px 5px #ddd inset ;
 }
 #main_content > h1, #main_content_title, #sidebar_title, #home_band_title{
   text-align: center;
   margin: 0;
-  font-family: universe-bold;
+  font-family: altfont_bold;
   width: 100%;
   padding: 0;
   font-size: 1em;
-  line-height: 1.6em;
-  background: #eaeaea
-}
-#sidebar_title, #home_band_title{
-  color: #fff;
-}
-#main_title_band, #main_content_title_inner{
-  font-size: 1.2em;
-  color: #fff;
-  display: table-cell;
-}
-#sidebar > h1, #sidebar_header{
-  background: @main_color;
-  height: 1.6em;
+  line-height: 3.2em;
+  background:  @base_grey_neg url("../images/worn_dots.png");
+  color: @base_grey;
 }
 
-#main_content > h1, #main_content_title, #home_band_title{
-}
 .index_list_columns{
   margin: 0;
   padding: 1.6em;
@@ -1263,7 +1267,7 @@ body .clear_bg{
   margin: 0;
   padding: 0;
   border: none;
-  line-height: 1.6em;
+  line-height: 3.2em;
 }
 
 #sidebar_header .search_submit 
@@ -1286,7 +1290,8 @@ body .clear_bg{
   color: #fff;
 }
 .side_filter_title{
-  background: #eee;
+  color:  @base_grey;
+  background:  @base_grey_neg url("../images/worn_dots.png");
   position: absolute;
   width: 100%;
   top: 0;
@@ -1304,10 +1309,8 @@ body .clear_bg{
 }
 .side_filter:nth-child(3) .side_filter_title{
   top: 2.56em;
-  background: #ddd;
 }
 .side_filter:nth-child(2) .side_filter_title{
-  background: #bbb;
   top: 1.28em;
 }
 .side_filter .side_filter_title.selected{
@@ -1321,7 +1324,7 @@ body .clear_bg{
   width: 100%;
   top: 0;
   right: 0;
-  background: #fff;
+  background: @main_color_neg;
   .transition(right , 0.5s, ease);
   z-index: 1;
   .boxSizing;
@@ -1359,7 +1362,7 @@ body .clear_bg{
 }
 /*FOOTER*/
 #footer{
-  border-top: #e0e0e0 9px solid;
+  border-top: #e0e0e0 1em solid;
   padding: 20px;
   background: @less_subtle_grey;
   clear: both;
@@ -1376,6 +1379,10 @@ body .clear_bg{
 
 /* EXTRA */
 
+.ui-datepicker-calendar td{
+  padding: 0;
+  text-align: center;
+}
 #ui-datepicker-div{
   background: #fff;
   border: 3px solid #ddd;
