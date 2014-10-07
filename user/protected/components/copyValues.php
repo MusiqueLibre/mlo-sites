@@ -24,14 +24,14 @@ class copyValues extends CApplicationComponent{
                 VALUES ('$id', '4432');";
       $commandRole=$connection['forum']->createCommand($sqlForumRole);
       $commandRole->execute();
-      */
       //############  BLOG ##########
       $nice_name = strtolower($username);
       $sqlBlog="INSERT INTO wp_users (ID, user_login, user_pass, user_email, user_nicename) 
         VALUES ($id, '$username','$password', '$email', '$nice_name');";
       $command=$connection['blog']->createCommand($sqlBlog);
       $command->execute();
-      //############  BLOG ##########
+      */
+      //############  MG ##########
       $nice_name = strtolower($username);
       $now = date('Y-m-d H:i:s');
       $sqlMG="INSERT INTO core__users (id, username, pw_hash, created, email ) 
@@ -47,11 +47,11 @@ class copyValues extends CApplicationComponent{
       $sql="UPDATE GDN_User SET Password = '$password' WHERE Name = '$username'";
       $command=$connection['forum']->createCommand($sql);
       $command->execute();
-       */
       ####### BLOG  #######
       $sql="UPDATE wp_users SET user_pass = '$password' WHERE user_login = '$username'";
       $command=$connection['blog']->createCommand($sql);
       $command->execute();
+       */
     }
 
     public function activateAccount($username, $id){
@@ -61,7 +61,6 @@ class copyValues extends CApplicationComponent{
       $sql="UPDATE GDN_User SET Deleted = '0' WHERE Name = '$username'";
       $command=$connection['forum']->createCommand($sql);
       $command->execute();
-      */
 
       ###### BLOG ######
       //Get the ID of the newly created user
@@ -77,7 +76,8 @@ class copyValues extends CApplicationComponent{
                        INSERT INTO wp_usermeta SET user_id = '$ID_blog', meta_key ='nickname', meta_value='$username';";
       $command=$connection['blog']->createCommand($sqlBlogRole);
       $command->execute();
-      //MG
+      */
+      ############## MG ################
       $sqlMGRole =  "INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '3') ;
                      INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '4') ;
                      INSERT INTO core__privileges_users (\"user\", privilege) VALUES ('$id', '5') ;
