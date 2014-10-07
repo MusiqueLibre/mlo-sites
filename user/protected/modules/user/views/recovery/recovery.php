@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1><?php echo UserModule::t("Restore"); ?></h1>
+<h1 id="main_content_title"><?php echo UserModule::t("Restore"); ?></h1>
 
 <?php if(Yii::app()->user->hasFlash('recoveryMessage')): ?>
 <div class="success">
