@@ -34,8 +34,8 @@ class copyValues extends CApplicationComponent{
       //############  MG ##########
       $nice_name = strtolower($username);
       $now = date('Y-m-d H:i:s');
-      $sqlMG="INSERT INTO core__users (id, username, pw_hash, created, email ) 
-        VALUES ($id, '$username','$password', '$now','$email');";
+      $sqlMG="INSERT INTO core__users (id, username, pw_hash, created, email, uploaded ) 
+        VALUES ($id, '$username','$password', '$now','$email', 0);";
       $command=$connection['MG']->createCommand($sqlMG);
       $command->execute();
     }
