@@ -51,6 +51,7 @@ class RegistrationController extends Controller
               $salt="";
 
 						$model->password=UserModule::encrypting($model->password,$salt);
+            $model->activkey = urlencode(sha1(mt_rand(10000,99999).time()));
 						$model->verifyPassword=UserModule::encrypting($model->verifyPassword,$salt);
 						$model->createtime=time();
 						$model->lastvisit=((Yii::app()->controller->module->loginNotActiv||(Yii::app()->controller->module->activeAfterRegister&&Yii::app()->controller->module->sendActivationMail==false))&&Yii::app()->controller->module->autoLogin)?time():0;
@@ -115,11 +116,9 @@ class RegistrationController extends Controller
     }
   }
   function doSendActivationMail($model){
-			$model->activkey=urlencode(sha1(mt_rand(10000,99999).time()));
-      $model->save();
       $activation_url = $this->createAbsoluteUrl('/user/activation/activation',array("activkey" => $model->activkey, "email" => $model->email));
       UserModule::sendMail($model->email,UserModule::t("You registered from {site_name}",array('{site_name}'=>Yii::app()->name)),UserModule::t("Please activate you account go to {activation_url}",array('{activation_url}'=>$activation_url)));
       Yii::app()->user->setFlash('resend',UserModule::t("An email will be sent to you shortly with a new activation code. Remember to check your spams folder"));
-      $this->refresh();
+      header('Location: http://www.coomute.net?registration=True');
   }
 }
