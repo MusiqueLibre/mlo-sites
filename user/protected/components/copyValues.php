@@ -4,7 +4,7 @@ class copyValues extends CApplicationComponent{
       return  array(
         //'forum' => Yii::app()->dbforum,
         'blog' => Yii::app()->dbblog,
-        //'MG' => Yii::app()->dbmg,
+        'MG' => Yii::app()->dbmg,
       );
     }
 
