@@ -15,7 +15,7 @@
 get_header(); ?>
 
 <div id="full_content_container">
-  <main id="main_content">
+  <main id="main_content" class="make_cell col_main">
   <h1 id="main_content_title">Derniers articles du blog</h1>
 
   <?php 

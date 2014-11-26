@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-      <main id="main_content">
+      <main id="main_content" class="make_cell col_main">
 
         <?php while ( have_posts() ) : the_post(); ?>
 

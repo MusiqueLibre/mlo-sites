@@ -1991,7 +1991,6 @@ body .clear_bg {
 #main_content,
 #main_sidecol {
   vertical-align: top;
-  display: table-cell;
 }
 #main_content {
   position: relative;

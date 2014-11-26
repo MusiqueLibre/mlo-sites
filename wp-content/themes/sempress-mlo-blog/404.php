@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-    <main id="main_content">
+    <main id="main_content" class="make_cell col_main">
 
       <article id="post-0" class="post error404 not-found">
         <header class="entry-header">
