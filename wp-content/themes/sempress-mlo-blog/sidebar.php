@@ -6,7 +6,7 @@
  * @since SemPress 1.0.0
  */
 ?>
-  <aside id="sidebar">
+  <aside id="main_sidecol">
       <header id="sidebar_header">
           <?php get_search_form(); ?>
       </header>

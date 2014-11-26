@@ -6,7 +6,7 @@
 	</div><!-- content -->
 </div>
 <div class="span-5 last">
-	<div id="sidebar">
+	<div id="main_sidecol">
 	<?php
 		$this->beginWidget('zii.widgets.CPortlet', array(
 			'title'=>'Operations',
