@@ -15,7 +15,6 @@ if(isset($script_array)){
 <script type="text/javascript" src="/global_statics/js/lib/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="/global_statics/js/global.js"></script>
 
-<link rel="stylesheet" type="text/css" href="/global_statics/css/normalize.css">
 <link rel="stylesheet" type="text/css" href="/global_statics/css/global.css">
 <?php
   if(isset($css_array)){
