@@ -4,7 +4,7 @@ $this->breadcrumbs=array(
 );
 date_default_timezone_set('Europe/Paris');
 ?><h1 id="main_content_title"><?php echo UserModule::t('Your profile'); ?></h1>
-<div class="content">
+<div class="container">
 
   <?php if(Yii::app()->user->hasFlash('profileMessage')): ?>
   <div class="success">

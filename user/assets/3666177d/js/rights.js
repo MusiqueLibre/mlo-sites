@@ -49,7 +49,7 @@
 					}
 
 					// Append the content to the tooltip
-					$('<div class="content" />')
+					$('<div class="container" />')
 					.appendTo($tooltip)
 					.html(title);
 

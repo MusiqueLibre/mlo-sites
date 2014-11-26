@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 ?>
 
 <h1 id="main_content_title"><?php echo UserModule::t("List User"); ?></h1>
-<div class="content">
+<div class="container">
   <?php echo CHtml::link(UserModule::t('Profile'),array('/user/profile', )); ?>
   <?php if(UserModule::isAdmin()) {
     ?><ul class="actions">

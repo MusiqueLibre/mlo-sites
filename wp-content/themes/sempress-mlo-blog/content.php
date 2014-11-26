@@ -14,7 +14,7 @@
     </div><!-- .entry-meta -->
     <?php endif; ?>
   </header><!-- .entry-header -->
-  <div class="content">
+  <div class="container">
 
     <?php if ( is_search() ) : // Only display Excerpts for Search ?>
     <div class="entry-summary p-summary" itemprop="description">
