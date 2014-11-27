@@ -20,7 +20,11 @@ class LoginController extends Controller
           //check if the action contains a URL, meaning it's a remote login
           if(isset($_GET['url'])){
             $this->createSession();
-            $this->redirect($_GET['url']);
+            //This is an ugly hack needed to generate the mg cookie so the user sees he is connected
+            //First it goes to dashboard without the mg cookie then it's redirected to the index with the cookie
+            //ugly
+            $this->redirect('http://coomute.net/dogma/dashboard/');
+            
           }
           elseif (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
 						$this->redirect(Yii::app()->controller->module->returnUrl);
