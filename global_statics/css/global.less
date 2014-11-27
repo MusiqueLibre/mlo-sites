@@ -201,9 +201,7 @@ player
   display:none;
 }
 #playlist_button{
-  width: auto;
-  height: 50px;
-  font-size: 20px;
+  background-color: @color_neg;
 }
 .empty + #playlist_button{
   display: none;
@@ -539,11 +537,11 @@ input[type="checkbox"] {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-#main_form_submit, .big_submit{
+#main_form_submit, .big_submit, .big_submit:visited{
   .border-radius(1.6em);
   padding: 0.8em 1.6em;
-  color:@color1;
-  background: @color_neg;
+  color:@color_neg;
+  background: @@color1;
 }
 #main_form_submit:hover, .big_submit:hover{
   background:@color_main;
@@ -756,10 +754,12 @@ body .clear_bg{
    color: #fff;
 }
 #connection_button{
-  background-color: #c63b33;
-  color: #fff;
-  margin: 0 0 0 18px;
-  height: 1.6em; /* chromium bugfix*/
+  margin: 0 0 0 @ratio_half;
+  color: @color_neg;
+  font-family: altfont;
+}
+#connection_button:hover{
+  color: @grey_dark;
 }
 #subscribe_link{
   background-repeat: repeat-y;
@@ -850,9 +850,26 @@ body .clear_bg{
   display: inline-block;
   margin: 0;
   font-family: altfont_bold;
-  font-size: 2em;
-  line-height: 1.6em;
+  font-size: 1.7em;
+  line-height: 1.89em;
 }
+#more_info{
+  margin: 0 @ratio_double;
+  font-family: altfont_bold;
+  color: @color_neg;
+  background: darken(@@color3, 30%);
+  display: inline-block;
+  padding: 0 @ratio_main;
+  .box-shadow(5px 5px 0px @color_neg);
+}
+#more_info_link{
+  margin: @ratio_double @ratio_main @ratio_double 0;
+  padding: @ratio_half @ratio_main;
+  color: @color_neg;
+  background: @@color1;
+  .box-shadow(5px 5px 0px darken(@@color3, 40%));
+}
+
 #site_title{
   margin-right: 1.6em;
   color: @color_main;
@@ -907,7 +924,7 @@ body .clear_bg{
 
 #main_sidecol {
   .box-sizing(border-box);
-  background: @color_neg;
+  background: desaturate(@color_neg,20%);
   background-image: url("../images/noise.png");
   overflow: hidden;
 }
@@ -987,6 +1004,9 @@ body .clear_bg{
   display: inline;
   padding: 0 1.6em;
 }
+#sidebar_header{
+  text-align: right;
+}
 #sidebar_header .search_form, #search_form{
   padding: 0;
   margin:0;
@@ -1023,8 +1043,8 @@ body .clear_bg{
   color: #fff;
 }
 .side_filter_title{
-  color:  @color_neg;
-  background: @grey_dark;
+  color: @grey_dark;
+  background:  @grey_lightest url("../images/worn_dots.png");
   position: absolute;
   width: 100%;
   top: 0;
@@ -1065,7 +1085,7 @@ body .clear_bg{
   width: 100%;
   top: 0;
   left: 0;
-  background: @color_neg;
+  background: desaturate(@color_neg,20%);
   .transition(opacity 1s ease, left 1s ease);
   z-index: 1;
   .box-sizing(border-box);
@@ -1163,7 +1183,7 @@ body .clear_bg{
   #hh_close_menu{
     color: @grey_dark;
     position: absolute;
-    right: 0.8em;
+    right: 1.6em;
   }
   .side_filter_content{
     min-height: 100vh;

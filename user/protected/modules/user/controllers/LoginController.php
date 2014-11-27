@@ -18,8 +18,9 @@ class LoginController extends Controller
 				// validate user input and redirect to previous page if valid
 				if($model->validate()){
           //check if the action contains a URL, meaning it's a remote login
-          if (isset($_GET['url'])){
+          if(isset($_GET['url'])){
             $this->createSession();
+            $this->redirect($_GET['url']);
           }
           elseif (strpos(Yii::app()->user->returnUrl,'/index.php')!==false)
 						$this->redirect(Yii::app()->controller->module->returnUrl);
