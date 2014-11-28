@@ -20,7 +20,6 @@
   include('../inc/general_menu.php');
 ?>
 
-<main class="container" id="page" role="main">
 
 	<?php echo $content; ?>
 
@@ -29,7 +28,6 @@
 	<div id="footer">
 	</div><!-- footer -->
 
-</main><!-- page -->
 
 </body>
 </html>

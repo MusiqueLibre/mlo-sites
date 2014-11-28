@@ -933,7 +933,7 @@ audio {
   width: 16%;
 }
 .col_main {
-  width: 74%;
+  width: 84%;
 }
 @media only screen and (min-width: 1200px) {
   .handheld {
@@ -1213,6 +1213,10 @@ player
   float: right;
   white-space: nowrap;
   /* chromium bugfix*/
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  background: #111111;
 }
 #main_player_container .header_button {
   display: inline-block;
@@ -1351,8 +1355,18 @@ player
 .ppcontextmenu {
   display: none;
 }
-.play_track {
+.remove_track {
+  display: none;
+}
+.playlist_item:hover .remove_track {
+  display: inline;
+}
+.play_track,
+.remove_track {
   cursor: pointer;
+  font-size: 0.8em;
+  width: 100%;
+  border: none;
 }
 .pploaded {
   background: 'color_op_4';
@@ -1383,11 +1397,14 @@ player
 .loading_playlist {
   background: url("../images/ajax-loader.gif") no-repeat -1px -3px;
 }
-#current_playlist .played {
-  background: #d0d0d0;
+#current_playlist .played .play_track {
+  background: #ba3e25;
+  color: #f5e7d9;
 }
 #current_playlist .played:before {
   content: "\25B6";
+  position: absolute;
+  left: 10px;
 }
 .player_notif {
   color: #ba3e25;
@@ -2137,6 +2154,7 @@ body .clear_bg {
 .side_filter_content.inactive {
   height: 0;
   overflow: hidden;
+  opacity: 0;
 }
 .side_filter_content {
   padding: 1.6em;
@@ -2231,12 +2249,6 @@ body .clear_bg {
   color: #ddd;
 }
 @media only screen and (max-width: 1200px) {
-  #main_player_container {
-    position: fixed;
-    margin: 0;
-    bottom: 0;
-    background: #111111;
-  }
   #main_connection {
     width: 100%;
     background: #111111;

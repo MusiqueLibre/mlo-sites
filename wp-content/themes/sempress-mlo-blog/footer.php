@@ -12,7 +12,7 @@
 
   <footer id="colophon" role="contentinfo">
     <div id="chat_container"></div>
-    <button id="chat_button" class="open" type="button">chat</button>
+    <!--button id="chat_button" class="open" type="button">chat</button-->
   </footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
