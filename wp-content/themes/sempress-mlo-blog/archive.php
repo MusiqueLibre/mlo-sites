@@ -17,8 +17,7 @@ get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
 
-  <header class="page-header">
-    <h1 class="page-title">
+    <h1 id="main_content_title" class="page-title">
       <?php
         if ( is_date() ) :
           $link = "";
@@ -36,8 +35,8 @@ get_header(); ?>
         endif;
       ?>
     </h1>
-  </header>
 
+  <div class="container">
   <?php rewind_posts(); ?>
 
   <?php sempress_content_nav( 'nav-above' ); ?>
@@ -72,6 +71,7 @@ get_header(); ?>
 
 <?php endif; ?>
 
+</div>
 </main><!-- #content -->
 
 <?php get_sidebar(); ?>
