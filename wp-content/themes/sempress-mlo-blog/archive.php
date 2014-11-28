@@ -36,7 +36,6 @@ get_header(); ?>
       ?>
     </h1>
 
-  <div class="container">
   <?php rewind_posts(); ?>
 
   <?php sempress_content_nav( 'nav-above' ); ?>
@@ -71,7 +70,6 @@ get_header(); ?>
 
 <?php endif; ?>
 
-</div>
 </main><!-- #content -->
 
 <?php get_sidebar(); ?>
