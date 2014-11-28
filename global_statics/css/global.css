@@ -1617,11 +1617,11 @@ input[type="checkbox"] {
   color: #fff;
 }
 #login_form .big_submit {
-  color: 'color_op_1';
+  color: #6a2315;
   background: #f5e7d9;
 }
 #login_form .big_submit:hover {
-  background: 'color_op_1';
+  background: #6a2315;
   color: #f5e7d9;
 }
 .submit {
